@@ -153,6 +153,7 @@ export const languages: Language[] = [
 		useCases: ['Data Science', 'Web Development', 'Automation', 'Machine Learning'],
 		personality:
 			'You value clarity and simplicity. You prefer getting things done efficiently over complex solutions.',
+		mbti: 'ENFP',
 		icon: '🐍',
 		color: '#3776AB'
 	},
