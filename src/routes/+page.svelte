@@ -22,33 +22,44 @@
 
 	function handleMBTIAnswer(answerId: string) {
 		const questionId = currentMBTIQuestion.id;
+		// Check if this is a new answer before updating the store
+		const isNewAnswer = !$quizStore.mbtiAnswers[questionId];
+		const currentIndex = $quizStore.currentQuestionIndex;
+
 		quizStore.answerMBTIQuestion(questionId, answerId);
 
-		// Delay auto-advance to allow animation to complete
-		setTimeout(() => {
-			if (
-				$quizStore.phase === 'mbti' &&
-				Object.keys($quizStore.mbtiAnswers).length < mbtiQuestions.length
-			) {
-				quizStore.goToNextQuestion();
-			}
-		}, 250); // Slightly longer than animation (200ms) to ensure it completes
+		// Auto-advance only if this was a new answer (not re-answering) and not on last question
+		if (isNewAnswer && currentIndex < mbtiQuestions.length - 1) {
+			// Small delay for animation
+			setTimeout(() => {
+				// Double-check we're still in MBTI phase and at the same question index
+				// to prevent advancing after rapid clicks that triggered phase transition
+				if ($quizStore.phase === 'mbti' && $quizStore.currentQuestionIndex === currentIndex) {
+					quizStore.goToNextQuestion();
+				}
+			}, 100);
+		}
 	}
 
 	function handleLanguageAnswer(answerId: string) {
 		const questionId = currentLanguageQuestion.id;
+		// Check if this is a new answer before updating the store
+		const isNewAnswer = !$quizStore.languageAnswers[questionId];
+		const currentIndex = $quizStore.currentQuestionIndex;
+
 		quizStore.answerLanguageQuestion(questionId, answerId);
 
-		// Delay auto-advance to allow animation to complete
-		setTimeout(() => {
-			if (
-				$quizStore.phase === 'language' &&
-				adaptiveQuestions &&
-				Object.keys($quizStore.languageAnswers).length < adaptiveQuestions.length
-			) {
-				quizStore.goToNextQuestion();
-			}
-		}, 250); // Slightly longer than animation (200ms) to ensure it completes
+		// Auto-advance only if this was a new answer (not re-answering) and not on last question
+		if (isNewAnswer && currentIndex < adaptiveQuestions.length - 1) {
+			// Small delay for animation
+			setTimeout(() => {
+				// Double-check we're still in language phase and at the same question index
+				// to prevent advancing after rapid clicks that triggered phase transition
+				if ($quizStore.phase === 'language' && $quizStore.currentQuestionIndex === currentIndex) {
+					quizStore.goToNextQuestion();
+				}
+			}, 100);
+		}
 	}
 
 	function handlePrevious() {
@@ -241,10 +252,10 @@
 	main {
 		min-height: 100vh;
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: center;
 		padding: 2rem 1rem;
-		padding-top: 10vh;
+		padding-top: 0;
 	}
 
 	.intro {

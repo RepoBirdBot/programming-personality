@@ -117,16 +117,24 @@
 
 	.question-text {
 		font-size: 1.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 0;
 		text-align: center;
 		color: var(--color-text-primary);
+		min-height: 6.75rem; /* 108px - Accommodate up to 3 lines */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1.5;
+		padding: 0 0.5rem;
 	}
 
 	.quiz-content {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		gap: 2rem;
-		min-height: 300px;
+		min-height: 400px;
+		height: 400px;
+		padding-top: 2.5rem;
 	}
 
 	.nav-button {
@@ -142,6 +150,8 @@
 		align-items: center;
 		justify-content: center;
 		flex-shrink: 0;
+		margin-top: 4rem;
+		align-self: flex-start;
 	}
 
 	.nav-button:hover:not(:disabled) {
@@ -156,11 +166,13 @@
 	}
 
 	.answers {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(10, minmax(104px, auto));
+		gap: 0.75rem;
 		flex: 1;
 		min-width: 0;
+		align-content: start;
 	}
 
 	.answer-button {
@@ -176,6 +188,48 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		min-height: 104px;
+		height: 100%;
+		white-space: normal;
+		word-wrap: break-word;
+		line-height: 1.4;
+	}
+
+	/* Dynamically adjust grid rows based on number of answers */
+	.answers:has(.answer-button:nth-child(2):last-child) {
+		grid-template-rows: repeat(2, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(3):last-child) {
+		grid-template-rows: repeat(3, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(4):last-child) {
+		grid-template-rows: repeat(4, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(5):last-child) {
+		grid-template-rows: repeat(5, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(6):last-child) {
+		grid-template-rows: repeat(6, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(7):last-child) {
+		grid-template-rows: repeat(7, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(8):last-child) {
+		grid-template-rows: repeat(8, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(9):last-child) {
+		grid-template-rows: repeat(9, minmax(104px, 1fr));
+	}
+
+	.answers:has(.answer-button:nth-child(10):last-child) {
+		grid-template-rows: repeat(10, minmax(104px, 1fr));
 	}
 
 	.answer-button:hover {
@@ -222,13 +276,30 @@
 	@media (max-width: 768px) {
 		.quiz-content {
 			gap: 1rem;
-			min-height: 250px;
+			min-height: 350px;
+			height: 350px;
+			padding-top: 1.5rem;
 		}
 
 		.nav-button {
 			width: 40px;
 			height: 40px;
 			font-size: 1.2rem;
+			margin-top: 3rem;
+		}
+
+		.question-text {
+			font-size: 1.25rem;
+			min-height: 5.5rem;
+		}
+
+		.answers {
+			gap: 0.5rem;
+		}
+
+		.answer-button {
+			padding: 0.75rem 1rem;
+			font-size: 0.95rem;
 		}
 	}
 </style>

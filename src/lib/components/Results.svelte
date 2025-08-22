@@ -2,6 +2,7 @@
 	import type { Language } from '$lib/types/quiz';
 	import { generateShareUrl, getShareText, shareLinks, copyToClipboard } from '$lib/utils/sharing';
 	import { quizStore } from '$lib/stores/quiz';
+	import { mbtiDescriptions, type MBTIType } from '$lib/data/mbti-descriptions';
 
 	export let language: Language;
 	export let onRestart: () => void;
@@ -45,6 +46,10 @@
 				{/if}
 			</div>
 		</div>
+
+		{#if $quizStore.mbtiType && mbtiDescriptions[$quizStore.mbtiType as MBTIType]}
+			<p class="mbti-description">{mbtiDescriptions[$quizStore.mbtiType as MBTIType]}</p>
+		{/if}
 
 		<p class="personality">{language.personality}</p>
 
@@ -218,6 +223,16 @@
 		border-radius: 20px;
 		font-size: 0.8rem;
 		font-weight: 600;
+	}
+
+	.mbti-description {
+		font-size: 1rem;
+		color: var(--color-text-secondary);
+		margin-bottom: 1rem;
+		line-height: 1.5;
+		padding: 1rem;
+		background: var(--color-bg-secondary, rgba(0, 0, 0, 0.03));
+		border-radius: 8px;
 	}
 
 	.personality {

@@ -32,7 +32,7 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 		}
 	};
 
-	// Question 1: Primary use case
+	// Question 1: Primary use case - More generic answers
 	addQuestionIfValid('use_case', 'What do you want to build?', 'domain', [
 		{
 			id: 'use_web',
@@ -51,7 +51,8 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 							'java',
 							'csharp',
 							'elixir',
-							'dart'
+							'dart',
+							'coffeescript'
 						].includes(l.id)
 				)
 				.map((l) => l.id)
@@ -96,7 +97,9 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.primaryDomain === 'systems' ||
-						['c', 'cpp', 'rust', 'go', 'zig', 'nim', 'd', 'ada'].includes(l.id)
+						['c', 'cpp', 'rust', 'go', 'zig', 'nim', 'd', 'ada', 'odin', 'vale', 'carbon'].includes(
+							l.id
+						)
 				)
 				.map((l) => l.id)
 		},
@@ -105,7 +108,17 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 			text: 'Games and graphics',
 			languages: candidateLanguages
 				.filter((l) =>
-					['cpp', 'csharp', 'rust', 'lua', 'gdscript', 'haxe', 'unrealscript'].includes(l.id)
+					[
+						'cpp',
+						'csharp',
+						'rust',
+						'lua',
+						'gdscript',
+						'haxe',
+						'unrealscript',
+						'monkey',
+						'glsl'
+					].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
@@ -116,261 +129,53 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.primaryDomain === 'scripting' ||
-						['python', 'bash', 'perl', 'ruby', 'lua', 'powershell', 'tcl'].includes(l.id)
+						['python', 'bash', 'perl', 'ruby', 'lua', 'powershell', 'rexx', 'autohotkey'].includes(
+							l.id
+						)
 				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'use_mathematical',
-			text: 'Mathematical notation and array programming',
+			id: 'use_education',
+			text: 'Educational or visual programming',
 			languages: candidateLanguages
-				.filter((l) => ['apl', 'j', 'matlab'].includes(l.id))
+				.filter((l) => ['scratch', 'logo', 'alice', 'scheme', 'racket', 'ring'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'use_children_education',
-			text: 'Teaching children and visual programming',
+			id: 'use_enterprise',
+			text: 'Enterprise and business applications',
 			languages: candidateLanguages
-				.filter((l) => ['scratch', 'logo', 'alice'].includes(l.id))
+				.filter((l) =>
+					[
+						'java',
+						'csharp',
+						'cobol',
+						'visualbasic',
+						'delphi',
+						'sas',
+						'plsql',
+						'abap',
+						'apex'
+					].includes(l.id)
+				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'use_legacy_web',
-			text: 'Legacy web and Flash development',
+			id: 'use_scientific',
+			text: 'Scientific and mathematical computing',
 			languages: candidateLanguages
-				.filter((l) => ['actionscript', 'coffeescript', 'dart'].includes(l.id))
+				.filter((l) =>
+					['matlab', 'julia', 'r', 'fortran', 'apl', 'j', 'mathematica', 'chapel'].includes(l.id)
+				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'use_apple_legacy',
-			text: 'Legacy Apple platform development',
+			id: 'use_embedded',
+			text: 'Embedded systems and IoT',
 			languages: candidateLanguages
-				.filter((l) => ['objectivec', 'applescript'].includes(l.id))
+				.filter((l) => ['c', 'cpp', 'rust', 'ada', 'forth', 'micropython', 'zig'].includes(l.id))
 				.map((l) => l.id)
-		},
-		{
-			id: 'use_statistical_enterprise',
-			text: 'Enterprise statistical analysis',
-			languages: candidateLanguages
-				.filter((l) => ['sas', 'spss', 'stata'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'use_database_admin',
-			text: 'Database administration and queries',
-			languages: candidateLanguages
-				.filter((l) => ['sql', 'plsql', 'tsql'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'use_flash_actionscript',
-			text: 'Flash and ActionScript development',
-			languages: candidateLanguages.filter((l) => ['actionscript'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_coffeescript_js',
-			text: 'CoffeeScript as JavaScript alternative',
-			languages: candidateLanguages.filter((l) => ['coffeescript'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_smalltalk_live',
-			text: 'Smalltalk-style live coding and reflection',
-			languages: candidateLanguages.filter((l) => ['smalltalk'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_cross_platform_games',
-			text: 'Cross-platform game development frameworks',
-			languages: candidateLanguages.filter((l) => ['monkey'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_simple_visual_ring',
-			text: 'Simple visual programming with Ring',
-			languages: candidateLanguages.filter((l) => ['ring'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_gui_tcltk',
-			text: 'GUI scripting with Tcl/Tk',
-			languages: candidateLanguages.filter((l) => ['tcltk'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_pre_swift_ios',
-			text: 'Pre-Swift iOS and macOS development',
-			languages: candidateLanguages.filter((l) => ['objectivec'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_flutter_dart',
-			text: 'Flutter cross-platform mobile development',
-			languages: candidateLanguages.filter((l) => ['dart'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_pure_lazy_functional',
-			text: 'Pure functional programming with lazy evaluation',
-			languages: candidateLanguages.filter((l) => ['haskell'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_children_blocks',
-			text: "Children's visual block programming",
-			languages: candidateLanguages.filter((l) => ['scratch'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_windows_automation',
-			text: 'Windows PowerShell automation',
-			languages: candidateLanguages.filter((l) => ['powershell'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_mathematical_apl',
-			text: 'APL mathematical array programming',
-			languages: candidateLanguages.filter((l) => ['apl'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_j_array',
-			text: 'J language array programming',
-			languages: candidateLanguages.filter((l) => ['j'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_lisp_racket',
-			text: 'Racket Lisp dialect programming',
-			languages: candidateLanguages.filter((l) => ['racket'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_purescript_haskell',
-			text: 'PureScript functional web programming',
-			languages: candidateLanguages.filter((l) => ['purescript'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_enterprise_sas',
-			text: 'SAS enterprise statistical computing',
-			languages: candidateLanguages.filter((l) => ['sas'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_rexx_mainframe',
-			text: 'REXX mainframe scripting',
-			languages: candidateLanguages.filter((l) => ['rexx'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_dhall_config',
-			text: 'Dhall configuration language',
-			languages: candidateLanguages.filter((l) => ['dhall'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_pony_actor',
-			text: 'Pony actor model programming',
-			languages: candidateLanguages.filter((l) => ['pony'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_idris_dependent',
-			text: 'Idris dependent type programming',
-			languages: candidateLanguages.filter((l) => ['idris'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_julia_scientific',
-			text: 'Julia high-performance scientific computing',
-			languages: candidateLanguages.filter((l) => ['julia'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_fsharp_functional',
-			text: 'F# functional programming on .NET',
-			languages: candidateLanguages.filter((l) => ['fsharp'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_erlang_telecom',
-			text: 'Erlang telecom and fault-tolerant systems',
-			languages: candidateLanguages.filter((l) => ['erlang'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_standardml_academic',
-			text: 'Standard ML academic functional programming',
-			languages: candidateLanguages.filter((l) => ['standardml'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_vhdl_hardware',
-			text: 'VHDL hardware description language',
-			languages: candidateLanguages.filter((l) => ['vhdl'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_chapel_parallel',
-			text: 'Chapel parallel computing language',
-			languages: candidateLanguages.filter((l) => ['chapel'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_systemverilog_verification',
-			text: 'SystemVerilog hardware verification',
-			languages: candidateLanguages.filter((l) => ['systemverilog'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_prolog_logic',
-			text: 'Prolog logic and expert systems',
-			languages: candidateLanguages.filter((l) => ['prolog'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_lisp_symbolic',
-			text: 'Lisp symbolic computation',
-			languages: candidateLanguages.filter((l) => ['lisp'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_scheme_educational',
-			text: 'Scheme educational functional programming',
-			languages: candidateLanguages.filter((l) => ['scheme'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_nim_systems',
-			text: 'Nim systems programming',
-			languages: candidateLanguages.filter((l) => ['nim'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_commonlisp_ai',
-			text: 'Common Lisp AI development',
-			languages: candidateLanguages.filter((l) => ['commonlisp'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_opencl_gpu',
-			text: 'OpenCL GPU computing',
-			languages: candidateLanguages.filter((l) => ['opencl'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_factor_stack',
-			text: 'Factor stack-based programming',
-			languages: candidateLanguages.filter((l) => ['factor'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_qsharp_quantum',
-			text: 'Q# quantum computing',
-			languages: candidateLanguages.filter((l) => ['qsharp'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_cobol_mainframe',
-			text: 'COBOL mainframe business systems',
-			languages: candidateLanguages.filter((l) => ['cobol'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_plsql_oracle',
-			text: 'PL/SQL Oracle database programming',
-			languages: candidateLanguages.filter((l) => ['plsql'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_eiffel_oop',
-			text: 'Eiffel object-oriented programming',
-			languages: candidateLanguages.filter((l) => ['eiffel'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_cuda_nvidia',
-			text: 'CUDA NVIDIA GPU programming',
-			languages: candidateLanguages.filter((l) => ['cuda'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_glsl_shaders',
-			text: 'GLSL graphics shader programming',
-			languages: candidateLanguages.filter((l) => ['glsl'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_forth_embedded',
-			text: 'Forth embedded stack programming',
-			languages: candidateLanguages.filter((l) => ['forth'].includes(l.id)).map((l) => l.id)
-		},
-		{
-			id: 'use_purebasic_windows',
-			text: 'PureBasic Windows application development',
-			languages: candidateLanguages.filter((l) => ['purebasic'].includes(l.id)).map((l) => l.id)
 		}
 	]);
 
@@ -396,7 +201,11 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 							'reasonml',
 							'standardml',
 							'lean',
-							'idris'
+							'idris',
+							'lisp',
+							'scheme',
+							'racket',
+							'commonlisp'
 						].includes(l.id)
 				)
 				.map((l) => l.id)
@@ -420,7 +229,9 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 							'smalltalk',
 							'eiffel',
 							'simula',
-							'visualbasic'
+							'visualbasic',
+							'objectivec',
+							'apex'
 						].includes(l.id)
 				)
 				.map((l) => l.id)
@@ -432,7 +243,7 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.paradigm === 'procedural' ||
-						['c', 'go', 'pascal', 'fortran', 'cobol', 'basic'].includes(l.id)
+						['c', 'go', 'pascal', 'fortran', 'cobol', 'basic', 'ada', 'modula'].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
@@ -443,29 +254,32 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.paradigm === 'multi_paradigm' ||
-						['python', 'javascript', 'typescript', 'rust', 'scala', 'swift', 'nim'].includes(l.id)
+						[
+							'python',
+							'javascript',
+							'typescript',
+							'rust',
+							'scala',
+							'swift',
+							'nim',
+							'd',
+							'julia'
+						].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'style_mathematical',
-			text: 'Mathematical and symbolic programming',
+			id: 'style_logic',
+			text: 'Logic and declarative programming',
 			languages: candidateLanguages
-				.filter((l) => ['apl', 'j', 'mathematica', 'maxima'].includes(l.id))
+				.filter((l) => ['prolog', 'datalog', 'mercury'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'style_pure_functional',
-			text: 'Pure functional programming with strong types',
+			id: 'style_stack',
+			text: 'Stack-based or concatenative programming',
 			languages: candidateLanguages
-				.filter((l) => ['haskell', 'idris', 'agda'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'style_object_pure',
-			text: 'Pure object-oriented with everything as objects',
-			languages: candidateLanguages
-				.filter((l) => ['smalltalk', 'ruby', 'pharo'].includes(l.id))
+				.filter((l) => ['forth', 'factor', 'postscript'].includes(l.id))
 				.map((l) => l.id)
 		}
 	]);
@@ -491,7 +305,10 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 							'carbon',
 							'julia',
 							'chapel',
-							'pony'
+							'pony',
+							'nim',
+							'odin',
+							'vale'
 						].includes(l.id)
 				)
 				.map((l) => l.id)
@@ -514,7 +331,8 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 							'dart',
 							'coffeescript',
 							'ring',
-							'autohotkey'
+							'autohotkey',
+							'visualbasic'
 						].includes(l.id)
 				)
 				.map((l) => l.id)
@@ -526,15 +344,18 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.performanceNeeds === 'important' ||
-						['go', 'rust', 'java', 'csharp', 'swift', 'kotlin', 'nim'].includes(l.id)
+						[
+							'go',
+							'rust',
+							'java',
+							'csharp',
+							'swift',
+							'kotlin',
+							'nim',
+							'crystal',
+							'elixir'
+						].includes(l.id)
 				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'perf_next_gen',
-			text: 'Cutting-edge next-generation performance',
-			languages: candidateLanguages
-				.filter((l) => ['carbon', 'pony', 'd', 'mojo'].includes(l.id))
 				.map((l) => l.id)
 		}
 	]);
@@ -548,22 +369,8 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.learningCurve === 'gentle' ||
-						['python', 'javascript', 'ruby', 'go', 'lua', 'basic'].includes(l.id)
+						['python', 'javascript', 'ruby', 'go', 'lua', 'basic', 'scratch', 'logo'].includes(l.id)
 				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'learn_business',
-			text: 'Business-friendly with RAD tools',
-			languages: candidateLanguages
-				.filter((l) => ['visualbasic', 'purebasic', 'delphi', 'rexx'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'learn_visual',
-			text: 'Visual and beginner-friendly',
-			languages: candidateLanguages
-				.filter((l) => ['scratch', 'logo', 'alice', 'labview'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
@@ -573,7 +380,9 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 				.filter(
 					(l) =>
 						l.learningCurve === 'moderate' ||
-						['java', 'csharp', 'typescript', 'kotlin', 'swift', 'dart', 'php'].includes(l.id)
+						['java', 'csharp', 'typescript', 'kotlin', 'swift', 'dart', 'php', 'elixir'].includes(
+							l.id
+						)
 				)
 				.map((l) => l.id)
 		},
@@ -597,7 +406,8 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 							'lean',
 							'idris',
 							'apl',
-							'j'
+							'j',
+							'agda'
 						].includes(l.id)
 				)
 				.map((l) => l.id)
@@ -610,895 +420,468 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 			id: 'comm_large',
 			text: 'Large, established community with tons of resources',
 			languages: candidateLanguages
-				.filter(
-					(l) =>
-						l.ecosystemMaturity === 'mature' ||
-						['javascript', 'python', 'java', 'cpp', 'csharp', 'php', 'ruby', 'go'].includes(l.id)
+				.filter((l) =>
+					[
+						'python',
+						'javascript',
+						'java',
+						'cpp',
+						'csharp',
+						'php',
+						'ruby',
+						'go',
+						'rust',
+						'typescript',
+						'swift',
+						'kotlin'
+					].includes(l.id)
+				)
+				.map((l) => l.id)
+		},
+		{
+			id: 'comm_specialized',
+			text: 'Specialized community focused on specific domains',
+			languages: candidateLanguages
+				.filter((l) =>
+					[
+						'r',
+						'matlab',
+						'julia',
+						'haskell',
+						'erlang',
+						'elixir',
+						'clojure',
+						'fortran',
+						'cobol',
+						'lisp',
+						'prolog',
+						'apl'
+					].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
 		{
 			id: 'comm_growing',
-			text: 'Growing, enthusiastic community',
+			text: 'Growing, innovative community',
 			languages: candidateLanguages
-				.filter(
-					(l) =>
-						l.ecosystemMaturity === 'modern' ||
-						[
-							'rust',
-							'kotlin',
-							'swift',
-							'typescript',
-							'dart',
-							'elixir',
-							'julia',
-							'carbon',
-							'pony',
-							'd'
-						].includes(l.id)
+				.filter((l) =>
+					[
+						'rust',
+						'zig',
+						'nim',
+						'crystal',
+						'elixir',
+						'purescript',
+						'reasonml',
+						'dart',
+						'julia',
+						'carbon',
+						'vale',
+						'odin',
+						'pony'
+					].includes(l.id)
 				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'comm_niche',
-			text: 'Small, specialized community',
-			languages: candidateLanguages
-				.filter(
-					(l) =>
-						l.ecosystemMaturity === 'bleeding_edge' ||
-						['clojure', 'erlang', 'nim', 'zig', 'crystal', 'racket'].includes(l.id)
-				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'comm_academic',
-			text: 'Academic and research-focused community',
-			languages: candidateLanguages
-				.filter((l) => ['haskell', 'chapel', 'standardml', 'simula'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'comm_mathematical',
-			text: 'Mathematical and notation specialists',
-			languages: candidateLanguages
-				.filter((l) => ['apl', 'j', 'maxima', 'mathematica'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'comm_configuration',
-			text: 'Configuration and infrastructure specialists',
-			languages: candidateLanguages
-				.filter((l) => ['dhall', 'nix', 'tcltk'].includes(l.id))
 				.map((l) => l.id)
 		}
 	]);
 
 	// Question 6: Type system preference
-	addQuestionIfValid('type_system', 'How do you prefer to handle types in your code?', 'style', [
+	addQuestionIfValid('types', 'How do you prefer to handle types in your code?', 'style', [
 		{
-			id: 'type_static',
+			id: 'types_static',
 			text: 'Strong static typing - catch errors at compile time',
 			languages: candidateLanguages
-				.filter(
-					(l) =>
-						l.typing === 'static' ||
-						[
-							'java',
-							'csharp',
-							'rust',
-							'go',
-							'swift',
-							'kotlin',
-							'haskell',
-							'scala',
-							'fsharp',
-							'ocaml',
-							'sql',
-							'plsql',
-							'eiffel'
-						].includes(l.id)
+				.filter((l) =>
+					[
+						'rust',
+						'haskell',
+						'typescript',
+						'java',
+						'csharp',
+						'cpp',
+						'swift',
+						'kotlin',
+						'scala',
+						'fsharp',
+						'ocaml',
+						'go',
+						'ada'
+					].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'type_dynamic',
-			text: 'Dynamic typing - flexibility and duck typing',
-			languages: candidateLanguages
-				.filter(
-					(l) =>
-						l.typing === 'dynamic' ||
-						[
-							'python',
-							'javascript',
-							'ruby',
-							'php',
-							'perl',
-							'lua',
-							'clojure',
-							'smalltalk',
-							'actionscript',
-							'coffeescript',
-							'ring',
-							'rexx'
-						].includes(l.id)
-				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'type_gradual',
-			text: 'Optional typing - types when I need them',
-			languages: candidateLanguages
-				.filter(
-					(l) => l.typing === 'gradual' || ['typescript', 'python', 'dart', 'kotlin'].includes(l.id)
-				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'type_creative',
-			text: 'Flexible typing for creative work',
-			languages: candidateLanguages
-				.filter((l) => ['ring', 'tcltk', 'monkey'].includes(l.id))
-				.map((l) => l.id)
-		}
-	]);
-
-	// Question 7: Application scale
-	addQuestionIfValid('scale', 'What scale of applications do you typically build?', 'domain', [
-		{
-			id: 'scale_small',
-			text: 'Small scripts and utilities',
+			id: 'types_dynamic',
+			text: 'Dynamic typing - flexibility and rapid development',
 			languages: candidateLanguages
 				.filter((l) =>
 					[
 						'python',
-						'bash',
-						'perl',
-						'ruby',
-						'lua',
 						'javascript',
-						'autohotkey',
-						'rexx',
-						'tcltk',
+						'ruby',
+						'php',
+						'perl',
+						'lua',
+						'clojure',
+						'lisp',
+						'scheme',
+						'erlang',
+						'elixir',
+						'smalltalk'
+					].includes(l.id)
+				)
+				.map((l) => l.id)
+		},
+		{
+			id: 'types_optional',
+			text: 'Optional/gradual typing - best of both worlds',
+			languages: candidateLanguages
+				.filter((l) => ['typescript', 'python', 'dart', 'crystal', 'nim', 'raku'].includes(l.id))
+				.map((l) => l.id)
+		}
+	]);
+
+	// Question 7: Platform preference
+	addQuestionIfValid('platform', 'Which platform is most important to you?', 'ecosystem', [
+		{
+			id: 'plat_web',
+			text: 'Web browsers',
+			languages: candidateLanguages
+				.filter((l) =>
+					['javascript', 'typescript', 'elm', 'purescript', 'reasonml', 'dart', 'wasm'].includes(
+						l.id
+					)
+				)
+				.map((l) => l.id)
+		},
+		{
+			id: 'plat_server',
+			text: 'Servers and cloud',
+			languages: candidateLanguages
+				.filter((l) =>
+					[
+						'python',
+						'java',
+						'go',
+						'rust',
+						'javascript',
+						'ruby',
+						'csharp',
+						'php',
+						'elixir',
+						'erlang',
+						'scala',
+						'kotlin',
+						'apex'
+					].includes(l.id)
+				)
+				.map((l) => l.id)
+		},
+		{
+			id: 'plat_mobile',
+			text: 'Mobile devices',
+			languages: candidateLanguages
+				.filter((l) => ['swift', 'kotlin', 'dart', 'java', 'objectivec', 'csharp'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'plat_desktop',
+			text: 'Desktop applications',
+			languages: candidateLanguages
+				.filter((l) =>
+					[
+						'cpp',
+						'csharp',
+						'java',
+						'python',
+						'rust',
+						'go',
+						'swift',
+						'delphi',
+						'visualbasic',
 						'purebasic'
 					].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'scale_medium',
-			text: 'Medium-sized applications',
+			id: 'plat_embedded',
+			text: 'Embedded and IoT devices',
 			languages: candidateLanguages
-				.filter((l) =>
-					['python', 'javascript', 'typescript', 'go', 'ruby', 'php', 'dart'].includes(l.id)
-				)
+				.filter((l) => ['c', 'cpp', 'rust', 'ada', 'forth', 'micropython'].includes(l.id))
+				.map((l) => l.id)
+		}
+	]);
+
+	// Specialized domain questions - these are more generic now
+
+	// Question 8: Specialized computing needs
+	addQuestionIfValid('specialized', 'Do you have specialized computing needs?', 'domain', [
+		{
+			id: 'spec_gpu',
+			text: 'GPU and parallel computing',
+			languages: candidateLanguages
+				.filter((l) => ['cuda', 'opencl', 'glsl', 'hlsl', 'julia', 'chapel'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'scale_large',
-			text: 'Large enterprise systems',
+			id: 'spec_quantum',
+			text: 'Quantum computing',
+			languages: candidateLanguages
+				.filter((l) => ['qsharp', 'qiskit', 'cirq'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'spec_hardware',
+			text: 'Hardware design and verification',
+			languages: candidateLanguages
+				.filter((l) => ['vhdl', 'verilog', 'systemverilog', 'chisel'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'spec_symbolic',
+			text: 'Symbolic computation and AI',
+			languages: candidateLanguages
+				.filter((l) => ['lisp', 'prolog', 'scheme', 'racket', 'commonlisp'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'spec_none',
+			text: 'No specialized needs',
 			languages: candidateLanguages
 				.filter((l) =>
-					[
-						'java',
-						'csharp',
-						'cpp',
-						'scala',
-						'go',
-						'rust',
-						'kotlin',
-						'erlang',
-						'fsharp',
-						'visualbasic',
-						'eiffel',
-						'simula'
-					].includes(l.id)
+					['python', 'javascript', 'java', 'cpp', 'go', 'rust', 'csharp'].includes(l.id)
 				)
 				.map((l) => l.id)
 		}
 	]);
 
-	// Question 8: Platform preference
-	addQuestionIfValid('platform', 'Which platform is most important to you?', 'domain', [
-		{
-			id: 'platform_browser',
-			text: 'Web browsers',
-			languages: candidateLanguages
-				.filter((l) =>
-					[
-						'javascript',
-						'typescript',
-						'elm',
-						'purescript',
-						'dart',
-						'reasonml',
-						'clojurescript'
-					].includes(l.id)
-				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'platform_server',
-			text: 'Servers and cloud',
-			languages: candidateLanguages
-				.filter((l) =>
-					['python', 'java', 'go', 'javascript', 'ruby', 'csharp', 'rust', 'elixir'].includes(l.id)
-				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'platform_mobile',
-			text: 'Mobile devices',
-			languages: candidateLanguages
-				.filter((l) =>
-					[
-						'swift',
-						'kotlin',
-						'dart',
-						'java',
-						'objectivec',
-						'csharp',
-						'monkey',
-						'actionscript'
-					].includes(l.id)
-				)
-				.map((l) => l.id)
-		},
-		{
-			id: 'platform_embedded',
-			text: 'Embedded systems',
-			languages: candidateLanguages
-				.filter((l) =>
-					['c', 'cpp', 'rust', 'ada', 'forth', 'assembly', 'labview', 'd'].includes(l.id)
-				)
-				.map((l) => l.id)
-		}
-	]);
-
-	// If we still don't have enough questions, add some general preferences
-	if (questions.length < 3) {
-		addQuestionIfValid('general_preference', 'Which of these appeals to you most?', 'style', [
+	// Question 9: Mathematical and array programming style
+	addQuestionIfValid(
+		'mathematical',
+		'How do you prefer to work with mathematical concepts?',
+		'style',
+		[
 			{
-				id: 'pref_popular',
-				text: 'Popular and widely used languages',
+				id: 'math_symbolic',
+				text: 'Symbolic notation and concise operators',
 				languages: candidateLanguages
-					.filter((l) =>
-						[
-							'python',
-							'javascript',
-							'java',
-							'cpp',
-							'csharp',
-							'typescript',
-							'go',
-							'swift',
-							'kotlin',
-							'rust'
-						].includes(l.id)
-					)
+					.filter((l) => ['apl', 'j', 'k', 'mathematica'].includes(l.id))
 					.map((l) => l.id)
 			},
 			{
-				id: 'pref_innovative',
-				text: 'Innovative and cutting-edge languages',
+				id: 'math_traditional',
+				text: 'Traditional mathematical syntax',
 				languages: candidateLanguages
-					.filter((l) => ['rust', 'zig', 'nim', 'crystal', 'vlang', 'odin', 'mojo'].includes(l.id))
+					.filter((l) => ['matlab', 'julia', 'r', 'fortran', 'octave'].includes(l.id))
 					.map((l) => l.id)
 			},
 			{
-				id: 'pref_specialized',
-				text: 'Specialized languages for specific domains',
+				id: 'math_libraries',
+				text: 'Through libraries in general-purpose languages',
 				languages: candidateLanguages
-					.filter((l) =>
-						['r', 'matlab', 'julia', 'sql', 'prolog', 'coq', 'agda', 'idris'].includes(l.id)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'pref_classic',
-				text: 'Classic, time-tested languages',
-				languages: candidateLanguages
-					.filter((l) =>
-						['c', 'lisp', 'fortran', 'cobol', 'pascal', 'ada', 'scheme', 'smalltalk'].includes(l.id)
-					)
+					.filter((l) => ['python', 'cpp', 'java', 'csharp', 'javascript'].includes(l.id))
 					.map((l) => l.id)
 			}
-		]);
-	}
+		]
+	);
 
-	// Specialized questions to ensure underrepresented languages have paths to victory
-	// These target specific niches where certain languages excel
-
-	// Question: Legacy and Mainframe Systems
-	addQuestionIfValid('legacy_systems', 'Do you work with legacy or mainframe systems?', 'domain', [
+	// Question 10: Legacy and specialized platforms
+	addQuestionIfValid('legacy', 'Do you work with legacy or specialized platforms?', 'ecosystem', [
+		{
+			id: 'legacy_salesforce',
+			text: 'Salesforce platform and CRM',
+			languages: candidateLanguages.filter((l) => ['apex'].includes(l.id)).map((l) => l.id)
+		},
 		{
 			id: 'legacy_mainframe',
-			text: 'Yes, primarily mainframe and legacy systems',
+			text: 'Mainframe and enterprise systems',
 			languages: candidateLanguages
-				.filter((l) => ['cobol', 'fortran', 'assembly', 'ada', 'plsql'].includes(l.id))
+				.filter((l) => ['cobol', 'pl1', 'rexx', 'jcl', 'rpg'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'legacy_some',
-			text: 'Some legacy support needed',
+			id: 'legacy_windows',
+			text: 'Windows automation and scripting',
 			languages: candidateLanguages
-				.filter((l) => ['delphi', 'visualbasic', 'c', 'pascal', 'perl'].includes(l.id))
+				.filter((l) => ['powershell', 'visualbasic', 'batch', 'autohotkey'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'legacy_modern',
-			text: 'Modern systems only',
+			id: 'legacy_apple',
+			text: 'Apple ecosystem (pre-modern)',
 			languages: candidateLanguages
-				.filter((l) => ['python', 'javascript', 'rust', 'go', 'java'].includes(l.id))
+				.filter((l) => ['objectivec', 'applescript'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'legacy_web',
+			text: 'Legacy web technologies',
+			languages: candidateLanguages
+				.filter((l) => ['actionscript', 'coffeescript', 'vbscript'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'legacy_none',
+			text: 'Modern platforms only',
+			languages: candidateLanguages
+				.filter((l) => ['rust', 'go', 'typescript', 'swift', 'kotlin', 'dart'].includes(l.id))
 				.map((l) => l.id)
 		}
 	]);
 
-	// Question: Scientific and Mathematical Computing
-	addQuestionIfValid(
-		'scientific_computing',
-		'How important is advanced mathematical computation?',
-		'domain',
-		[
-			{
-				id: 'sci_critical',
-				text: 'Critical - heavy numerical analysis and modeling',
-				languages: candidateLanguages
-					.filter((l) => ['matlab', 'julia', 'fortran', 'sas', 'mathematica'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'sci_moderate',
-				text: 'Moderate - some data analysis',
-				languages: candidateLanguages
-					.filter((l) => ['r', 'python', 'scala', 'numpy', 'octave'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'sci_minimal',
-				text: 'Not important',
-				languages: candidateLanguages
-					.filter((l) => ['javascript', 'java', 'csharp', 'go', 'php'].includes(l.id))
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Question: Blockchain and Cryptocurrency
-	addQuestionIfValid('blockchain', 'Are you interested in blockchain development?', 'domain', [
+	// Question 11: Development philosophy
+	addQuestionIfValid('philosophy', 'What development philosophy resonates with you?', 'style', [
 		{
-			id: 'blockchain_primary',
-			text: 'Yes, smart contracts and DeFi',
+			id: 'phil_simple',
+			text: 'Simplicity and minimalism',
 			languages: candidateLanguages
-				.filter((l) => ['solidity', 'rust', 'javascript', 'move'].includes(l.id))
+				.filter((l) => ['go', 'c', 'lua', 'scheme', 'forth', 'zig'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'blockchain_explore',
-			text: 'Want to explore blockchain',
+			id: 'phil_expressive',
+			text: 'Expressiveness and developer happiness',
 			languages: candidateLanguages
-				.filter((l) => ['python', 'go', 'javascript', 'rust', 'java'].includes(l.id))
+				.filter((l) => ['ruby', 'python', 'elixir', 'crystal', 'nim', 'janet'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'blockchain_no',
-			text: 'Not interested in blockchain',
+			id: 'phil_safety',
+			text: 'Safety and correctness',
 			languages: candidateLanguages
-				.filter((l) => ['python', 'java', 'csharp', 'php', 'ruby'].includes(l.id))
-				.map((l) => l.id)
-		}
-	]);
-
-	// Question: Visual and Educational Programming
-	addQuestionIfValid(
-		'visual_programming',
-		'Do you prefer visual programming environments?',
-		'domain',
-		[
-			{
-				id: 'visual_yes',
-				text: 'Yes, drag-and-drop and visual tools',
-				languages: candidateLanguages
-					.filter((l) => ['scratch', 'labview', 'simulink', 'blueprint'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'visual_hybrid',
-				text: 'Mix of visual and text-based',
-				languages: candidateLanguages
-					.filter((l) => ['python', 'javascript', 'swift', 'dart', 'processing'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'visual_text',
-				text: 'Pure text-based coding',
-				languages: candidateLanguages
-					.filter((l) => ['c', 'rust', 'haskell', 'lisp', 'assembly'].includes(l.id))
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Question: Text Processing and Automation
-	addQuestionIfValid('text_processing', 'How much text processing do you do?', 'domain', [
-		{
-			id: 'text_heavy',
-			text: 'Heavy - logs, files, and data transformation',
-			languages: candidateLanguages
-				.filter((l) => ['awk', 'sed', 'perl', 'grep', 'regex'].includes(l.id))
+				.filter((l) => ['rust', 'ada', 'haskell', 'idris', 'agda', 'lean'].includes(l.id))
 				.map((l) => l.id)
 		},
 		{
-			id: 'text_scripting',
-			text: 'Moderate - automation scripts',
-			languages: candidateLanguages
-				.filter((l) => ['python', 'bash', 'powershell', 'ruby', 'lua'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'text_minimal',
-			text: 'Minimal text processing',
-			languages: candidateLanguages
-				.filter((l) => ['java', 'csharp', 'cpp', 'rust', 'go'].includes(l.id))
-				.map((l) => l.id)
-		}
-	]);
-
-	// Question: AI and Logic Programming
-	addQuestionIfValid(
-		'ai_logic',
-		'Are you involved in AI research or formal verification?',
-		'domain',
-		[
-			{
-				id: 'ai_research',
-				text: 'Yes, AI research and symbolic computation',
-				languages: candidateLanguages
-					.filter((l) => ['prolog', 'lisp', 'scheme', 'commonlisp', 'racket'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'ai_formal',
-				text: 'Formal verification and theorem proving',
-				languages: candidateLanguages
-					.filter((l) => ['coq', 'agda', 'idris', 'lean', 'isabelle'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'ai_ml',
-				text: 'Machine learning and data science',
-				languages: candidateLanguages
-					.filter((l) => ['python', 'r', 'julia', 'scala', 'matlab'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'ai_none',
-				text: 'Not involved in AI',
-				languages: candidateLanguages
-					.filter((l) => ['java', 'javascript', 'csharp', 'go', 'php'].includes(l.id))
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Question: Database Administration
-	addQuestionIfValid('database_focus', 'Is database management your primary focus?', 'domain', [
-		{
-			id: 'db_admin',
-			text: 'Yes, database administration and queries',
-			languages: candidateLanguages
-				.filter((l) => ['sql', 'plsql', 'tsql', 'mysql', 'postgresql'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'db_development',
-			text: 'Database-driven application development',
-			languages: candidateLanguages
-				.filter((l) => ['java', 'csharp', 'python', 'php', 'ruby'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'db_minimal',
-			text: 'Minimal database interaction',
-			languages: candidateLanguages
-				.filter((l) => ['javascript', 'rust', 'go', 'swift', 'kotlin'].includes(l.id))
-				.map((l) => l.id)
-		}
-	]);
-
-	// Question: Next-Generation Performance
-	addQuestionIfValid(
-		'nextgen_performance',
-		'Are you interested in cutting-edge performance languages?',
-		'domain',
-		[
-			{
-				id: 'nextgen_bleeding',
-				text: 'Yes, newest performance-focused languages',
-				languages: candidateLanguages
-					.filter((l) => ['mojo', 'carbon', 'vale', 'zig', 'odin'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'nextgen_modern',
-				text: 'Modern proven performance languages',
-				languages: candidateLanguages
-					.filter((l) => ['rust', 'go', 'swift', 'kotlin', 'nim'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'nextgen_established',
-				text: 'Established performance languages',
-				languages: candidateLanguages
-					.filter((l) => ['c', 'cpp', 'java', 'csharp', 'fortran'].includes(l.id))
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Question: Hardware and Low-Level Programming
-	addQuestionIfValid(
-		'hardware_programming',
-		'Do you work with hardware or embedded systems?',
-		'domain',
-		[
-			{
-				id: 'hardware_embedded',
-				text: 'Yes, embedded systems and microcontrollers',
-				languages: candidateLanguages
-					.filter((l) => ['c', 'assembly', 'rust', 'ada', 'forth'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'hardware_graphics',
-				text: 'Graphics programming and shaders',
-				languages: candidateLanguages
-					.filter((l) => ['glsl', 'hlsl', 'cuda', 'opencl', 'cpp'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'hardware_fpga',
-				text: 'FPGA and hardware description',
-				languages: candidateLanguages
-					.filter((l) => ['verilog', 'vhdl', 'systemverilog', 'chisel'].includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'hardware_none',
-				text: 'No hardware programming',
-				languages: candidateLanguages
-					.filter((l) => ['python', 'javascript', 'java', 'csharp', 'go'].includes(l.id))
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Question: Windows Ecosystem
-	addQuestionIfValid('windows_ecosystem', 'How important is Windows integration?', 'domain', [
-		{
-			id: 'windows_admin',
-			text: 'Windows administration and automation',
-			languages: candidateLanguages
-				.filter((l) => ['powershell', 'autohotkey', 'batch', 'vbscript'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'windows_desktop',
-			text: 'Windows desktop applications',
-			languages: candidateLanguages
-				.filter((l) => ['csharp', 'cpp', 'visualbasic', 'vbnet', 'delphi'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'windows_cross',
-			text: 'Cross-platform with Windows support',
-			languages: candidateLanguages
-				.filter((l) => ['java', 'python', 'javascript', 'go', 'rust'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'windows_minimal',
-			text: 'Not Windows-focused',
-			languages: candidateLanguages
-				.filter((l) => ['python', 'javascript', 'ruby', 'php', 'swift'].includes(l.id))
-				.map((l) => l.id)
-		}
-	]);
-
-	// Question: Educational and Learning Focus
-	addQuestionIfValid('educational_focus', 'Are you teaching or learning programming?', 'domain', [
-		{
-			id: 'edu_beginners',
-			text: 'Teaching beginners and children',
-			languages: candidateLanguages
-				.filter((l) => ['scratch', 'python', 'javascript', 'java', 'processing'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'edu_academic',
-			text: 'Academic computer science research',
-			languages: candidateLanguages
-				.filter((l) => ['haskell', 'ocaml', 'scheme', 'prolog', 'coq'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'edu_professional',
-			text: 'Professional development training',
-			languages: candidateLanguages
-				.filter((l) => ['java', 'python', 'javascript', 'csharp', 'go'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'edu_self',
-			text: 'Self-learning for projects',
-			languages: candidateLanguages
-				.filter((l) => ['python', 'javascript', 'rust', 'go', 'swift'].includes(l.id))
-				.map((l) => l.id)
-		}
-	]);
-
-	// Question: Rare and Specialized Domains
-	addQuestionIfValid('specialized_domains', 'Do you work in specialized domains?', 'domain', [
-		{
-			id: 'spec_finance',
-			text: 'Financial trading and quantitative analysis',
-			languages: candidateLanguages
-				.filter((l) => ['mql4', 'q', 'kdb', 'r', 'matlab'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'spec_aerospace',
-			text: 'Aerospace and safety-critical systems',
-			languages: candidateLanguages
-				.filter((l) => ['ada', 'spark', 'misrac', 'fortran', 'simulink'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'spec_config',
-			text: 'Configuration and infrastructure',
-			languages: candidateLanguages
-				.filter((l) => ['dhall', 'nix', 'terraform', 'yaml', 'json'].includes(l.id))
-				.map((l) => l.id)
-		},
-		{
-			id: 'spec_creative',
-			text: 'Creative coding and digital art',
+			id: 'phil_pragmatic',
+			text: 'Pragmatic and practical',
 			languages: candidateLanguages
 				.filter((l) =>
-					['processing', 'openframeworks', 'max', 'pd', 'supercollider'].includes(l.id)
+					['java', 'csharp', 'typescript', 'kotlin', 'swift', 'dart', 'apex'].includes(l.id)
+				)
+				.map((l) => l.id)
+		}
+	]);
+
+	// Question 12: Actor model and concurrency
+	addQuestionIfValid('concurrency', 'How do you prefer to handle concurrency?', 'style', [
+		{
+			id: 'conc_actor',
+			text: 'Actor model and message passing',
+			languages: candidateLanguages
+				.filter((l) => ['erlang', 'elixir', 'pony', 'akka'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'conc_async',
+			text: 'Async/await and promises',
+			languages: candidateLanguages
+				.filter((l) =>
+					['javascript', 'typescript', 'python', 'csharp', 'rust', 'swift', 'dart'].includes(l.id)
 				)
 				.map((l) => l.id)
 		},
 		{
-			id: 'spec_general',
-			text: 'General-purpose development',
+			id: 'conc_channels',
+			text: 'Channels and goroutines',
 			languages: candidateLanguages
-				.filter((l) => ['python', 'javascript', 'java', 'csharp', 'go'].includes(l.id))
+				.filter((l) => ['go', 'rust', 'clojure', 'crystal'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'conc_threads',
+			text: 'Traditional threads and locks',
+			languages: candidateLanguages
+				.filter((l) => ['java', 'cpp', 'c', 'csharp'].includes(l.id))
 				.map((l) => l.id)
 		}
 	]);
 
-	// Ultimate fallback - ensures every language has an exclusive path to victory
-	// Create individual answer choices for remaining problematic languages
-	const _problematicLanguages = [
-		'haskell',
-		'dart',
-		'objectivec',
-		'visualbasic',
-		'sql',
-		'plsql',
-		'd',
-		'scratch',
-		'racket',
-		'sas',
-		'standardml',
-		'smalltalk',
-		'carbon',
-		'actionscript',
-		'apl',
-		'coffeescript',
-		'chapel',
-		'j',
-		'labview',
-		'monkey',
-		'purebasic',
-		'rexx',
-		'ring',
-		'simula',
-		'tcltk',
-		'pony',
-		'idris',
-		'dhall'
-	];
+	// Question 13: Configuration and infrastructure
+	addQuestionIfValid('config', 'Do you work with configuration and infrastructure?', 'domain', [
+		{
+			id: 'config_yes',
+			text: 'Yes, configuration as code',
+			languages: candidateLanguages
+				.filter((l) => ['dhall', 'nix', 'jsonnet', 'cue'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'config_scripting',
+			text: 'Yes, through scripting',
+			languages: candidateLanguages
+				.filter((l) => ['python', 'bash', 'powershell', 'perl', 'ruby'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'config_no',
+			text: 'No, application development only',
+			languages: candidateLanguages
+				.filter((l) => !['dhall', 'nix', 'jsonnet', 'cue'].includes(l.id))
+				.map((l) => l.id)
+		}
+	]);
 
-	// Split into groups and create exclusive answers
+	// Question 14: Teaching and learning
+	addQuestionIfValid('teaching', 'Are you teaching or learning programming?', 'ecosystem', [
+		{
+			id: 'teach_children',
+			text: 'Teaching children or absolute beginners',
+			languages: candidateLanguages
+				.filter((l) => ['scratch', 'logo', 'alice', 'blockly'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'teach_students',
+			text: 'Teaching computer science students',
+			languages: candidateLanguages
+				.filter((l) => ['python', 'java', 'scheme', 'racket', 'c', 'haskell'].includes(l.id))
+				.map((l) => l.id)
+		},
+		{
+			id: 'teach_no',
+			text: 'Professional development',
+			languages: candidateLanguages.map((l) => l.id)
+		}
+	]);
+
+	// Question 15: Live development environment preference
 	addQuestionIfValid(
-		'exclusive_paths',
-		'What specific programming context appeals to you?',
-		'domain',
-		[
-			{
-				id: 'exclusive_legacy_business',
-				text: 'Legacy business and enterprise systems',
-				languages: candidateLanguages
-					.filter((l) =>
-						['objectivec', 'visualbasic', 'sql', 'plsql', 'sas', 'purebasic', 'rexx'].includes(l.id)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'exclusive_creative_interactive',
-				text: 'Creative, visual, and interactive programming',
-				languages: candidateLanguages
-					.filter((l) =>
-						[
-							'scratch',
-							'actionscript',
-							'coffeescript',
-							'monkey',
-							'ring',
-							'tcltk',
-							'smalltalk',
-							'labview'
-						].includes(l.id)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'exclusive_mathematical_research',
-				text: 'Mathematical notation and research programming',
-				languages: candidateLanguages
-					.filter((l) =>
-						['haskell', 'apl', 'j', 'standardml', 'chapel', 'simula', 'racket', 'idris'].includes(
-							l.id
-						)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'exclusive_modern_systems',
-				text: 'Next-generation systems and configuration',
-				languages: candidateLanguages
-					.filter((l) => ['carbon', 'd', 'pony', 'dhall', 'dart'].includes(l.id))
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Targeted question for underrepresented MBTI types
-	// ENFP, ISFJ, ESTJ, ESFP have very few reachable languages - give them specific paths
-	addQuestionIfValid(
-		'mbti_specific_paths',
-		'Which programming approach resonates with you?',
-		'domain',
-		[
-			{
-				id: 'mbti_creative_visual',
-				text: 'Creative, visual, and interactive programming',
-				languages: candidateLanguages
-					.filter((l) =>
-						[
-							'scratch',
-							'actionscript',
-							'coffeescript',
-							'monkey',
-							'ring',
-							'tcltk',
-							'smalltalk',
-							'processing',
-							'labview'
-						].includes(l.id)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'mbti_business_productivity',
-				text: 'Business productivity and automation',
-				languages: candidateLanguages
-					.filter((l) =>
-						[
-							'visualbasic',
-							'autohotkey',
-							'purebasic',
-							'rexx',
-							'dart',
-							'dhall',
-							'powershell',
-							'carbon'
-						].includes(l.id)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'mbti_research_academic',
-				text: 'Academic research and formal methods',
-				languages: candidateLanguages
-					.filter((l) =>
-						[
-							'haskell',
-							'fsharp',
-							'ocaml',
-							'standardml',
-							'lean',
-							'idris',
-							'apl',
-							'j',
-							'chapel'
-						].includes(l.id)
-					)
-					.map((l) => l.id)
-			},
-			{
-				id: 'mbti_data_specialized',
-				text: 'Specialized data and domain-specific work',
-				languages: candidateLanguages
-					.filter((l) =>
-						['julia', 'sql', 'plsql', 'sas', 'd', 'erlang', 'simula', 'pony'].includes(l.id)
-					)
-					.map((l) => l.id)
-			}
-		]
-	);
-
-	// Comprehensive coverage question - ensures ALL languages have a path to victory
-	// Split ALL candidate languages across multiple meaningful categories
-	const allCandidateIds = candidateLanguages.map((l) => l.id);
-	const quarterSize = Math.ceil(allCandidateIds.length / 4);
-
-	addQuestionIfValid(
-		'comprehensive_coverage',
+		'environment',
 		'What type of programming environment appeals to you most?',
-		'domain',
+		'ecosystem',
 		[
 			{
-				id: 'coverage_enterprise',
-				text: 'Enterprise and business applications',
-				languages: allCandidateIds.slice(0, quarterSize)
+				id: 'env_live',
+				text: 'Live coding with immediate feedback',
+				languages: candidateLanguages
+					.filter((l) => ['smalltalk', 'lisp', 'clojure', 'swift', 'jupyter'].includes(l.id))
+					.map((l) => l.id)
 			},
 			{
-				id: 'coverage_research',
-				text: 'Research and experimental programming',
-				languages: allCandidateIds.slice(quarterSize, quarterSize * 2)
+				id: 'env_compiled',
+				text: 'Traditional compile-run cycle',
+				languages: candidateLanguages
+					.filter((l) => ['c', 'cpp', 'rust', 'go', 'java', 'csharp'].includes(l.id))
+					.map((l) => l.id)
 			},
 			{
-				id: 'coverage_creative',
-				text: 'Creative and interactive programming',
-				languages: allCandidateIds.slice(quarterSize * 2, quarterSize * 3)
+				id: 'env_interpreted',
+				text: 'Interactive REPL and scripting',
+				languages: candidateLanguages
+					.filter((l) => ['python', 'ruby', 'javascript', 'lua', 'perl'].includes(l.id))
+					.map((l) => l.id)
 			},
 			{
-				id: 'coverage_systems',
-				text: 'Systems and infrastructure programming',
-				languages: allCandidateIds.slice(quarterSize * 3)
+				id: 'env_visual',
+				text: 'Visual or block-based programming',
+				languages: candidateLanguages
+					.filter((l) => ['scratch', 'labview', 'alice', 'blockly'].includes(l.id))
+					.map((l) => l.id)
 			}
 		]
 	);
-
-	// Absolute fallback - if we still have no questions, create a basic one
-	// This should rarely happen, but ensures we always have something
-	if (questions.length === 0) {
-		const third = Math.ceil(candidateLanguages.length / 3);
-		questions.push({
-			id: 'fallback',
-			text: 'Which type of programming appeals to you?',
-			category: 'domain',
-			answers: [
-				{
-					id: 'fallback_practical',
-					text: 'Practical, get-things-done programming',
-					languages: candidateLanguages.slice(0, third).map((l) => l.id)
-				},
-				{
-					id: 'fallback_elegant',
-					text: 'Elegant, well-designed programming',
-					languages: candidateLanguages.slice(third, third * 2).map((l) => l.id)
-				},
-				{
-					id: 'fallback_powerful',
-					text: 'Powerful, performance-oriented programming',
-					languages: candidateLanguages.slice(third * 2).map((l) => l.id)
-				}
-			]
-		});
-	}
 
 	return questions;
 }

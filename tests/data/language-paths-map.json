@@ -1,0 +1,1473 @@
+{
+	"python": {
+		"mbtiTypes": ["ENFP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENFP",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"types": "types_dynamic",
+					"platform": "plat_server",
+					"config": "config_scripting",
+					"teaching": "teach_students",
+					"environment": "env_live"
+				},
+				"score": 11
+			},
+			{
+				"mbtiType": "ENFP",
+				"answers": {
+					"performance": "perf_productivity",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"learning": "learn_easy",
+					"types": "types_dynamic",
+					"platform": "plat_server",
+					"config": "config_scripting",
+					"teaching": "teach_students",
+					"environment": "env_live"
+				},
+				"score": 13
+			}
+		],
+		"unreachable": false
+	},
+	"javascript": {
+		"mbtiTypes": ["ESFP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESFP",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_procedural",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"teaching": "teach_children",
+					"environment": "env_interpreted"
+				},
+				"score": 6
+			},
+			{
+				"mbtiType": "ESFP",
+				"answers": {
+					"style": "style_mixed",
+					"use_case": "use_web",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"teaching": "teach_children",
+					"environment": "env_interpreted"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"typescript": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"philosophy": "phil_safety",
+					"concurrency": "conc_async"
+				},
+				"score": 8
+			},
+			{
+				"mbtiType": "ISTJ",
+				"answers": {
+					"performance": "perf_balance",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"philosophy": "phil_safety",
+					"concurrency": "conc_async"
+				},
+				"score": 10
+			}
+		],
+		"unreachable": false
+	},
+	"rust": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTJ",
+				"answers": {
+					"use_case": "use_games",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"mathematical": "math_symbolic",
+					"concurrency": "conc_actor"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"go": {
+		"mbtiTypes": ["ESTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESTJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"legacy": "legacy_salesforce",
+					"philosophy": "phil_simple",
+					"config": "config_scripting",
+					"environment": "env_compiled"
+				},
+				"score": 8
+			},
+			{
+				"mbtiType": "ESTJ",
+				"answers": {
+					"style": "style_procedural",
+					"use_case": "use_web",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"legacy": "legacy_salesforce",
+					"philosophy": "phil_simple",
+					"config": "config_scripting",
+					"environment": "env_compiled"
+				},
+				"score": 9
+			},
+			{
+				"mbtiType": "ESTJ",
+				"answers": {
+					"performance": "perf_productivity",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"legacy": "legacy_salesforce",
+					"philosophy": "phil_simple",
+					"config": "config_scripting",
+					"environment": "env_compiled"
+				},
+				"score": 10
+			},
+			{
+				"mbtiType": "ESTJ",
+				"answers": {
+					"config": "config_no",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"legacy": "legacy_salesforce",
+					"philosophy": "phil_simple",
+					"environment": "env_compiled"
+				},
+				"score": 11
+			}
+		],
+		"unreachable": false
+	},
+	"java": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISFJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"concurrency": "conc_async",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 6
+			},
+			{
+				"mbtiType": "ISFJ",
+				"answers": {
+					"style": "style_oop",
+					"use_case": "use_web",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"concurrency": "conc_async",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 7
+			},
+			{
+				"mbtiType": "ISFJ",
+				"answers": {
+					"performance": "perf_balance",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"concurrency": "conc_async",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 8
+			},
+			{
+				"mbtiType": "ISFJ",
+				"answers": {
+					"config": "config_no",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"concurrency": "conc_async",
+					"teaching": "teach_students"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"cpp": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTJ",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"philosophy": "phil_safety",
+					"concurrency": "conc_async"
+				},
+				"score": 8
+			}
+		],
+		"unreachable": false
+	},
+	"ruby": {
+		"mbtiTypes": ["INFP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INFP",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_productivity",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_dynamic",
+					"config": "config_scripting"
+				},
+				"score": 12
+			}
+		],
+		"unreachable": false
+	},
+	"swift": {
+		"mbtiTypes": ["ISFP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISFP",
+				"answers": {
+					"use_case": "use_mobile",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"types": "types_static",
+					"platform": "plat_mobile",
+					"philosophy": "phil_simple",
+					"environment": "env_live"
+				},
+				"score": 7
+			},
+			{
+				"mbtiType": "ISFP",
+				"answers": {
+					"performance": "perf_productivity",
+					"use_case": "use_mobile",
+					"style": "style_oop",
+					"learning": "learn_easy",
+					"types": "types_static",
+					"platform": "plat_mobile",
+					"philosophy": "phil_simple",
+					"environment": "env_live"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"haskell": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"csharp": {
+		"mbtiTypes": ["ENTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENTJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"specialized": "spec_gpu",
+					"concurrency": "conc_actor"
+				},
+				"score": 7
+			},
+			{
+				"mbtiType": "ENTJ",
+				"answers": {
+					"performance": "perf_balance",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"specialized": "spec_gpu",
+					"concurrency": "conc_actor"
+				},
+				"score": 9
+			},
+			{
+				"mbtiType": "ENTJ",
+				"answers": {
+					"specialized": "spec_none",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"concurrency": "conc_actor"
+				},
+				"score": 10
+			}
+		],
+		"unreachable": false
+	},
+	"c": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"use_case": "use_embedded",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"config": "config_scripting",
+					"teaching": "teach_students"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"php": {
+		"mbtiTypes": ["ESFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESFJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_oop",
+					"learning": "learn_easy"
+				},
+				"score": 4
+			},
+			{
+				"mbtiType": "ESFJ",
+				"answers": {
+					"style": "style_mixed",
+					"use_case": "use_web",
+					"learning": "learn_easy"
+				},
+				"score": 5
+			}
+		],
+		"unreachable": false
+	},
+	"kotlin": {
+		"mbtiTypes": ["INFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INFJ",
+				"answers": {
+					"use_case": "use_mobile",
+					"style": "style_functional",
+					"performance": "perf_productivity",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"philosophy": "phil_safety"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"r": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTP",
+				"answers": {
+					"use_case": "use_data",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_specialized",
+					"types": "types_static",
+					"specialized": "spec_gpu",
+					"philosophy": "phil_simple",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 6
+			},
+			{
+				"mbtiType": "INTP",
+				"answers": {
+					"config": "config_no",
+					"use_case": "use_data",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_specialized",
+					"types": "types_static",
+					"specialized": "spec_gpu",
+					"philosophy": "phil_simple",
+					"teaching": "teach_students"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"matlab": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"scala": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTP",
+				"answers": {
+					"performance": "perf_balance",
+					"use_case": "use_data",
+					"style": "style_functional",
+					"learning": "learn_moderate",
+					"community": "comm_specialized",
+					"types": "types_static",
+					"specialized": "spec_gpu",
+					"philosophy": "phil_simple",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"dart": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISFJ",
+				"answers": {
+					"performance": "perf_productivity",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"concurrency": "conc_async",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 8
+			}
+		],
+		"unreachable": false
+	},
+	"objectivec": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"perl": {
+		"mbtiTypes": ["ESTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESTP",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"config": "config_scripting"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"lua": {
+		"mbtiTypes": ["ISFP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISFP",
+				"answers": {
+					"use_case": "use_games",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"types": "types_static",
+					"platform": "plat_mobile",
+					"philosophy": "phil_simple",
+					"environment": "env_live"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"julia": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"mathematical": "math_symbolic",
+					"concurrency": "conc_actor"
+				},
+				"score": 6
+			},
+			{
+				"mbtiType": "INTJ",
+				"answers": {
+					"use_case": "use_data",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"mathematical": "math_symbolic",
+					"concurrency": "conc_actor"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"elixir": {
+		"mbtiTypes": ["ENFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENFJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_specialized",
+					"teaching": "teach_children"
+				},
+				"score": 5
+			},
+			{
+				"mbtiType": "ENFJ",
+				"answers": {
+					"performance": "perf_balance",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"learning": "learn_easy",
+					"community": "comm_specialized",
+					"teaching": "teach_children"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"clojure": {
+		"mbtiTypes": ["ENTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENTP",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_functional",
+					"learning": "learn_easy",
+					"community": "comm_specialized"
+				},
+				"score": 5
+			},
+			{
+				"mbtiType": "ENTP",
+				"answers": {
+					"learning": "learn_complex",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"community": "comm_specialized"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"fsharp": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"erlang": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"visualbasic": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"delphi": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTJ",
+				"answers": {
+					"use_case": "use_enterprise",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"philosophy": "phil_safety",
+					"concurrency": "conc_async"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"cobol": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"sql": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"bash": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"config": "config_scripting",
+					"teaching": "teach_students"
+				},
+				"score": 8
+			}
+		],
+		"unreachable": false
+	},
+	"groovy": {
+		"mbtiTypes": ["ENTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"assembly": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"fortran": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"ada": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"powershell": {
+		"mbtiTypes": ["ESTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESTJ",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"legacy": "legacy_salesforce",
+					"philosophy": "phil_simple",
+					"config": "config_scripting",
+					"environment": "env_compiled"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"vba": {
+		"mbtiTypes": ["ESFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESFJ",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_oop",
+					"learning": "learn_easy"
+				},
+				"score": 4
+			}
+		],
+		"unreachable": false
+	},
+	"plsql": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"prolog": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"lisp": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"d": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"scratch": {
+		"mbtiTypes": ["ESFP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESFP",
+				"answers": {
+					"use_case": "use_education",
+					"style": "style_procedural",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"teaching": "teach_children",
+					"environment": "env_interpreted"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"scheme": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTP",
+				"answers": {
+					"use_case": "use_education",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_specialized",
+					"types": "types_static",
+					"specialized": "spec_gpu",
+					"philosophy": "phil_simple",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"ocaml": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"solidity": {
+		"mbtiTypes": ["ENTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENTJ",
+				"answers": {
+					"community": "comm_growing",
+					"use_case": "use_web",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"platform": "plat_server",
+					"specialized": "spec_gpu",
+					"concurrency": "conc_actor"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"racket": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"awk": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"sas": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"tcl": {
+		"mbtiTypes": ["ENTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENTP",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_functional",
+					"learning": "learn_easy",
+					"community": "comm_specialized"
+				},
+				"score": 4
+			}
+		],
+		"unreachable": false
+	},
+	"vbnet": {
+		"mbtiTypes": ["ESFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"nim": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"crystal": {
+		"mbtiTypes": ["INFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"zig": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"vlang": {
+		"mbtiTypes": ["ENFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENFJ",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_specialized",
+					"teaching": "teach_children"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"elm": {
+		"mbtiTypes": ["INFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INFJ",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_productivity",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"philosophy": "phil_safety"
+				},
+				"score": 5
+			},
+			{
+				"mbtiType": "INFJ",
+				"answers": {
+					"learning": "learn_moderate",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_productivity",
+					"platform": "plat_web",
+					"philosophy": "phil_safety"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"purescript": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTJ",
+				"answers": {
+					"performance": "perf_balance",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"mathematical": "math_symbolic",
+					"concurrency": "conc_actor"
+				},
+				"score": 5
+			},
+			{
+				"mbtiType": "INTJ",
+				"answers": {
+					"learning": "learn_complex",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"mathematical": "math_symbolic",
+					"concurrency": "conc_actor"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"reasonml": {
+		"mbtiTypes": ["ENTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENTP",
+				"answers": {
+					"community": "comm_growing",
+					"use_case": "use_web",
+					"style": "style_functional",
+					"learning": "learn_easy"
+				},
+				"score": 5
+			}
+		],
+		"unreachable": false
+	},
+	"commonlisp": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"standardml": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"smalltalk": {
+		"mbtiTypes": ["ENFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"sed": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"verilog": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"vhdl": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"cuda": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"config": "config_scripting",
+					"teaching": "teach_students"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"opencl": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTP",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_specialized",
+					"types": "types_static",
+					"specialized": "spec_gpu",
+					"philosophy": "phil_simple",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 8
+			}
+		],
+		"unreachable": false
+	},
+	"glsl": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"use_case": "use_games",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"config": "config_scripting",
+					"teaching": "teach_students"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"hlsl": {
+		"mbtiTypes": ["ENTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENTJ",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"specialized": "spec_gpu",
+					"concurrency": "conc_actor"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"mojo": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"carbon": {
+		"mbtiTypes": ["ESTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"actionscript": {
+		"mbtiTypes": ["ENFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"autohotkey": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"apl": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"coffeescript": {
+		"mbtiTypes": ["ENFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"chapel": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTJ",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"mathematical": "math_symbolic",
+					"concurrency": "conc_actor"
+				},
+				"score": 9
+			}
+		],
+		"unreachable": false
+	},
+	"eiffel": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"factor": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"forth": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"io": {
+		"mbtiTypes": ["ENTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"j": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"labview": {
+		"mbtiTypes": ["ESTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"logo": {
+		"mbtiTypes": ["ENFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ENFJ",
+				"answers": {
+					"use_case": "use_education",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_specialized",
+					"teaching": "teach_children"
+				},
+				"score": 5
+			}
+		],
+		"unreachable": false
+	},
+	"mql4": {
+		"mbtiTypes": ["ENTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"monkey": {
+		"mbtiTypes": ["ENFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"purebasic": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"rexx": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"ring": {
+		"mbtiTypes": ["ENFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"simula": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"xslt": {
+		"mbtiTypes": ["INFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"apex": {
+		"mbtiTypes": ["ESTJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESTJ",
+				"answers": {
+					"use_case": "use_enterprise",
+					"style": "style_oop",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"platform": "plat_server",
+					"legacy": "legacy_salesforce",
+					"philosophy": "phil_simple",
+					"config": "config_scripting",
+					"environment": "env_compiled"
+				},
+				"score": 6
+			}
+		],
+		"unreachable": false
+	},
+	"qsharp": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"wasm": {
+		"mbtiTypes": ["ISTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"use_case": "use_web",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"config": "config_scripting",
+					"teaching": "teach_students"
+				},
+				"score": 7
+			},
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"learning": "learn_moderate",
+					"use_case": "use_web",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"config": "config_scripting",
+					"teaching": "teach_students"
+				},
+				"score": 8
+			},
+			{
+				"mbtiType": "ISTP",
+				"answers": {
+					"config": "config_no",
+					"use_case": "use_web",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"platform": "plat_web",
+					"specialized": "spec_gpu",
+					"teaching": "teach_students"
+				},
+				"score": 10
+			}
+		],
+		"unreachable": false
+	},
+	"systemverilog": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"pony": {
+		"mbtiTypes": ["ENTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"idris": {
+		"mbtiTypes": ["INFJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"vale": {
+		"mbtiTypes": ["ISTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"odin": {
+		"mbtiTypes": ["ESTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ESTP",
+				"answers": {
+					"use_case": "use_systems",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"config": "config_scripting"
+				},
+				"score": 7
+			},
+			{
+				"mbtiType": "ESTP",
+				"answers": {
+					"config": "config_no",
+					"use_case": "use_systems",
+					"style": "style_procedural",
+					"performance": "perf_speed",
+					"learning": "learn_moderate"
+				},
+				"score": 10
+			}
+		],
+		"unreachable": false
+	},
+	"janet": {
+		"mbtiTypes": ["INFP"],
+		"optimalPaths": [],
+		"unreachable": false
+	},
+	"nix": {
+		"mbtiTypes": ["INTP"],
+		"optimalPaths": [
+			{
+				"mbtiType": "INTP",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_moderate",
+					"community": "comm_specialized",
+					"types": "types_static",
+					"specialized": "spec_gpu",
+					"philosophy": "phil_simple",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"dhall": {
+		"mbtiTypes": ["ISFJ"],
+		"optimalPaths": [
+			{
+				"mbtiType": "ISFJ",
+				"answers": {
+					"use_case": "use_scripting",
+					"style": "style_functional",
+					"performance": "perf_speed",
+					"learning": "learn_easy",
+					"community": "comm_large",
+					"types": "types_static",
+					"platform": "plat_web",
+					"legacy": "legacy_mainframe",
+					"concurrency": "conc_async",
+					"config": "config_yes",
+					"teaching": "teach_students"
+				},
+				"score": 7
+			}
+		],
+		"unreachable": false
+	},
+	"lean": {
+		"mbtiTypes": ["INTJ"],
+		"optimalPaths": [],
+		"unreachable": false
+	}
+}
