@@ -18,7 +18,7 @@ interface ValidationResult {
 async function testUrl(url: string): Promise<{ status: number | null; error?: string }> {
 	try {
 		// Use curl to test the URL with a 10 second timeout
-		const { stdout, stderr } = await execAsync(`curl -I -s -w "%{http_code}" -m 10 "${url}"`);
+		const { stdout } = await execAsync(`curl -I -s -w "%{http_code}" -m 10 "${url}"`);
 
 		// Extract status code from curl output
 		const lines = stdout.trim().split('\n');

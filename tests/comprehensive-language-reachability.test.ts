@@ -1,6 +1,5 @@
 import { languages } from '../src/lib/data/languages';
 import { getAdaptiveQuestions } from '../src/lib/data/adaptive-questions';
-import { mbtiQuestions } from '../src/lib/data/mbti-questions';
 
 const ALL_MBTI_TYPES = [
 	'INTJ',
@@ -79,18 +78,18 @@ function simulateQuizWithAnswers(mbtiType: string, languageAnswers: Record<strin
 	return languages.find((lang) => lang.id === resultId);
 }
 
-function getAllAnswerCombinations(questions: any[]) {
+function getAllAnswerCombinations(questions: { id: string; answers: { id: string }[] }[]) {
 	if (questions.length === 0) return [{}];
 	if (questions.length === 1) {
-		return questions[0].answers.map((answer: any) => ({ [questions[0].id]: answer.id }));
+		return questions[0].answers.map((answer) => ({ [questions[0].id]: answer.id }));
 	}
 
 	const combinations: Record<string, string>[] = [];
 	const firstQuestion = questions[0];
 	const restCombinations = getAllAnswerCombinations(questions.slice(1));
 
-	firstQuestion.answers.forEach((answer: any) => {
-		restCombinations.forEach((restCombo: any) => {
+	firstQuestion.answers.forEach((answer) => {
+		restCombinations.forEach((restCombo) => {
 			combinations.push({
 				[firstQuestion.id]: answer.id,
 				...restCombo
@@ -169,7 +168,7 @@ for (const mbtiType of ALL_MBTI_TYPES) {
 
 	console.log(`${mbtiType}: Testing ${testCombinations.length} answer combinations`);
 
-	testCombinations.forEach((answerCombo: any) => {
+	testCombinations.forEach((answerCombo) => {
 		const result = simulateQuizWithAnswers(mbtiType, answerCombo);
 		if (result) {
 			typeReachable.add(result.id);
@@ -231,7 +230,7 @@ console.log('\n' + '='.repeat(60) + '\n');
 console.log('5. CRITICAL PATH ANALYSIS\n');
 
 const languageWinCounts: Record<string, number> = {};
-let totalSimulations = 0;
+let _totalSimulations = 0;
 
 for (const mbtiType of ALL_MBTI_TYPES) {
 	const questions = getAdaptiveQuestions(mbtiType);
@@ -239,11 +238,11 @@ for (const mbtiType of ALL_MBTI_TYPES) {
 
 	const testCombinations = getAllAnswerCombinations(questions).slice(0, 100); // Sample
 
-	testCombinations.forEach((answerCombo: any) => {
+	testCombinations.forEach((answerCombo) => {
 		const result = simulateQuizWithAnswers(mbtiType, answerCombo);
 		if (result) {
 			languageWinCounts[result.id] = (languageWinCounts[result.id] || 0) + 1;
-			totalSimulations++;
+			_totalSimulations++;
 		}
 	});
 }

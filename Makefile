@@ -52,6 +52,13 @@ clean: ## Clean build artifacts
 
 test: lint format-check check ## Run all tests (lint, format check, type check)
 
+test-ci: lint format-check check build-check ## Run comprehensive tests matching GitHub CI workflow
+	@echo "✅ All CI checks passed! Ready for deployment."
+
+build-check: ## Run production build to catch all errors (matches GitHub CI)
+	@echo "🏗️ Running production build check (matches GitHub CI)..."
+	NODE_ENV=production npm run build
+
 deploy: build ## Build and prepare for deployment
 	@echo "Build complete. Ready for deployment to GitHub Pages."
 

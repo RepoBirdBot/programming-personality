@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { languages } from '$lib/data/languages';
-	import type { Language } from '$lib/types/quiz';
 
 	function formatYear(year?: number): string {
 		return year ? year.toString() : 'Unknown';
@@ -9,10 +8,6 @@
 	function formatBoolean(value?: boolean): string {
 		if (value === undefined) return '—';
 		return value ? '✓' : '✗';
-	}
-
-	function formatArray(arr: string[]): string {
-		return arr.join(', ');
 	}
 
 	function formatString(value?: string): string {

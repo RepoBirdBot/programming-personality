@@ -32,7 +32,7 @@ let content = fs.readFileSync(languagesPath, 'utf-8');
 let removedCount = 0;
 brokenLanguages.forEach((langId) => {
 	// Remove the imgURL line for this language
-	const imgUrlPattern = new RegExp(`\\s*imgURL:\\s*'[^']*',?\\n`, 'g');
+	const _imgUrlPattern = new RegExp(`\\s*imgURL:\\s*'[^']*',?\\n`, 'g');
 	const langStartPattern = new RegExp(`id: '${langId}'`);
 
 	// Find the section for this language

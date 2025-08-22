@@ -101,18 +101,18 @@
 		text-align: center;
 		margin-bottom: 2rem;
 		padding-bottom: 1rem;
-		border-bottom: 2px solid #e2e8f0;
+		border-bottom: 2px solid var(--color-border);
 	}
 
 	.validation-header h1 {
-		color: #1a202c;
+		color: var(--color-text-primary);
 		margin: 0 0 0.5rem 0;
 		font-size: 2.5rem;
 		font-weight: 700;
 	}
 
 	.validation-header p {
-		color: #4a5568;
+		color: var(--color-text-secondary);
 		margin: 0 0 1rem 0;
 		font-size: 1.1rem;
 	}
@@ -126,15 +126,15 @@
 
 	.stat {
 		padding: 0.5rem 1rem;
-		background: #f7fafc;
+		background: var(--color-bg-tertiary);
 		border-radius: 8px;
 		font-weight: 600;
-		color: #2d3748;
+		color: var(--color-text-primary);
 	}
 
 	.stat.error {
-		background: #fed7d7;
-		color: #c53030;
+		background: var(--color-error);
+		color: white;
 	}
 
 	.languages-grid {
@@ -144,22 +144,23 @@
 	}
 
 	.language-card {
-		background: white;
-		border: 1px solid #e2e8f0;
+		background: var(--color-bg-card);
+		border: 1px solid var(--color-border);
 		border-radius: 12px;
 		padding: 1.5rem;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		box-shadow: var(--shadow-md);
 		transition: all 0.2s ease;
 	}
 
 	.language-card:hover {
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		box-shadow: var(--shadow-lg);
 		transform: translateY(-1px);
+		background: var(--color-bg-card-hover);
 	}
 
 	.language-card.has-error {
-		border-color: #fc8181;
-		background: #fffafa;
+		border-color: var(--color-error);
+		background: var(--color-bg-card);
 	}
 
 	.language-header {
@@ -178,7 +179,7 @@
 		justify-content: center;
 		position: relative;
 		border-radius: 8px;
-		background: #f7fafc;
+		background: var(--color-bg-tertiary);
 	}
 
 	.language-img {
@@ -212,13 +213,13 @@
 		margin: 0 0 0.25rem 0;
 		font-size: 1.25rem;
 		font-weight: 600;
-		color: #1a202c;
+		color: var(--color-text-primary);
 	}
 
 	.language-id {
 		display: block;
 		font-size: 0.875rem;
-		color: #718096;
+		color: var(--color-text-muted);
 		font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
 	}
 
@@ -226,7 +227,7 @@
 		display: inline-block;
 		margin-top: 0.25rem;
 		padding: 0.25rem 0.5rem;
-		background: linear-gradient(90deg, #4fc3f7 0%, #29b6f6 100%);
+		background: var(--gradient-primary);
 		color: white;
 		border-radius: 12px;
 		font-size: 0.75rem;
@@ -246,37 +247,37 @@
 	.url-label {
 		display: block;
 		font-weight: 600;
-		color: #4a5568;
+		color: var(--color-text-secondary);
 		margin-bottom: 0.25rem;
 		font-size: 0.875rem;
 	}
 
 	.img-url {
 		display: block;
-		color: #3182ce;
+		color: var(--color-primary-light);
 		text-decoration: none;
 		font-size: 0.875rem;
 		word-break: break-all;
 		line-height: 1.4;
 		padding: 0.5rem;
-		background: #f7fafc;
+		background: var(--color-bg-tertiary);
 		border-radius: 6px;
 		font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
 	}
 
 	.img-url:hover {
-		background: #edf2f7;
+		background: var(--color-bg-secondary);
 		text-decoration: underline;
 	}
 
 	.no-url {
-		color: #a0aec0;
+		color: var(--color-text-muted);
 		font-style: italic;
 		margin-bottom: 1rem;
 	}
 
 	.description {
-		color: #4a5568;
+		color: var(--color-text-secondary);
 		line-height: 1.5;
 		font-size: 0.9rem;
 	}
@@ -284,8 +285,8 @@
 	.error-message {
 		margin-top: 1rem;
 		padding: 0.75rem;
-		background: #fed7d7;
-		color: #c53030;
+		background: var(--color-error);
+		color: white;
 		border-radius: 6px;
 		font-size: 0.875rem;
 		font-weight: 500;

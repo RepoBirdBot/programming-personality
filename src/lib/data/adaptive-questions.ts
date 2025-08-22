@@ -1279,7 +1279,7 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 
 	// Ultimate fallback - ensures every language has an exclusive path to victory
 	// Create individual answer choices for remaining problematic languages
-	const problematicLanguages = [
+	const _problematicLanguages = [
 		'haskell',
 		'dart',
 		'objectivec',

@@ -20,7 +20,8 @@ const batchUrls: Record<string, string> = {
 	sas: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/SAS_logo.svg',
 	tcl: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Tcl_logo.svg',
 	vlang: 'https://upload.wikimedia.org/wikipedia/commons/3/34/V-logo.svg',
-	reasonml: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/reasonml/reasonml-original.svg',
+	reasonml:
+		'https://raw.githubusercontent.com/devicons/devicon/master/icons/reasonml/reasonml-original.svg',
 	standardml: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Standard_ML_logo.svg',
 	smalltalk: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Smalltalk_logo_with_text_v2.png',
 	sed: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Sed-logo.svg',

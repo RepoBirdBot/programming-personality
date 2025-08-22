@@ -81,9 +81,9 @@ function analyzeLanguageReachability() {
 	return { totalReachable, totalUnreachable };
 }
 
-function findBestAnswersForLanguage(
+function _findBestAnswersForLanguage(
 	languageId: string,
-	questions: any[]
+	questions: { id: string; category: string; answers: { id: string; languages: string[] }[] }[]
 ): Array<{ questionId: string; answerId: string; weight: number; competition: number }> {
 	const bestAnswers: Array<{
 		questionId: string;
@@ -94,13 +94,13 @@ function findBestAnswersForLanguage(
 
 	questions.forEach((question) => {
 		const weight = question.category === 'domain' ? 3 : question.category === 'performance' ? 2 : 1;
-		const answersWithLang = question.answers.filter((answer: any) =>
+		const answersWithLang = question.answers.filter((answer) =>
 			answer.languages.includes(languageId)
 		);
 
 		if (answersWithLang.length > 0) {
 			// Find the answer with least competition (fewest other languages)
-			const bestAnswer = answersWithLang.reduce((best: any, current: any) => {
+			const bestAnswer = answersWithLang.reduce((best, current) => {
 				const currentCompetition = current.languages.length;
 				const bestCompetition = best.languages.length;
 
@@ -126,14 +126,14 @@ function findBestAnswersForLanguage(
 
 function simulateQuizForLanguage(
 	targetLanguageId: string,
-	candidateLanguages: any[],
-	questions: any[],
+	candidateLanguages: { id: string; mbti?: string }[],
+	questions: { id: string; answers: { id: string; languages: string[] }[] }[],
 	mbtiType: string
 ): boolean {
 	// Check for exclusive answers first (guaranteed wins)
 	const exclusiveAnswers = questions.flatMap((question) =>
 		question.answers.filter(
-			(answer: any) => answer.languages.length === 1 && answer.languages[0] === targetLanguageId
+			(answer) => answer.languages.length === 1 && answer.languages[0] === targetLanguageId
 		)
 	);
 
@@ -161,7 +161,7 @@ function simulateQuizForLanguage(
 }
 
 function generateStrategicAnswerCombinations(
-	questions: any[],
+	questions: { id: string; answers: { id: string; languages: string[] }[] }[],
 	targetLanguageId: string,
 	maxCombinations: number
 ): Record<string, string>[] {
@@ -170,10 +170,10 @@ function generateStrategicAnswerCombinations(
 	// Strategy 1: Prioritize answers that mention the target language
 	const targetFavoringAnswers: Record<string, string[]> = {};
 	questions.forEach((question) => {
-		const favoringAnswers = question.answers.filter((answer: any) =>
+		const favoringAnswers = question.answers.filter((answer) =>
 			answer.languages.includes(targetLanguageId)
 		);
-		targetFavoringAnswers[question.id] = favoringAnswers.map((a: any) => a.id);
+		targetFavoringAnswers[question.id] = favoringAnswers.map((a) => a.id);
 	});
 
 	// Generate combinations that favor the target language
@@ -209,7 +209,7 @@ function generateStrategicAnswerCombinations(
 }
 
 function generateCombinationsRecursive(
-	questions: any[],
+	questions: { id: string; answers: { id: string }[] }[],
 	targetFavoringAnswers: Record<string, string[]>,
 	currentCombo: Record<string, string>,
 	questionIndex: number,
@@ -250,8 +250,8 @@ function generateCombinationsRecursive(
 function simulateQuizWithAnswers(
 	mbtiType: string,
 	languageAnswers: Record<string, string>,
-	candidateLanguages: any[]
-): any {
+	candidateLanguages: { id: string; mbti?: string }[]
+): { id: string } | null {
 	const scores: Record<string, number> = {};
 
 	candidateLanguages.forEach((lang) => {
@@ -300,13 +300,13 @@ function simulateQuizWithAnswers(
 		resultId = mbtiMatch?.id || candidateLanguages[0].id;
 	}
 
-	return candidateLanguages.find((lang) => lang.id === resultId);
+	return candidateLanguages.find((lang) => lang.id === resultId) || null;
 }
 
 function canLanguageWin(
 	languageId: string,
-	candidateLanguages: any[],
-	questions: any[],
+	candidateLanguages: { id: string; mbti?: string }[],
+	questions: { id: string; answers: { id: string; languages: string[] }[] }[],
 	mbtiType: string
 ): boolean {
 	return simulateQuizForLanguage(languageId, candidateLanguages, questions, mbtiType);
@@ -395,7 +395,7 @@ function testUltraSpecificAnswers() {
 	];
 
 	let passed = 0;
-	let failed = 0;
+	let _failed = 0;
 
 	ultraSpecificTests.forEach((test) => {
 		const questions = getAdaptiveQuestions(test.mbti);
@@ -408,7 +408,7 @@ function testUltraSpecificAnswers() {
 		} else {
 			console.log(`❌ ${test.mbti}: ${test.answerId} → MISSING ${test.expectedLang}`);
 			console.log(`     Available languages: ${answer?.languages.join(', ') || 'None'}`);
-			failed++;
+			_failed++;
 		}
 	});
 
@@ -418,7 +418,7 @@ function testUltraSpecificAnswers() {
 }
 
 // Run analysis
-const results = analyzeLanguageReachability();
+const _results = analyzeLanguageReachability();
 testUltraSpecificAnswers();
 
 export {};

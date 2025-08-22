@@ -4,12 +4,12 @@ A fun, interactive web application that helps you discover which programming lan
 
 ## 🎯 Live Demo
 
-Visit the live application at: https://[your-username].github.io/programming-personality/
+Visit the live application at: https://repobirdbot.github.io/programming-personality/
 
 ## 🌟 Features
 
 - **MBTI-Based Assessment**: Two-phase quiz combining personality typing with language matching
-- **200+ Programming Languages**: Extensive database covering mainstream to esoteric languages
+- **100 Programming Languages**: Extensive list covering mainstream to esoteric languages
 - **Adaptive Questioning**: Dynamic questions based on your MBTI personality type
 - **Share Your Results**: Social sharing buttons for Twitter, LinkedIn, WhatsApp, and Reddit
 - **Shareable Links**: Copy and share unique URLs that display your quiz results

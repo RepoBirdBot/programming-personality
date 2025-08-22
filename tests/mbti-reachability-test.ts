@@ -169,6 +169,6 @@ function analyzeMBTIReachability() {
 }
 
 // Run the analysis
-const results = analyzeMBTIReachability();
+const _results = analyzeMBTIReachability();
 
 export {};
