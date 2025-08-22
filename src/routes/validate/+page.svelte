@@ -67,7 +67,7 @@
 				<div class="language-details">
 					{#if language.imgURL}
 						<div class="url-section">
-							<label>Image URL:</label>
+							<span class="url-label">Image URL:</span>
 							<a href={language.imgURL} target="_blank" rel="noopener" class="img-url">
 								{language.imgURL}
 							</a>
@@ -234,14 +234,16 @@
 	}
 
 	.language-details {
-		space-y: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.url-section {
 		margin-bottom: 1rem;
 	}
 
-	.url-section label {
+	.url-label {
 		display: block;
 		font-weight: 600;
 		color: #4a5568;

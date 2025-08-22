@@ -107,11 +107,11 @@
 	{#if $quizStore.phase === 'mbti'}
 		{#if showIntro}
 			<div class="intro">
-				<h1>🚀 Programming Language Personality Test</h1>
-				<p>
-					Answer a few questions to discover which programming language best matches your
-					personality from our database of 40+ languages!
-				</p>
+				<h1>
+					<span class="emoji">🚀</span>
+					<span class="gradient-text">Programming Language Personality Test</span>
+				</h1>
+				<p>Discover your coding personality match from 100 languages!</p>
 				<div class="intro-details">
 					<p class="intro-subtitle">
 						✨ Takes just 2-3 minutes<br />
@@ -141,50 +141,56 @@
 	{:else if $quizStore.completed && $quizStore.result}
 		<Results language={$quizStore.result} onRestart={handleRestart} />
 	{/if}
+
+	<a href="https://repobird.ai" class="repobird-badge" target="_blank" rel="noopener noreferrer">
+		Created with Repobird.ai
+	</a>
 </main>
 
 <style>
-	:global(body) {
-		margin: 0;
-		padding: 0;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-		background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-		min-height: 100vh;
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-	}
-
 	main {
 		min-height: 100vh;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
-		padding: 1rem;
+		padding: 2rem 1rem;
+		padding-top: 10vh;
 	}
 
 	.intro {
 		text-align: center;
 		max-width: 700px;
 		padding: 3rem;
-		background: white;
+		background: var(--color-bg-card);
+		border: 1px solid var(--color-border);
 		border-radius: 16px;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+		box-shadow: var(--shadow-xl);
 	}
 
 	.intro h1 {
 		font-size: 2.5rem;
 		margin-bottom: 1rem;
-		background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+		color: var(--color-text-primary);
+	}
+
+	.intro h1 .gradient-text {
+		background: var(--gradient-primary);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 	}
 
+	.intro h1 .emoji {
+		color: initial;
+		background: none;
+		-webkit-background-clip: initial;
+		-webkit-text-fill-color: initial;
+		background-clip: initial;
+	}
+
 	.intro p {
 		font-size: 1.2rem;
-		color: #666;
+		color: var(--color-text-secondary);
 		margin-bottom: 2rem;
 		line-height: 1.6;
 	}
@@ -196,22 +202,46 @@
 	.intro-subtitle {
 		font-size: 1.1rem;
 		line-height: 1.8;
-		color: #555;
+		color: var(--color-text-secondary);
 	}
 
 	.start-button {
 		padding: 1rem 3rem;
 		font-size: 1.2rem;
-		background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+		background: var(--gradient-primary);
 		color: white;
 		border: none;
 		border-radius: 50px;
 		cursor: pointer;
-		transition: transform 0.2s ease;
+		transition: all 0.2s ease;
+		box-shadow: var(--shadow-md);
 	}
 
 	.start-button:hover {
-		transform: scale(1.05);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.repobird-badge {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background: var(--color-primary);
+		color: white;
+		padding: 8px 16px;
+		border-radius: 20px;
+		text-decoration: none;
+		font-size: 0.85rem;
+		font-weight: 500;
+		box-shadow: var(--shadow-md);
+		transition: all 0.2s ease;
+		z-index: 1000;
+	}
+
+	.repobird-badge:hover {
+		background: var(--color-primary-hover);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
 	}
 
 	@media (max-width: 600px) {
@@ -222,6 +252,13 @@
 		.intro-details {
 			grid-template-columns: 1fr;
 			gap: 1rem;
+		}
+
+		.repobird-badge {
+			bottom: 15px;
+			right: 15px;
+			padding: 6px 12px;
+			font-size: 0.8rem;
 		}
 	}
 </style>

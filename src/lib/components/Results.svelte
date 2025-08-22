@@ -154,10 +154,10 @@
 	}
 
 	.result-card {
-		background: white;
+		background: var(--color-bg-card);
 		border-radius: 16px;
 		padding: 2rem;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+		box-shadow: var(--shadow-xl);
 		text-align: center;
 	}
 
@@ -198,7 +198,7 @@
 	.language-name {
 		font-size: 1.8rem;
 		margin: 0;
-		color: #2d3748;
+		color: var(--color-text-primary);
 		font-family:
 			'Inter',
 			-apple-system,
@@ -213,7 +213,7 @@
 	.mbti-badge {
 		display: inline-block;
 		padding: 0.25rem 0.75rem;
-		background: linear-gradient(90deg, #4fc3f7 0%, #29b6f6 100%);
+		background: var(--gradient-primary);
 		color: white;
 		border-radius: 20px;
 		font-size: 0.8rem;
@@ -222,14 +222,14 @@
 
 	.personality {
 		font-size: 1.1rem;
-		color: #666;
+		color: var(--color-text-secondary);
 		margin-bottom: 1.5rem;
 		font-style: italic;
 	}
 
 	.description {
 		margin-bottom: 1.5rem;
-		color: #444;
+		color: var(--color-text-secondary);
 		line-height: 1.6;
 	}
 
@@ -243,7 +243,7 @@
 	}
 
 	.detail-section h3 {
-		color: #333;
+		color: var(--color-text-primary);
 		margin-bottom: 0.5rem;
 		font-size: 1.1rem;
 	}
@@ -260,12 +260,12 @@
 
 	.detail-section li {
 		padding: 0.25rem 0;
-		color: #666;
+		color: var(--color-text-secondary);
 	}
 
 	.detail-section li::before {
 		content: '✓ ';
-		color: #667eea;
+		color: var(--color-primary);
 		font-weight: bold;
 	}
 
@@ -275,7 +275,7 @@
 		gap: 1.5rem;
 		margin-top: 1.5rem;
 		padding-top: 1.5rem;
-		border-top: 1px solid #e0e0e0;
+		border-top: 1px solid var(--color-border);
 	}
 
 	.share-section {
@@ -283,7 +283,7 @@
 	}
 
 	.share-section h3 {
-		color: #333;
+		color: var(--color-text-primary);
 		margin-bottom: 1rem;
 		font-size: 1rem;
 		text-align: center;
@@ -298,7 +298,7 @@
 
 	.restart-button {
 		padding: 0.8rem 1.5rem;
-		background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+		background: var(--gradient-primary);
 		color: white;
 		border: none;
 		border-radius: 8px;
@@ -349,12 +349,12 @@
 	}
 
 	.share-button.copy {
-		background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+		background: var(--gradient-primary);
 	}
 
 	.copy-feedback {
 		margin-top: 0.5rem;
-		color: #667eea;
+		color: var(--color-primary);
 		font-size: 0.9rem;
 		animation: fadeIn 0.3s ease;
 	}

@@ -37,7 +37,7 @@
 
 	.progress {
 		height: 4px;
-		background: #e0e0e0;
+		background: var(--color-bg-tertiary);
 		border-radius: 2px;
 		margin-bottom: 2rem;
 		overflow: hidden;
@@ -59,7 +59,7 @@
 
 	.phase-label {
 		display: block;
-		color: #29b6f6;
+		color: var(--color-primary-light);
 		font-size: 0.85rem;
 		font-weight: 600;
 		margin-bottom: 0.25rem;
@@ -68,7 +68,7 @@
 	}
 
 	.question-number {
-		color: #666;
+		color: var(--color-text-secondary);
 		font-size: 0.9rem;
 	}
 
@@ -76,7 +76,7 @@
 		font-size: 1.5rem;
 		margin-bottom: 2rem;
 		text-align: center;
-		color: #333;
+		color: var(--color-text-primary);
 	}
 
 	.answers {
@@ -87,8 +87,8 @@
 
 	.answer-button {
 		padding: 1rem 1.5rem;
-		background: white;
-		border: 2px solid #e0e0e0;
+		background: var(--color-bg-card);
+		border: 2px solid var(--color-border);
 		border-radius: 8px;
 		cursor: pointer;
 		transition: all 0.2s ease;
@@ -97,8 +97,8 @@
 	}
 
 	.answer-button:hover {
-		border-color: #29b6f6;
+		border-color: var(--color-primary-light);
 		transform: translateX(4px);
-		box-shadow: 0 4px 12px rgba(41, 182, 246, 0.1);
+		box-shadow: var(--shadow-md);
 	}
 </style>
