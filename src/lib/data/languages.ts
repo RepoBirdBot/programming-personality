@@ -2719,8 +2719,6 @@ export const languages: Language[] = [
 		mbti: 'INTJ',
 		icon: '📚',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'academic',
 		performanceNeeds: 'moderate',
 		ecosystemMaturity: 'mature',
@@ -2813,8 +2811,6 @@ export const languages: Language[] = [
 		mbti: 'ISTJ',
 		icon: '✂️',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'scripting',
 		performanceNeeds: 'moderate',
 		ecosystemMaturity: 'mature',
@@ -3191,8 +3187,6 @@ export const languages: Language[] = [
 		mbti: 'ESTJ',
 		icon: '💠',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'systems',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'bleeding_edge',
@@ -3523,8 +3517,6 @@ export const languages: Language[] = [
 		mbti: 'INTP',
 		icon: '📚',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'academic',
 		performanceNeeds: 'flexible',
 		ecosystemMaturity: 'modern',
@@ -3571,8 +3563,6 @@ export const languages: Language[] = [
 		mbti: 'ISTP',
 		icon: '🔧',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'embedded',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'mature',
@@ -3619,8 +3609,6 @@ export const languages: Language[] = [
 		mbti: 'ENTP',
 		icon: '🌀',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'academic',
 		performanceNeeds: 'flexible',
 		ecosystemMaturity: 'modern',
@@ -3762,8 +3750,6 @@ export const languages: Language[] = [
 		mbti: 'ENFJ',
 		icon: '🐢',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'academic',
 		performanceNeeds: 'flexible',
 		ecosystemMaturity: 'mature',
@@ -3810,8 +3796,6 @@ export const languages: Language[] = [
 		mbti: 'ENTJ',
 		icon: '📈',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'enterprise',
 		performanceNeeds: 'important',
 		ecosystemMaturity: 'mature',
@@ -3858,8 +3842,6 @@ export const languages: Language[] = [
 		mbti: 'ENFP',
 		icon: '🐒',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'mobile',
 		performanceNeeds: 'important',
 		ecosystemMaturity: 'modern',
@@ -3906,8 +3888,6 @@ export const languages: Language[] = [
 		mbti: 'ISFJ',
 		icon: '🔷',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'enterprise',
 		performanceNeeds: 'important',
 		ecosystemMaturity: 'mature',
@@ -4048,8 +4028,6 @@ export const languages: Language[] = [
 		mbti: 'INTJ',
 		icon: '🏛️',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'academic',
 		performanceNeeds: 'moderate',
 		ecosystemMaturity: 'legacy',
@@ -4288,8 +4266,6 @@ export const languages: Language[] = [
 		mbti: 'INTJ',
 		icon: '🔧',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'embedded',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'mature',
@@ -4431,8 +4407,6 @@ export const languages: Language[] = [
 		mbti: 'ISTJ',
 		icon: '🏛️',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'systems',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'bleeding_edge',
@@ -4478,8 +4452,6 @@ export const languages: Language[] = [
 		mbti: 'ESTP',
 		icon: '⚔️',
 		color: '#3776AB',
-		imgURL:
-			'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/default_file.svg',
 		primaryDomain: 'systems',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'modern',
