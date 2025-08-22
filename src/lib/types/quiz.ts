@@ -72,6 +72,7 @@ export interface Language {
 	mbti: MBTIType;
 	icon: string;
 	color: string;
+	imgURL?: string;
 	primaryDomain?: PrimaryDomain;
 	performanceNeeds?: PerformanceNeeds;
 	ecosystemMaturity?: EcosystemMaturity;
