@@ -4,7 +4,6 @@
 	export let question: LanguageQuestion;
 	export let questionNumber: number;
 	export let totalQuestions: number;
-	export let mbtiType: string;
 	export let onAnswer: (answerId: string) => void;
 </script>
 
@@ -17,7 +16,7 @@
 	</div>
 
 	<div class="question-header">
-		<span class="phase-label">Phase 2: Language Matching • MBTI: {mbtiType}</span>
+		<span class="phase-label">Finding Your Language Match</span>
 		<span class="question-number">Question {questionNumber} of {totalQuestions}</span>
 	</div>
 

@@ -1,146 +1,117 @@
 import type { MBTIQuestion } from '$lib/types/quiz';
 
+// Minimal, research-based MBTI questions with high discriminatory power
 export const mbtiQuestions: MBTIQuestion[] = [
-	// Extraversion vs Introversion
+	// Extraversion vs Introversion - Energy source is the key indicator
 	{
-		id: 'mbti1',
-		text: 'After a long coding session with your team, you typically:',
+		id: 'ei1',
+		text: 'After a day of intense collaboration with your team, you typically:',
 		dimension: 'EI',
 		answers: [
 			{
-				id: 'mbti1a',
-				text: 'Feel energized and want to discuss ideas more',
+				id: 'ei1e',
+				text: 'Feel energized and want to continue brainstorming',
 				dimension: 'E'
 			},
 			{
-				id: 'mbti1b',
-				text: 'Need some quiet time alone to recharge',
-				dimension: 'I'
-			}
-		]
-	},
-	{
-		id: 'mbti2',
-		text: 'When joining a new development team, you:',
-		dimension: 'EI',
-		answers: [
-			{
-				id: 'mbti2a',
-				text: 'Actively introduce yourself and start conversations',
-				dimension: 'E'
-			},
-			{
-				id: 'mbti2b',
-				text: 'Observe first and let relationships develop naturally',
+				id: 'ei1i',
+				text: 'Need quiet time alone to recharge',
 				dimension: 'I'
 			}
 		]
 	},
 
-	// Sensing vs Intuition
+	// Sensing vs Intuition - Concrete vs Abstract information preference
 	{
-		id: 'mbti3',
-		text: 'When learning a new technology, you prefer to:',
+		id: 'sn1',
+		text: 'When debugging code, you prefer to:',
 		dimension: 'SN',
 		answers: [
 			{
-				id: 'mbti3a',
-				text: 'Start with hands-on examples and practical tutorials',
+				id: 'sn1s',
+				text: 'Focus on specific error messages and stack traces',
 				dimension: 'S'
 			},
 			{
-				id: 'mbti3b',
-				text: 'Understand the underlying concepts and theory first',
-				dimension: 'N'
-			}
-		]
-	},
-	{
-		id: 'mbti4',
-		text: 'Your code tends to focus more on:',
-		dimension: 'SN',
-		answers: [
-			{
-				id: 'mbti4a',
-				text: 'Solving the immediate problem with proven solutions',
-				dimension: 'S'
-			},
-			{
-				id: 'mbti4b',
-				text: 'Creating flexible abstractions for future possibilities',
+				id: 'sn1n',
+				text: 'Consider the broader patterns and system architecture',
 				dimension: 'N'
 			}
 		]
 	},
 
-	// Thinking vs Feeling
+	// Thinking vs Feeling - Decision criteria
 	{
-		id: 'mbti5',
-		text: 'In code reviews, you prioritize:',
+		id: 'tf1',
+		text: 'When reviewing code or making technical decisions, you prioritize:',
 		dimension: 'TF',
 		answers: [
 			{
-				id: 'mbti5a',
-				text: 'Logic, efficiency, and objective correctness',
+				id: 'tf1t',
+				text: 'Objective metrics like performance and correctness',
 				dimension: 'T'
 			},
 			{
-				id: 'mbti5b',
-				text: 'Team harmony and constructive, supportive feedback',
-				dimension: 'F'
-			}
-		]
-	},
-	{
-		id: 'mbti6',
-		text: 'When choosing between technical solutions, you value:',
-		dimension: 'TF',
-		answers: [
-			{
-				id: 'mbti6a',
-				text: 'The most logical and performant approach',
-				dimension: 'T'
-			},
-			{
-				id: 'mbti6b',
-				text: 'The solution that the team is most comfortable with',
+				id: 'tf1f',
+				text: 'Team consensus and developer experience',
 				dimension: 'F'
 			}
 		]
 	},
 
-	// Judging vs Perceiving
+	// Judging vs Perceiving - Structure preference
 	{
-		id: 'mbti7',
-		text: 'Your ideal development process involves:',
+		id: 'jp1',
+		text: 'Your ideal project workflow is:',
 		dimension: 'JP',
 		answers: [
 			{
-				id: 'mbti7a',
-				text: 'Clear plans, deadlines, and structured workflows',
+				id: 'jp1j',
+				text: 'Well-planned sprints with clear deadlines',
 				dimension: 'J'
 			},
 			{
-				id: 'mbti7b',
-				text: 'Flexibility to explore and adapt as you go',
+				id: 'jp1p',
+				text: 'Flexible iterations that adapt to discoveries',
 				dimension: 'P'
 			}
 		]
 	},
+
+	// Second E/I question for reliability
 	{
-		id: 'mbti8',
-		text: 'You feel most productive when:',
-		dimension: 'JP',
+		id: 'ei2',
+		text: 'You do your best thinking when:',
+		dimension: 'EI',
 		answers: [
 			{
-				id: 'mbti8a',
-				text: 'Following a well-defined roadmap to completion',
-				dimension: 'J'
+				id: 'ei2e',
+				text: 'Discussing ideas with others',
+				dimension: 'E'
 			},
 			{
-				id: 'mbti8b',
-				text: 'Keeping options open and iterating freely',
-				dimension: 'P'
+				id: 'ei2i',
+				text: 'Working through problems alone',
+				dimension: 'I'
+			}
+		]
+	},
+
+	// Second S/N question for reliability
+	{
+		id: 'sn2',
+		text: 'You trust solutions that are:',
+		dimension: 'SN',
+		answers: [
+			{
+				id: 'sn2s',
+				text: 'Proven and tested in production',
+				dimension: 'S'
+			},
+			{
+				id: 'sn2n',
+				text: 'Innovative and forward-thinking',
+				dimension: 'N'
 			}
 		]
 	}

@@ -1,14 +1,16 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { quizStore } from '$lib/stores/quiz';
 	import { mbtiQuestions } from '$lib/data/mbti-questions';
-	import { languageQuestions } from '$lib/data/language-questions';
-	import Question from '$lib/components/Question.svelte';
+	import { languages } from '$lib/data/languages';
 	import MBTIQuestion from '$lib/components/MBTIQuestion.svelte';
 	import LanguageQuestion from '$lib/components/LanguageQuestion.svelte';
 	import Results from '$lib/components/Results.svelte';
+	import { decodeResult } from '$lib/utils/sharing';
 
 	$: currentMBTIQuestion = mbtiQuestions[$quizStore.currentQuestionIndex];
-	$: currentLanguageQuestion = languageQuestions[$quizStore.currentQuestionIndex];
+	$: adaptiveQuestions = $quizStore.adaptiveQuestions || [];
+	$: currentLanguageQuestion = adaptiveQuestions[$quizStore.currentQuestionIndex];
 
 	function handleMBTIAnswer(answerId: string) {
 		const questionId = currentMBTIQuestion.id;
@@ -21,19 +23,82 @@
 	}
 
 	function handleRestart() {
+		const urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.has('r')) {
+			urlParams.delete('r');
+			const newUrl =
+				window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+			window.history.replaceState({}, '', newUrl);
+		}
+		hideIntro = false;
 		quizStore.reset();
 	}
 
-	$: showIntro = $quizStore.phase === 'mbti' && Object.keys($quizStore.mbtiAnswers).length === 0;
-	$: showPhaseTransition =
-		$quizStore.phase === 'language' && Object.keys($quizStore.languageAnswers).length === 0;
+	let hideIntro = false;
+	$: showIntro = !hideIntro && $quizStore.phase === 'mbti' && Object.keys($quizStore.mbtiAnswers).length === 0;
+
+	onMount(() => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const sharedResult = urlParams.get('r');
+
+		if (sharedResult) {
+			const decoded = decodeResult(sharedResult);
+			if (decoded && languages.find((l) => l.id === decoded.languageId)) {
+				quizStore.loadSharedResult(decoded.languageId, decoded.mbtiType);
+			}
+		}
+	});
 </script>
 
 <svelte:head>
-	<title>Programming Language Personality Test</title>
+	<title>
+		{$quizStore.completed && $quizStore.result
+			? `I got ${$quizStore.result.name} - Programming Language Personality Test`
+			: 'Programming Language Personality Test'}
+	</title>
 	<meta
 		name="description"
-		content="Discover which programming language matches your personality!"
+		content={$quizStore.completed && $quizStore.result
+			? `${$quizStore.result.name}: ${$quizStore.result.personality}. Discover which programming language matches your personality!`
+			: 'Discover which programming language matches your personality from 200+ languages! Based on MBTI personality science.'}
+	/>
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:title"
+		content={$quizStore.completed && $quizStore.result
+			? `I got ${$quizStore.result.name} - Programming Language Personality Test`
+			: 'Programming Language Personality Test'}
+	/>
+	<meta
+		property="og:description"
+		content={$quizStore.completed && $quizStore.result
+			? `${$quizStore.result.name}: ${$quizStore.result.personality}. Take the quiz to find your programming language match!`
+			: 'Discover which programming language matches your personality from 200+ languages! Based on MBTI personality science.'}
+	/>
+	<meta
+		property="og:image"
+		content="https://og-image.vercel.app/**Programming%20Language**%20Personality%20Test.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"
+	/>
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta
+		name="twitter:title"
+		content={$quizStore.completed && $quizStore.result
+			? `I got ${$quizStore.result.name} - Programming Language Personality Test`
+			: 'Programming Language Personality Test'}
+	/>
+	<meta
+		name="twitter:description"
+		content={$quizStore.completed && $quizStore.result
+			? `${$quizStore.result.name}: ${$quizStore.result.personality}. Take the quiz!`
+			: 'Discover which programming language matches your personality!'}
+	/>
+	<meta
+		name="twitter:image"
+		content="https://og-image.vercel.app/**Programming%20Language**%20Personality%20Test.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"
 	/>
 </svelte:head>
 
@@ -43,22 +108,19 @@
 			<div class="intro">
 				<h1>🚀 Programming Language Personality Test</h1>
 				<p>
-					Discover which of 200+ programming languages best matches your personality! We'll first
-					determine your MBTI type, then find your perfect language match.
+					Answer a few questions to discover which programming language best matches your
+					personality from our database of 40+ languages!
 				</p>
 				<div class="intro-details">
-					<div class="phase-info">
-						<h3>📊 Phase 1: Personality Assessment</h3>
-						<p>8 questions to determine your MBTI type</p>
-					</div>
-					<div class="phase-info">
-						<h3>🎯 Phase 2: Language Matching</h3>
-						<p>12 questions to find your ideal language</p>
-					</div>
+					<p class="intro-subtitle">
+						✨ Takes just 2-3 minutes<br />
+						🎯 Personalized to your coding style<br />
+						💡 Based on MBTI personality science
+					</p>
 				</div>
 				<button
 					class="start-button"
-					onclick={() => handleMBTIAnswer(currentMBTIQuestion.answers[0].id)}
+					on:click={() => hideIntro = true}
 				>
 					Start Quiz
 				</button>
@@ -72,27 +134,11 @@
 			/>
 		{/if}
 	{:else if $quizStore.phase === 'language'}
-		{#if showPhaseTransition}
-			<div class="phase-transition">
-				<h2>🎉 Your MBTI Type: {$quizStore.mbtiType}</h2>
-				<p>
-					Great! You're a {$quizStore.mbtiType} personality type. Now let's find the perfect programming
-					language for you from
-					{$quizStore.candidateLanguages.length} candidates!
-				</p>
-				<button
-					class="continue-button"
-					onclick={() => handleLanguageAnswer(currentLanguageQuestion.answers[0].id)}
-				>
-					Continue to Language Selection
-				</button>
-			</div>
-		{:else}
+		{#if currentLanguageQuestion}
 			<LanguageQuestion
 				question={currentLanguageQuestion}
 				questionNumber={$quizStore.currentQuestionIndex + 1}
-				totalQuestions={languageQuestions.length}
-				mbtiType={$quizStore.mbtiType}
+				totalQuestions={adaptiveQuestions.length}
 				onAnswer={handleLanguageAnswer}
 			/>
 		{/if}
@@ -148,54 +194,16 @@
 	}
 
 	.intro-details {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
 		margin: 2rem 0;
 	}
 
-	.phase-info {
-		padding: 1.5rem;
-		background: #f8f9fa;
-		border-radius: 8px;
-	}
-
-	.phase-info h3 {
-		margin: 0 0 0.5rem 0;
-		color: #333;
+	.intro-subtitle {
 		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #555;
 	}
 
-	.phase-info p {
-		margin: 0;
-		font-size: 0.95rem;
-		color: #666;
-	}
-
-	.phase-transition {
-		text-align: center;
-		max-width: 600px;
-		padding: 3rem;
-		background: white;
-		border-radius: 16px;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-	}
-
-	.phase-transition h2 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		color: #333;
-	}
-
-	.phase-transition p {
-		font-size: 1.1rem;
-		color: #666;
-		margin-bottom: 2rem;
-		line-height: 1.6;
-	}
-
-	.start-button,
-	.continue-button {
+	.start-button {
 		padding: 1rem 3rem;
 		font-size: 1.2rem;
 		background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
@@ -206,8 +214,7 @@
 		transition: transform 0.2s ease;
 	}
 
-	.start-button:hover,
-	.continue-button:hover {
+	.start-button:hover {
 		transform: scale(1.05);
 	}
 

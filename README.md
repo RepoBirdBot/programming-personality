@@ -8,9 +8,11 @@ Visit the live application at: https://[your-username].github.io/programming-per
 
 ## 🌟 Features
 
-- **Interactive Quiz**: 8 carefully crafted questions to understand your programming preferences
-- **10 Programming Languages**: Matches you with Python, JavaScript, TypeScript, Rust, Go, Java, C++, Ruby, Swift, or Haskell
-- **Personality Analysis**: Detailed explanation of why a language suits your personality
+- **MBTI-Based Assessment**: Two-phase quiz combining personality typing with language matching
+- **200+ Programming Languages**: Extensive database covering mainstream to esoteric languages
+- **Adaptive Questioning**: Dynamic questions based on your MBTI personality type
+- **Share Your Results**: Social sharing buttons for Twitter, LinkedIn, WhatsApp, and Reddit
+- **Shareable Links**: Copy and share unique URLs that display your quiz results
 - **Beautiful UI**: Modern, responsive design with smooth animations
 - **Type-Safe**: Built with TypeScript for reliability
 - **Fast & Static**: Deployed as a static site for instant loading
@@ -133,11 +135,11 @@ programming-personality/
 
 ## 🎮 How It Works
 
-1. **Questions**: The quiz consists of 8 questions about programming preferences
-2. **Weighted Scoring**: Each answer has weights for different programming languages
-3. **Score Calculation**: The app tallies scores based on your answers
-4. **Result**: The language with the highest score becomes your match
-5. **Personality Profile**: Get insights into why this language suits you
+1. **MBTI Assessment**: Answer personality questions to determine your MBTI type (INTJ, ENFP, etc.)
+2. **Adaptive Questions**: Get customized language preference questions based on your personality
+3. **Smart Matching**: Algorithm matches you with languages that align with your MBTI profile
+4. **Share Results**: Generate a unique shareable link to show off your programming language match
+5. **Social Sharing**: One-click sharing to Twitter, LinkedIn, WhatsApp, or Reddit with rich previews
 
 ## 🤝 Contributing
 
