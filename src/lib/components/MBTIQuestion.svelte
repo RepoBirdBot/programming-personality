@@ -21,7 +21,13 @@
 
 	<div class="answers">
 		{#each question.answers as answer}
-			<button class="answer-button" onclick={() => onAnswer(answer.id)}>
+			<button
+				class="answer-button"
+				onclick={(e) => {
+					e.currentTarget.blur();
+					onAnswer(answer.id);
+				}}
+			>
 				{answer.text}
 			</button>
 		{/each}
