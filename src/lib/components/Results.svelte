@@ -10,6 +10,10 @@
 		<div class="language-icon">{language.icon}</div>
 		<h1 class="language-name">You are {language.name}!</h1>
 
+		{#if language.mbti}
+			<div class="mbti-badge">MBTI: {language.mbti}</div>
+		{/if}
+
 		<p class="personality">{language.personality}</p>
 
 		<div class="description">
@@ -62,11 +66,22 @@
 
 	.language-name {
 		font-size: 2rem;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 		background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
+	}
+
+	.mbti-badge {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		background: linear-gradient(90deg, #4fc3f7 0%, #29b6f6 100%);
+		color: white;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
 	}
 
 	.personality {
