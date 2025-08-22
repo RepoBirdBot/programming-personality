@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, get } from 'svelte/store';
 import type { QuizState, Language, MBTIType } from '$lib/types/quiz';
 import { mbtiQuestions } from '$lib/data/mbti-questions';
 import { getAdaptiveQuestions } from '$lib/data/adaptive-questions';
@@ -21,9 +21,67 @@ function createInitialState(): QuizState {
 
 function createQuizStore() {
 	const { subscribe, set, update } = writable<QuizState>(createInitialState());
+	const store = { subscribe, set, update };
 
 	return {
 		subscribe,
+		goToPreviousQuestion: () => {
+			update((state) => {
+				if (state.currentQuestionIndex > 0) {
+					return {
+						...state,
+						currentQuestionIndex: state.currentQuestionIndex - 1
+					};
+				}
+				return state;
+			});
+		},
+		goToNextQuestion: () => {
+			update((state) => {
+				const maxIndex =
+					state.phase === 'mbti'
+						? mbtiQuestions.length - 1
+						: (state.adaptiveQuestions?.length || 1) - 1;
+
+				if (state.currentQuestionIndex < maxIndex) {
+					return {
+						...state,
+						currentQuestionIndex: state.currentQuestionIndex + 1
+					};
+				}
+				return state;
+			});
+		},
+		canGoBack: () => {
+			const state = get(store);
+			if (state.phase === 'mbti') {
+				// Can go back if we have answered at least one question and aren't on the first question
+				const answered = Object.keys(state.mbtiAnswers).length;
+				return answered > 0 && state.currentQuestionIndex > 0;
+			} else if (state.phase === 'language') {
+				// Can go back if we have answered at least one language question and aren't on the first question
+				const answered = Object.keys(state.languageAnswers).length;
+				return answered > 0 && state.currentQuestionIndex > 0;
+			}
+			return false;
+		},
+		canGoForward: () => {
+			const state = get(store);
+			if (state.phase === 'mbti') {
+				const answered = Object.keys(state.mbtiAnswers).length;
+				return (
+					state.currentQuestionIndex < answered &&
+					state.currentQuestionIndex < mbtiQuestions.length - 1
+				);
+			} else if (state.phase === 'language') {
+				const answered = Object.keys(state.languageAnswers).length;
+				const totalQuestions = state.adaptiveQuestions?.length || 0;
+				return (
+					state.currentQuestionIndex < answered && state.currentQuestionIndex < totalQuestions - 1
+				);
+			}
+			return false;
+		},
 		answerMBTIQuestion: (questionId: string, answerId: string) => {
 			update((state) => {
 				const newState = {
@@ -58,8 +116,6 @@ function createQuizStore() {
 					// Move to language phase
 					newState.phase = 'language';
 					newState.currentQuestionIndex = 0;
-				} else {
-					newState.currentQuestionIndex++;
 				}
 
 				return newState;
@@ -103,8 +159,6 @@ function createQuizStore() {
 						newState.candidateLanguages,
 						newState.mbtiType
 					);
-				} else {
-					newState.currentQuestionIndex++;
 				}
 
 				return newState;

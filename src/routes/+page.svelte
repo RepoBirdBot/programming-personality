@@ -12,15 +12,81 @@
 	$: adaptiveQuestions = $quizStore.adaptiveQuestions || [];
 	$: currentLanguageQuestion = adaptiveQuestions[$quizStore.currentQuestionIndex];
 
+	// Get the currently selected answer for the current question
+	$: selectedMBTIAnswerId = currentMBTIQuestion
+		? $quizStore.mbtiAnswers[currentMBTIQuestion.id] || null
+		: null;
+	$: selectedLanguageAnswerId = currentLanguageQuestion
+		? $quizStore.languageAnswers[currentLanguageQuestion.id] || null
+		: null;
+
 	function handleMBTIAnswer(answerId: string) {
 		const questionId = currentMBTIQuestion.id;
 		quizStore.answerMBTIQuestion(questionId, answerId);
+
+		// Delay auto-advance to allow animation to complete
+		setTimeout(() => {
+			if (
+				$quizStore.phase === 'mbti' &&
+				Object.keys($quizStore.mbtiAnswers).length < mbtiQuestions.length
+			) {
+				quizStore.goToNextQuestion();
+			}
+		}, 250); // Slightly longer than animation (200ms) to ensure it completes
 	}
 
 	function handleLanguageAnswer(answerId: string) {
 		const questionId = currentLanguageQuestion.id;
 		quizStore.answerLanguageQuestion(questionId, answerId);
+
+		// Delay auto-advance to allow animation to complete
+		setTimeout(() => {
+			if (
+				$quizStore.phase === 'language' &&
+				adaptiveQuestions &&
+				Object.keys($quizStore.languageAnswers).length < adaptiveQuestions.length
+			) {
+				quizStore.goToNextQuestion();
+			}
+		}, 250); // Slightly longer than animation (200ms) to ensure it completes
 	}
+
+	function handlePrevious() {
+		quizStore.goToPreviousQuestion();
+	}
+
+	function handleNext() {
+		quizStore.goToNextQuestion();
+	}
+
+	$: canGoBack = (() => {
+		if ($quizStore.phase === 'mbti') {
+			const answered = Object.keys($quizStore.mbtiAnswers).length;
+			return answered > 0 && $quizStore.currentQuestionIndex > 0;
+		} else if ($quizStore.phase === 'language') {
+			const answered = Object.keys($quizStore.languageAnswers).length;
+			return answered > 0 && $quizStore.currentQuestionIndex > 0;
+		}
+		return false;
+	})();
+
+	$: canGoForward = (() => {
+		if ($quizStore.phase === 'mbti') {
+			const answered = Object.keys($quizStore.mbtiAnswers).length;
+			return (
+				$quizStore.currentQuestionIndex < answered &&
+				$quizStore.currentQuestionIndex < mbtiQuestions.length - 1
+			);
+		} else if ($quizStore.phase === 'language') {
+			const answered = Object.keys($quizStore.languageAnswers).length;
+			const totalQuestions = adaptiveQuestions.length;
+			return (
+				$quizStore.currentQuestionIndex < answered &&
+				$quizStore.currentQuestionIndex < totalQuestions - 1
+			);
+		}
+		return false;
+	})();
 
 	function handleRestart() {
 		const urlParams = new URLSearchParams(window.location.search);
@@ -127,6 +193,11 @@
 				questionNumber={$quizStore.currentQuestionIndex + 1}
 				totalQuestions={mbtiQuestions.length}
 				onAnswer={handleMBTIAnswer}
+				onPrevious={handlePrevious}
+				onNext={handleNext}
+				{canGoBack}
+				{canGoForward}
+				selectedAnswerId={selectedMBTIAnswerId}
 			/>
 		{/if}
 	{:else if $quizStore.phase === 'language'}
@@ -136,6 +207,11 @@
 				questionNumber={$quizStore.currentQuestionIndex + 1}
 				totalQuestions={adaptiveQuestions.length}
 				onAnswer={handleLanguageAnswer}
+				onPrevious={handlePrevious}
+				onNext={handleNext}
+				{canGoBack}
+				{canGoForward}
+				selectedAnswerId={selectedLanguageAnswerId}
 			/>
 		{/if}
 	{:else if $quizStore.completed && $quizStore.result}
