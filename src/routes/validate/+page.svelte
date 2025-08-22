@@ -26,10 +26,10 @@
 		<p>Review all {languages.length} programming languages and their image URLs</p>
 		<div class="stats">
 			<span class="stat">
-				With imgURL: {languages.filter(lang => lang.imgURL).length}
+				With imgURL: {languages.filter((lang) => lang.imgURL).length}
 			</span>
 			<span class="stat">
-				Without imgURL: {languages.filter(lang => !lang.imgURL).length}
+				Without imgURL: {languages.filter((lang) => !lang.imgURL).length}
 			</span>
 			<span class="stat error">
 				Image Errors: {Object.keys(imageErrors).length}
@@ -81,9 +81,7 @@
 					</div>
 
 					{#if imageErrors[language.id]}
-						<div class="error-message">
-							❌ Image failed to load - falling back to emoji
-						</div>
+						<div class="error-message">❌ Image failed to load - falling back to emoji</div>
 					{/if}
 				</div>
 			</div>

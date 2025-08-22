@@ -35,7 +35,8 @@
 	}
 
 	let hideIntro = false;
-	$: showIntro = !hideIntro && $quizStore.phase === 'mbti' && Object.keys($quizStore.mbtiAnswers).length === 0;
+	$: showIntro =
+		!hideIntro && $quizStore.phase === 'mbti' && Object.keys($quizStore.mbtiAnswers).length === 0;
 
 	onMount(() => {
 		const urlParams = new URLSearchParams(window.location.search);
@@ -118,12 +119,7 @@
 						💡 Based on MBTI personality science
 					</p>
 				</div>
-				<button
-					class="start-button"
-					on:click={() => hideIntro = true}
-				>
-					Start Quiz
-				</button>
+				<button class="start-button" on:click={() => (hideIntro = true)}> Start Quiz </button>
 			</div>
 		{:else}
 			<MBTIQuestion

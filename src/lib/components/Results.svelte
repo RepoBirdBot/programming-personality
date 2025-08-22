@@ -170,18 +170,20 @@
 	}
 
 	.language-icon {
-		font-size: 3rem;
+		font-size: 4rem;
 		flex-shrink: 0;
-		width: 3rem;
-		height: 3rem;
+		width: 4rem;
+		height: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
 	.language-img {
-		width: 100%;
-		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
 		object-fit: contain;
 		border-radius: 8px;
 	}
@@ -197,7 +199,13 @@
 		font-size: 1.8rem;
 		margin: 0;
 		color: #2d3748;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-family:
+			'Inter',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			sans-serif;
 		font-weight: 700;
 		letter-spacing: -0.025em;
 	}
@@ -226,17 +234,23 @@
 	}
 
 	.details {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 3rem;
 		margin: 1.5rem 0;
-		text-align: left;
+		text-align: center;
 	}
 
 	.detail-section h3 {
 		color: #333;
 		margin-bottom: 0.5rem;
 		font-size: 1.1rem;
+	}
+
+	.detail-section {
+		flex: 1;
+		max-width: 300px;
 	}
 
 	.detail-section ul {
@@ -388,9 +402,9 @@
 		}
 
 		.language-icon {
-			font-size: 2.5rem;
-			width: 2.5rem;
-			height: 2.5rem;
+			font-size: 3.5rem;
+			width: 3.5rem;
+			height: 3.5rem;
 		}
 
 		.language-name {
@@ -398,8 +412,8 @@
 		}
 
 		.details {
-			grid-template-columns: 1fr;
-			gap: 1rem;
+			flex-direction: column;
+			gap: 1.5rem;
 		}
 
 		.personality {
@@ -430,9 +444,9 @@
 		}
 
 		.language-icon {
-			font-size: 2rem;
-			width: 2rem;
-			height: 2rem;
+			font-size: 3rem;
+			width: 3rem;
+			height: 3rem;
 		}
 
 		.language-name {

@@ -51,7 +51,7 @@ export function getLanguageById(id: string): Language {
 		strengths: ['To be defined', 'To be defined', 'To be defined', 'To be defined'],
 		useCases: ['To be defined', 'To be defined', 'To be defined', 'To be defined'],
 		personality: `Suitable for ${mbti} personality types`,
-		mbti: mbti as typeof MBTI_TYPES[number],
+		mbti: mbti as (typeof MBTI_TYPES)[number],
 		icon: '🔧',
 		color: '#666666'
 	};

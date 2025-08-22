@@ -103,20 +103,17 @@ const testScenarios: TestScenario[] = [
 	}
 ];
 
-function simulateQuizAnswers(
-	mbtiType: string,
-	answers: Record<string, string>
-): Language | null {
+function simulateQuizAnswers(mbtiType: string, answers: Record<string, string>): Language | null {
 	// Get candidate languages for this MBTI type
 	const candidateLanguages = languages.filter((lang) => lang.mbti === mbtiType);
-	
+
 	if (candidateLanguages.length === 0) {
 		return null;
 	}
 
 	// Get adaptive questions
 	const questions = getAdaptiveQuestions(mbtiType);
-	
+
 	// Initialize scores
 	const scores: Record<string, number> = {};
 	candidateLanguages.forEach((lang) => {
@@ -136,8 +133,7 @@ function simulateQuizAnswers(
 			if (scores[langId] !== undefined) {
 				// Weight based on question category
 				const weight =
-					question.category === 'domain' ? 3 : 
-					question.category === 'performance' ? 2 : 1;
+					question.category === 'domain' ? 3 : question.category === 'performance' ? 2 : 1;
 				scores[langId] += weight;
 			}
 		});
@@ -166,9 +162,9 @@ let failedTests = 0;
 testScenarios.forEach((scenario) => {
 	console.log(`Testing: ${scenario.name}`);
 	console.log(`  MBTI Type: ${scenario.mbtiType}`);
-	
+
 	const result = simulateQuizAnswers(scenario.mbtiType, scenario.questionAnswers);
-	
+
 	if (!result) {
 		console.log(`  ❌ FAILED: No result returned`);
 		failedTests++;
@@ -176,19 +172,25 @@ testScenarios.forEach((scenario) => {
 	}
 
 	const isExpected = scenario.expectedLanguages.includes(result.id);
-	
+
 	if (isExpected) {
-		console.log(`  ✅ PASSED: Got ${result.name} (expected: ${scenario.expectedLanguages.join(' or ')})`);
+		console.log(
+			`  ✅ PASSED: Got ${result.name} (expected: ${scenario.expectedLanguages.join(' or ')})`
+		);
 		passedTests++;
 	} else {
-		console.log(`  ❌ FAILED: Got ${result.name} (expected: ${scenario.expectedLanguages.join(' or ')})`);
+		console.log(
+			`  ❌ FAILED: Got ${result.name} (expected: ${scenario.expectedLanguages.join(' or ')})`
+		);
 		failedTests++;
-		
+
 		// Debug info
 		const candidateLanguages = languages.filter((lang) => lang.mbti === scenario.mbtiType);
-		console.log(`     Candidates for ${scenario.mbtiType}: ${candidateLanguages.map(l => l.id).join(', ')}`);
+		console.log(
+			`     Candidates for ${scenario.mbtiType}: ${candidateLanguages.map((l) => l.id).join(', ')}`
+		);
 	}
-	
+
 	console.log('');
 });
 
@@ -199,7 +201,7 @@ const keyLanguages = ['python', 'javascript', 'typescript', 'rust', 'go', 'java'
 const requiredNewFields = [
 	'originalPurpose',
 	'imperative',
-	'objectOriented', 
+	'objectOriented',
 	'functional',
 	'procedural',
 	'typing',

@@ -19,7 +19,6 @@ function createInitialState(): QuizState {
 	};
 }
 
-
 function createQuizStore() {
 	const { subscribe, set, update } = writable<QuizState>(createInitialState());
 
@@ -27,7 +26,7 @@ function createQuizStore() {
 		subscribe,
 		answerMBTIQuestion: (questionId: string, answerId: string) => {
 			update((state) => {
-				const newState = { 
+				const newState = {
 					...state,
 					mbtiAnswers: { ...state.mbtiAnswers, [questionId]: answerId },
 					scores: { ...state.scores }
@@ -68,7 +67,7 @@ function createQuizStore() {
 		},
 		answerLanguageQuestion: (questionId: string, answerId: string) => {
 			update((state) => {
-				const newState = { 
+				const newState = {
 					...state,
 					languageAnswers: { ...state.languageAnswers, [questionId]: answerId },
 					scores: { ...state.scores }
@@ -85,15 +84,18 @@ function createQuizStore() {
 						// Give higher weight to specific trait matches
 						const weight =
 							question.category === 'domain' ? 3 : question.category === 'performance' ? 2 : 1;
-						newState.scores = { 
-							...newState.scores, 
-							[langId]: (newState.scores[langId] || 0) + weight 
+						newState.scores = {
+							...newState.scores,
+							[langId]: (newState.scores[langId] || 0) + weight
 						};
 					});
 				}
 
 				// Check if all adaptive questions answered
-				if (newState.adaptiveQuestions && Object.keys(newState.languageAnswers).length === newState.adaptiveQuestions.length) {
+				if (
+					newState.adaptiveQuestions &&
+					Object.keys(newState.languageAnswers).length === newState.adaptiveQuestions.length
+				) {
 					newState.completed = true;
 					newState.phase = 'completed';
 					newState.result = calculateEnhancedResult(
@@ -123,7 +125,7 @@ function createQuizStore() {
 					result: language
 				});
 			}
-		},
+		}
 	};
 }
 
@@ -167,31 +169,31 @@ function calculateEnhancedResult(
 	const scoredLanguages = Object.entries(scores)
 		.filter(([_, score]) => score > 0)
 		.sort((a, b) => b[1] - a[1]);
-	
+
 	let resultId = 'python'; // Default fallback
-	
+
 	if (scoredLanguages.length > 0) {
 		// Pick the highest scoring language
 		resultId = scoredLanguages[0][0];
-		
+
 		// If there are MBTI matches in the top scorers, prefer those
 		const topScore = scoredLanguages[0][1];
 		const topScorers = scoredLanguages.filter(([_, score]) => score === topScore);
-		
+
 		// Check if any top scorer matches the MBTI type
 		const mbtiMatch = topScorers.find(([langId]) => {
-			const lang = languages.find(l => l.id === langId);
+			const lang = languages.find((l) => l.id === langId);
 			return lang?.mbti === mbtiType;
 		});
-		
+
 		if (mbtiMatch) {
 			resultId = mbtiMatch[0];
 		}
 	} else if (candidates.length > 0) {
 		// No scores, pick from candidates
 		// Prefer MBTI matches if available
-		const mbtiMatch = candidates.find(langId => {
-			const lang = languages.find(l => l.id === langId);
+		const mbtiMatch = candidates.find((langId) => {
+			const lang = languages.find((l) => l.id === langId);
 			return lang?.mbti === mbtiType;
 		});
 		resultId = mbtiMatch || candidates[0];

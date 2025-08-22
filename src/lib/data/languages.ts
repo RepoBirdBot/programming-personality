@@ -339,7 +339,7 @@ export const languages: Language[] = [
 		mbti: 'ENFP',
 		icon: '🐍',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+		imgURL: 'https://lean-lang.org/lean_logo.svg',
 		primaryDomain: 'data_science',
 		performanceNeeds: 'moderate',
 		ecosystemMaturity: 'mature',
@@ -374,7 +374,6 @@ export const languages: Language[] = [
 		mbti: 'ESFP',
 		icon: '⚡',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
 		primaryDomain: 'web_frontend',
 		performanceNeeds: 'flexible',
 		ecosystemMaturity: 'mature',
@@ -409,7 +408,6 @@ export const languages: Language[] = [
 		mbti: 'ISTJ',
 		icon: '🔷',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
 		primaryDomain: 'enterprise',
 		performanceNeeds: 'important',
 		ecosystemMaturity: 'modern',
@@ -444,7 +442,6 @@ export const languages: Language[] = [
 		mbti: 'INTJ',
 		icon: '🦀',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg',
 		primaryDomain: 'systems',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'modern',
@@ -479,7 +476,6 @@ export const languages: Language[] = [
 		mbti: 'ESTJ',
 		icon: '🐹',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg',
 		primaryDomain: 'web_backend',
 		performanceNeeds: 'important',
 		ecosystemMaturity: 'modern',
@@ -514,7 +510,6 @@ export const languages: Language[] = [
 		mbti: 'ISFJ',
 		icon: '☕',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg',
 		primaryDomain: 'enterprise',
 		performanceNeeds: 'important',
 		ecosystemMaturity: 'mature',
@@ -554,7 +549,6 @@ export const languages: Language[] = [
 		mbti: 'ISTJ',
 		icon: '⚙️',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg',
 		primaryDomain: 'systems',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'mature',
@@ -594,7 +588,6 @@ export const languages: Language[] = [
 		mbti: 'INFP',
 		icon: '💎',
 		color: '#3776AB',
-		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg',
 		primaryDomain: 'web_backend',
 		performanceNeeds: 'flexible',
 		ecosystemMaturity: 'mature',
@@ -1073,6 +1066,7 @@ export const languages: Language[] = [
 		mbti: 'INTJ',
 		icon: '🔮',
 		color: '#3776AB',
+		imgURL: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg',
 		primaryDomain: 'data_science',
 		performanceNeeds: 'critical',
 		ecosystemMaturity: 'modern',
@@ -1347,7 +1341,8 @@ export const languages: Language[] = [
 			'Data warehousing',
 			'ETL processes'
 		],
-		personality: 'Methodical and systematic. You believe in structured thinking and organized data. Precision matters to you.',
+		personality:
+			'Methodical and systematic. You believe in structured thinking and organized data. Precision matters to you.',
 		mbti: 'ISTJ',
 		icon: '🗄️',
 		color: '#3776AB',
@@ -1392,7 +1387,8 @@ export const languages: Language[] = [
 			'File manipulation',
 			'Server management'
 		],
-		personality: 'Practical and efficient. You get things done quickly and value automation over manual work.',
+		personality:
+			'Practical and efficient. You get things done quickly and value automation over manual work.',
 		mbti: 'ISTP',
 		icon: '🐚',
 		color: '#3776AB',
@@ -1437,7 +1433,8 @@ export const languages: Language[] = [
 			'Web development',
 			'DSL creation'
 		],
-		personality: 'Flexible and creative. You like having options and building elegant solutions without constraints.',
+		personality:
+			'Flexible and creative. You like having options and building elegant solutions without constraints.',
 		mbti: 'ENTP',
 		icon: '🎭',
 		color: '#3776AB',
@@ -1482,7 +1479,8 @@ export const languages: Language[] = [
 			'Performance optimization',
 			'Security research'
 		],
-		personality: 'Detail-oriented and precise. You want complete control and understand exactly what the machine is doing.',
+		personality:
+			'Detail-oriented and precise. You want complete control and understand exactly what the machine is doing.',
 		mbti: 'ISTP',
 		icon: '⚙️',
 		color: '#3776AB',
@@ -1527,7 +1525,8 @@ export const languages: Language[] = [
 			'Engineering analysis',
 			'Supercomputing'
 		],
-		personality: 'Analytical and methodical. You focus on solving complex mathematical problems with proven tools.',
+		personality:
+			'Analytical and methodical. You focus on solving complex mathematical problems with proven tools.',
 		mbti: 'INTJ',
 		icon: '🔬',
 		color: '#3776AB',
@@ -1662,7 +1661,8 @@ export const languages: Language[] = [
 			'Data processing',
 			'Custom functions'
 		],
-		personality: 'Supportive and practical. You help others be more productive with familiar tools.',
+		personality:
+			'Supportive and practical. You help others be more productive with familiar tools.',
 		mbti: 'ESFJ',
 		icon: '📊',
 		color: '#3776AB',
@@ -1752,7 +1752,8 @@ export const languages: Language[] = [
 			'Theorem proving',
 			'Knowledge representation'
 		],
-		personality: 'Logical and abstract. You think in terms of rules and relationships rather than procedures.',
+		personality:
+			'Logical and abstract. You think in terms of rules and relationships rather than procedures.',
 		mbti: 'INTP',
 		icon: '🧩',
 		color: '#3776AB',
@@ -1842,7 +1843,8 @@ export const languages: Language[] = [
 			'Compiler development',
 			'Scientific computing'
 		],
-		personality: 'Forward-thinking and pragmatic. You want modern features without sacrificing performance.',
+		personality:
+			'Forward-thinking and pragmatic. You want modern features without sacrificing performance.',
 		mbti: 'INTJ',
 		icon: '🔷',
 		color: '#3776AB',
@@ -2015,14 +2017,9 @@ export const languages: Language[] = [
 			'Security features',
 			'DeFi applications'
 		],
-		useCases: [
-			'Smart contracts',
-			'DeFi protocols',
-			'NFT platforms',
-			'DAOs',
-			'Blockchain apps'
-		],
-		personality: 'Strategic and entrepreneurial. You build decentralized systems and value innovation.',
+		useCases: ['Smart contracts', 'DeFi protocols', 'NFT platforms', 'DAOs', 'Blockchain apps'],
+		personality:
+			'Strategic and entrepreneurial. You build decentralized systems and value innovation.',
 		mbti: 'ENTJ',
 		icon: '⟠',
 		color: '#3776AB',
@@ -2060,13 +2057,7 @@ export const languages: Language[] = [
 			'IDE integration',
 			'Cross-platform'
 		],
-		useCases: [
-			'DSL creation',
-			'Education',
-			'Research',
-			'Web development',
-			'Scripting'
-		],
+		useCases: ['DSL creation', 'Education', 'Research', 'Web development', 'Scripting'],
 		personality: 'Creative and academic. You enjoy creating new languages and exploring ideas.',
 		mbti: 'INTP',
 		icon: '🎨',
@@ -2247,7 +2238,8 @@ export const languages: Language[] = [
 			'Database applications',
 			'Office automation'
 		],
-		personality: 'Practical and supportive. You prioritize user-friendly solutions and structured development.',
+		personality:
+			'Practical and supportive. You prioritize user-friendly solutions and structured development.',
 		mbti: 'ESFJ',
 		icon: '🏢',
 		color: '#3776AB',
@@ -2292,7 +2284,8 @@ export const languages: Language[] = [
 			'Game development',
 			'Scientific computing'
 		],
-		personality: 'Systematic and flexible. You want readable code that performs exceptionally well.',
+		personality:
+			'Systematic and flexible. You want readable code that performs exceptionally well.',
 		mbti: 'INTP',
 		icon: '👑',
 		color: '#3776AB',
@@ -2427,7 +2420,8 @@ export const languages: Language[] = [
 			'Game development',
 			'Desktop applications'
 		],
-		personality: 'Clear and fast-learning. You value simplicity and efficient development workflows.',
+		personality:
+			'Clear and fast-learning. You value simplicity and efficient development workflows.',
 		mbti: 'ENFJ',
 		icon: '🚀',
 		color: '#3776AB',
@@ -2472,7 +2466,8 @@ export const languages: Language[] = [
 			'Data visualization',
 			'Educational apps'
 		],
-		personality: 'Systematic and user-focused. You prioritize reliability and excellent user experiences.',
+		personality:
+			'Systematic and user-focused. You prioritize reliability and excellent user experiences.',
 		mbti: 'INFJ',
 		icon: '🌳',
 		color: '#3776AB',
@@ -2517,7 +2512,8 @@ export const languages: Language[] = [
 			'Complex UIs',
 			'Mathematical applications'
 		],
-		personality: 'Rigorous and theoretical. You value mathematical correctness and type safety above all.',
+		personality:
+			'Rigorous and theoretical. You value mathematical correctness and type safety above all.',
 		mbti: 'INTJ',
 		icon: '🔮',
 		color: '#3776AB',
@@ -2562,7 +2558,8 @@ export const languages: Language[] = [
 			'Full-stack development',
 			'Type-safe frontends'
 		],
-		personality: 'Creative and experimental. You enjoy blending functional programming with practical web development.',
+		personality:
+			'Creative and experimental. You enjoy blending functional programming with practical web development.',
 		mbti: 'ENTP',
 		icon: '⚛️',
 		color: '#3776AB',
@@ -2607,7 +2604,8 @@ export const languages: Language[] = [
 			'Expert systems',
 			'Research projects'
 		],
-		personality: 'Abstract thinker and tinkerer. You love exploring ideas and building flexible systems.',
+		personality:
+			'Abstract thinker and tinkerer. You love exploring ideas and building flexible systems.',
 		mbti: 'INTP',
 		icon: '🎯',
 		color: '#3776AB',
@@ -2652,7 +2650,8 @@ export const languages: Language[] = [
 			'Language theory',
 			'Mathematical proofs'
 		],
-		personality: 'Analytical and rigorous. You demand mathematical precision and logical consistency.',
+		personality:
+			'Analytical and rigorous. You demand mathematical precision and logical consistency.',
 		mbti: 'INTJ',
 		icon: '📚',
 		color: '#3776AB',
@@ -2697,7 +2696,8 @@ export const languages: Language[] = [
 			'GUI development',
 			'Live coding environments'
 		],
-		personality: 'Open-minded and experimental. You thrive in interactive environments and love pure concepts.',
+		personality:
+			'Open-minded and experimental. You thrive in interactive environments and love pure concepts.',
 		mbti: 'ENFP',
 		icon: '💬',
 		color: '#3776AB',
@@ -2877,7 +2877,8 @@ export const languages: Language[] = [
 			'Image processing',
 			'Cryptocurrency mining'
 		],
-		personality: 'Technical and performance-focused. You harness hardware for maximum computational power.',
+		personality:
+			'Technical and performance-focused. You harness hardware for maximum computational power.',
 		mbti: 'ISTP',
 		icon: '🚀',
 		color: '#3776AB',
@@ -2922,7 +2923,8 @@ export const languages: Language[] = [
 			'Signal processing',
 			'Machine learning'
 		],
-		personality: 'Versatile and systems-focused. You value cross-platform solutions and open standards.',
+		personality:
+			'Versatile and systems-focused. You value cross-platform solutions and open standards.',
 		mbti: 'INTP',
 		icon: '🌐',
 		color: '#3776AB',
@@ -2967,7 +2969,8 @@ export const languages: Language[] = [
 			'Game development',
 			'Real-time rendering'
 		],
-		personality: 'Visual and technical. You create stunning graphics through mathematical precision.',
+		personality:
+			'Visual and technical. You create stunning graphics through mathematical precision.',
 		mbti: 'ISTP',
 		icon: '🎨',
 		color: '#3776AB',
@@ -3012,7 +3015,8 @@ export const languages: Language[] = [
 			'Visual effects',
 			'Real-time rendering'
 		],
-		personality: 'Project-focused with visual flair. You create impressive graphics for specific platforms.',
+		personality:
+			'Project-focused with visual flair. You create impressive graphics for specific platforms.',
 		mbti: 'ENTJ',
 		icon: '🖥️',
 		color: '#3776AB',
@@ -3057,7 +3061,8 @@ export const languages: Language[] = [
 			'Python acceleration',
 			'Systems programming'
 		],
-		personality: 'Analytical and innovation-focused. You push the boundaries of AI and performance.',
+		personality:
+			'Analytical and innovation-focused. You push the boundaries of AI and performance.',
 		mbti: 'INTJ',
 		icon: '🔥',
 		color: '#3776AB',
@@ -3102,7 +3107,8 @@ export const languages: Language[] = [
 			'Operating systems',
 			'Game engines'
 		],
-		personality: 'Pragmatic and leadership-oriented. You modernize systems while maintaining compatibility.',
+		personality:
+			'Pragmatic and leadership-oriented. You modernize systems while maintaining compatibility.',
 		mbti: 'ESTJ',
 		icon: '💠',
 		color: '#3776AB',
@@ -3147,7 +3153,8 @@ export const languages: Language[] = [
 			'Game development',
 			'Web interactivity'
 		],
-		personality: 'Creative and flexible. You build engaging interactive experiences and love visual storytelling.',
+		personality:
+			'Creative and flexible. You build engaging interactive experiences and love visual storytelling.',
 		mbti: 'ENFP',
 		icon: '🎬',
 		color: '#3776AB',
@@ -3192,7 +3199,8 @@ export const languages: Language[] = [
 			'Text replacement',
 			'System utilities'
 		],
-		personality: 'Practical and efficient. You automate repetitive tasks and help others be more productive.',
+		personality:
+			'Practical and efficient. You automate repetitive tasks and help others be more productive.',
 		mbti: 'ISFJ',
 		icon: '⚡',
 		color: '#3776AB',
@@ -3237,7 +3245,8 @@ export const languages: Language[] = [
 			'Financial modeling',
 			'Array processing'
 		],
-		personality: 'Abstract and logical. You think in mathematical terms and value concise, powerful expressions.',
+		personality:
+			'Abstract and logical. You think in mathematical terms and value concise, powerful expressions.',
 		mbti: 'INTJ',
 		icon: '∇',
 		color: '#3776AB',
@@ -3282,7 +3291,8 @@ export const languages: Language[] = [
 			'Rapid prototyping',
 			'JavaScript enhancement'
 		],
-		personality: 'Creative and expressive. You value clean, readable code and enjoy elegant syntax.',
+		personality:
+			'Creative and expressive. You value clean, readable code and enjoy elegant syntax.',
 		mbti: 'ENFP',
 		icon: '☕',
 		color: '#3776AB',
@@ -3327,7 +3337,8 @@ export const languages: Language[] = [
 			'Supercomputing',
 			'Data-intensive applications'
 		],
-		personality: 'Systematic and forward-thinking. You tackle complex computational problems with elegant parallel solutions.',
+		personality:
+			'Systematic and forward-thinking. You tackle complex computational problems with elegant parallel solutions.',
 		mbti: 'INTJ',
 		icon: '⛪',
 		color: '#3776AB',
@@ -3372,7 +3383,8 @@ export const languages: Language[] = [
 			'Reliable systems',
 			'Academic teaching'
 		],
-		personality: 'Meticulous and reliable. You prioritize software correctness and systematic design approaches.',
+		personality:
+			'Meticulous and reliable. You prioritize software correctness and systematic design approaches.',
 		mbti: 'ISTJ',
 		icon: '🏗️',
 		color: '#3776AB',
@@ -3417,7 +3429,8 @@ export const languages: Language[] = [
 			'Educational programming',
 			'Domain-specific languages'
 		],
-		personality: 'Novel and systematic. You enjoy exploring new programming paradigms and building extensible systems.',
+		personality:
+			'Novel and systematic. You enjoy exploring new programming paradigms and building extensible systems.',
 		mbti: 'INTP',
 		icon: '📚',
 		color: '#3776AB',
@@ -3462,7 +3475,8 @@ export const languages: Language[] = [
 			'Firmware development',
 			'Boot loaders'
 		],
-		personality: 'Practical and concise. You value direct control and minimal overhead in system programming.',
+		personality:
+			'Practical and concise. You value direct control and minimal overhead in system programming.',
 		mbti: 'ISTP',
 		icon: '🔧',
 		color: '#3776AB',
@@ -3507,7 +3521,8 @@ export const languages: Language[] = [
 			'Concurrent applications',
 			'Educational programming'
 		],
-		personality: 'Curious and flexible. You explore new ideas and enjoy the freedom of prototype-based programming.',
+		personality:
+			'Curious and flexible. You explore new ideas and enjoy the freedom of prototype-based programming.',
 		mbti: 'ENTP',
 		icon: '🌀',
 		color: '#3776AB',
@@ -3552,7 +3567,8 @@ export const languages: Language[] = [
 			'Scientific research',
 			'Algorithm prototyping'
 		],
-		personality: 'Logical and abstract. You think in mathematical patterns and value powerful, concise expressions.',
+		personality:
+			'Logical and abstract. You think in mathematical patterns and value powerful, concise expressions.',
 		mbti: 'INTJ',
 		icon: '📊',
 		color: '#3776AB',
@@ -3597,7 +3613,8 @@ export const languages: Language[] = [
 			'Industrial automation',
 			'Research applications'
 		],
-		personality: 'Practical and operational. You focus on engineering solutions and hands-on measurement systems.',
+		personality:
+			'Practical and operational. You focus on engineering solutions and hands-on measurement systems.',
 		mbti: 'ESTJ',
 		icon: '📊',
 		color: '#3776AB',
@@ -3638,11 +3655,12 @@ export const languages: Language[] = [
 		useCases: [
 			'Programming education',
 			'Teaching concepts',
-			'Children\'s programming',
+			"Children's programming",
 			'Graphics learning',
 			'STEM education'
 		],
-		personality: 'Nurturing and interactive. You make programming accessible and enjoyable for learners.',
+		personality:
+			'Nurturing and interactive. You make programming accessible and enjoyable for learners.',
 		mbti: 'ENFJ',
 		icon: '🐢',
 		color: '#3776AB',
@@ -3687,7 +3705,8 @@ export const languages: Language[] = [
 			'Market analysis',
 			'Financial strategies'
 		],
-		personality: 'Strategic and results-oriented. You automate trading decisions and optimize financial performance.',
+		personality:
+			'Strategic and results-oriented. You automate trading decisions and optimize financial performance.',
 		mbti: 'ENTJ',
 		icon: '📈',
 		color: '#3776AB',
@@ -3732,7 +3751,8 @@ export const languages: Language[] = [
 			'Indie game development',
 			'Rapid prototyping'
 		],
-		personality: 'Creative and adaptable. You build engaging games that work across multiple platforms.',
+		personality:
+			'Creative and adaptable. You build engaging games that work across multiple platforms.',
 		mbti: 'ENFP',
 		icon: '🐒',
 		color: '#3776AB',
@@ -3777,7 +3797,8 @@ export const languages: Language[] = [
 			'GUI applications',
 			'Rapid development'
 		],
-		personality: 'Practical and reliable. You build solid applications with familiar tools and straightforward approaches.',
+		personality:
+			'Practical and reliable. You build solid applications with familiar tools and straightforward approaches.',
 		mbti: 'ISFJ',
 		icon: '🔷',
 		color: '#3776AB',
@@ -3822,7 +3843,8 @@ export const languages: Language[] = [
 			'Legacy system automation',
 			'Administrative tasks'
 		],
-		personality: 'Routine-focused and reliable. You handle business needs with proven, stable solutions.',
+		personality:
+			'Routine-focused and reliable. You handle business needs with proven, stable solutions.',
 		mbti: 'ISFJ',
 		icon: '📜',
 		color: '#3776AB',
@@ -3867,7 +3889,8 @@ export const languages: Language[] = [
 			'Educational programming',
 			'Rapid prototyping'
 		],
-		personality: 'Playful and open. You enjoy creative scripting with flexible, natural-feeling syntax.',
+		personality:
+			'Playful and open. You enjoy creative scripting with flexible, natural-feeling syntax.',
 		mbti: 'ENFP',
 		icon: '💍',
 		color: '#3776AB',
@@ -3912,7 +3935,8 @@ export const languages: Language[] = [
 			'Academic studies',
 			'Historical computing'
 		],
-		personality: 'Innovative and theory-driven. You model complex systems and pioneered object-oriented thinking.',
+		personality:
+			'Innovative and theory-driven. You model complex systems and pioneered object-oriented thinking.',
 		mbti: 'INTJ',
 		icon: '🏛️',
 		color: '#3776AB',
@@ -3957,7 +3981,8 @@ export const languages: Language[] = [
 			'Report generation',
 			'Data migration'
 		],
-		personality: 'Structured and creative. You find patterns in data and transform information systematically.',
+		personality:
+			'Structured and creative. You find patterns in data and transform information systematically.',
 		mbti: 'INFJ',
 		icon: '🔄',
 		color: '#3776AB',
@@ -4002,7 +4027,8 @@ export const languages: Language[] = [
 			'System administration',
 			'Embedded scripting'
 		],
-		personality: 'Flexible and expressive. You build practical tools and enjoy rapid, visual development.',
+		personality:
+			'Flexible and expressive. You build practical tools and enjoy rapid, visual development.',
 		mbti: 'ENFP',
 		icon: '🎨',
 		color: '#3776AB',
@@ -4032,7 +4058,7 @@ export const languages: Language[] = [
 	{
 		id: 'qsharp',
 		name: 'Q#',
-		description: 'Microsoft\'s quantum programming language for quantum computing',
+		description: "Microsoft's quantum programming language for quantum computing",
 		strengths: [
 			'Quantum algorithm development',
 			'.NET integration',
@@ -4047,7 +4073,8 @@ export const languages: Language[] = [
 			'Azure Quantum',
 			'Quantum cryptography'
 		],
-		personality: 'Curious and analytical. You explore quantum concepts and push the boundaries of computation.',
+		personality:
+			'Curious and analytical. You explore quantum concepts and push the boundaries of computation.',
 		mbti: 'INTP',
 		icon: '🔬',
 		color: '#3776AB',
@@ -4092,7 +4119,8 @@ export const languages: Language[] = [
 			'Serverless functions',
 			'Edge computing'
 		],
-		personality: 'Pragmatic and technical. You optimize performance and enjoy efficient, low-level solutions.',
+		personality:
+			'Pragmatic and technical. You optimize performance and enjoy efficient, low-level solutions.',
 		mbti: 'ISTP',
 		icon: '⚡',
 		color: '#3776AB',
@@ -4137,7 +4165,8 @@ export const languages: Language[] = [
 			'Digital verification',
 			'Hardware modeling'
 		],
-		personality: 'Strategic and systematic. You design complex hardware systems with rigorous verification.',
+		personality:
+			'Strategic and systematic. You design complex hardware systems with rigorous verification.',
 		mbti: 'INTJ',
 		icon: '🔧',
 		color: '#3776AB',
@@ -4182,7 +4211,8 @@ export const languages: Language[] = [
 			'Distributed systems',
 			'High-performance computing'
 		],
-		personality: 'Innovative and scalable. You build safe, concurrent systems with elegant architectures.',
+		personality:
+			'Innovative and scalable. You build safe, concurrent systems with elegant architectures.',
 		mbti: 'ENTJ',
 		icon: '🐎',
 		color: '#3776AB',
@@ -4227,7 +4257,8 @@ export const languages: Language[] = [
 			'Type theory teaching',
 			'Critical systems'
 		],
-		personality: 'Structured and precise. You value mathematical correctness and build provably correct systems.',
+		personality:
+			'Structured and precise. You value mathematical correctness and build provably correct systems.',
 		mbti: 'INFJ',
 		icon: '🔍',
 		color: '#3776AB',
@@ -4452,7 +4483,8 @@ export const languages: Language[] = [
 			'Infrastructure configuration',
 			'Safe templating'
 		],
-		personality: 'Structure-loving and safety-focused. You prefer reliable, validated system configuration.',
+		personality:
+			'Structure-loving and safety-focused. You prefer reliable, validated system configuration.',
 		mbti: 'ISFJ',
 		icon: '⚙️',
 		color: '#3776AB',
@@ -4497,7 +4529,8 @@ export const languages: Language[] = [
 			'Logic teaching',
 			'Certified programming'
 		],
-		personality: 'Rigorous and abstract. You love logical consistency and deep mathematical frameworks.',
+		personality:
+			'Rigorous and abstract. You love logical consistency and deep mathematical frameworks.',
 		mbti: 'INTJ',
 		icon: '📐',
 		color: '#3776AB',

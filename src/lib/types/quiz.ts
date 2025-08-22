@@ -38,13 +38,25 @@ export interface Question {
 
 // All 16 MBTI personality types
 export const MBTI_TYPES = [
-	'ISTJ', 'ISFJ', 'INFJ', 'INTJ',
-	'ISTP', 'ISFP', 'INFP', 'INTP',
-	'ESTP', 'ESFP', 'ENFP', 'ENTP',
-	'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'
+	'ISTJ',
+	'ISFJ',
+	'INFJ',
+	'INTJ',
+	'ISTP',
+	'ISFP',
+	'INFP',
+	'INTP',
+	'ESTP',
+	'ESFP',
+	'ENFP',
+	'ENTP',
+	'ESTJ',
+	'ESFJ',
+	'ENFJ',
+	'ENTJ'
 ] as const;
 
-export type MBTIType = typeof MBTI_TYPES[number];
+export type MBTIType = (typeof MBTI_TYPES)[number];
 
 export type PrimaryDomain =
 	| 'web_frontend'
