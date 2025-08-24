@@ -75,8 +75,8 @@
 			const answered = Object.keys($quizStore.mbtiAnswers).length;
 			return answered > 0 && $quizStore.currentQuestionIndex > 0;
 		} else if ($quizStore.phase === 'language') {
-			const answered = Object.keys($quizStore.languageAnswers).length;
-			return answered > 0 && $quizStore.currentQuestionIndex > 0;
+			// Can always go back from language phase (either to previous language question or to MBTI)
+			return true;
 		}
 		return false;
 	})();
@@ -186,14 +186,15 @@
 			<div class="intro">
 				<h1>
 					<span class="emoji">🚀</span>
-					<span class="gradient-text">Programming Language Personality Test</span>
+					<span class="gradient-text">Personality Programming Quiz</span>
 				</h1>
-				<p>Discover your coding personality match from 42 languages!</p>
+				<p class="subtitle">Ever wondered which programming language truly matches who you are?</p>
+				<p>Discover languages that match your thinking style from 42 curated options</p>
 				<div class="intro-details">
 					<p class="intro-subtitle">
 						✨ Takes just 2-3 minutes<br />
-						🎯 Personalized to your coding style<br />
-						💡 Based on MBTI personality science
+						🎯 Based on MBTI personality framework<br />
+						💯 100% free, no signup required
 					</p>
 				</div>
 				<button class="start-button" on:click={() => (hideIntro = true)}> Start Quiz </button>
@@ -304,6 +305,13 @@
 		color: var(--color-text-secondary);
 		margin-bottom: 1.5rem;
 		line-height: 1.6;
+	}
+
+	.intro p.subtitle {
+		font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+		color: var(--color-text-primary);
+		margin-bottom: 0.5rem;
+		font-weight: 500;
 	}
 
 	.intro-details {

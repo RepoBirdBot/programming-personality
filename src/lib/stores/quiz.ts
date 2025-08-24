@@ -27,6 +27,21 @@ function createQuizStore() {
 		subscribe,
 		goToPreviousQuestion: () => {
 			update((state) => {
+				// If we're in language phase at question 0, go back to last MBTI question
+				if (state.phase === 'language' && state.currentQuestionIndex === 0) {
+					return {
+						...state,
+						phase: 'mbti',
+						currentQuestionIndex: mbtiQuestions.length - 1,
+						// Clear language phase data since we're going back
+						languageAnswers: {},
+						adaptiveQuestions: [],
+						scores: {},
+						candidateLanguages: [],
+						mbtiType: ''
+					};
+				}
+				// Normal back navigation within the same phase
 				if (state.currentQuestionIndex > 0) {
 					return {
 						...state,
@@ -59,9 +74,8 @@ function createQuizStore() {
 				const answered = Object.keys(state.mbtiAnswers).length;
 				return answered > 0 && state.currentQuestionIndex > 0;
 			} else if (state.phase === 'language') {
-				// Can go back if we have answered at least one language question and aren't on the first question
-				const answered = Object.keys(state.languageAnswers).length;
-				return answered > 0 && state.currentQuestionIndex > 0;
+				// Can always go back from language phase (either to previous language question or to MBTI)
+				return true;
 			}
 			return false;
 		},
