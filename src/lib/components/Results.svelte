@@ -3,11 +3,27 @@
 	import { generateShareUrl, getShareText, shareLinks, copyToClipboard } from '$lib/utils/sharing';
 	import { quizStore } from '$lib/stores/quiz';
 	import { mbtiDescriptions, type MBTIType } from '$lib/data/mbti-descriptions';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import posthog from 'posthog-js';
 
 	export let language: Language;
 	export let onRestart: () => void;
 
 	let copied = false;
+
+	// Track when results page is reached
+	onMount(() => {
+		if (browser) {
+			posthog.capture('quiz_completed', {
+				language: language.name,
+				language_id: language.id,
+				mbti_type: $quizStore.mbtiType,
+				mbti_questions_answered: $quizStore.mbtiAnswers.length,
+				language_questions_answered: $quizStore.languageAnswers.length
+			});
+		}
+	});
 
 	$: shareUrl = generateShareUrl({
 		languageId: language.id,
@@ -20,12 +36,26 @@
 		if (success) {
 			copied = true;
 			setTimeout(() => (copied = false), 2000);
+			if (browser) {
+				posthog.capture('share_clicked', {
+					platform: 'copy_link',
+					language: language.name,
+					mbti_type: $quizStore.mbtiType
+				});
+			}
 		}
 	}
 
 	function handleShare(platform: keyof typeof shareLinks) {
 		const url = shareLinks[platform](shareUrl, shareText);
 		window.open(url, '_blank', 'width=600,height=400');
+		if (browser) {
+			posthog.capture('share_clicked', {
+				platform,
+				language: language.name,
+				mbti_type: $quizStore.mbtiType
+			});
+		}
 	}
 </script>
 

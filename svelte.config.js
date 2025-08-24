@@ -16,7 +16,8 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/programming-personality' : ''
+			base: process.env.NODE_ENV === 'production' ? '/programming-personality' : '',
+			relative: false // Required for PostHog session replay to work correctly
 		}
 	}
 };

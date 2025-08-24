@@ -36,6 +36,8 @@
 	},
 	"dependencies": {
 		"@types/js-yaml": "^4.0.9",
-		"js-yaml": "^4.1.0"
+		"js-yaml": "^4.1.0",
+		"posthog-js": "^1.260.2",
+		"posthog-node": "^5.7.0"
 	}
 }
