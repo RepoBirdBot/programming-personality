@@ -1,38 +1,38 @@
 import type { MBTIQuestion } from '$lib/types/quiz';
 
-// Improved MBTI questions with concrete scenarios and software engineering focus
+// General personality questions that map to programming preferences without being technical
 export const mbtiQuestions: MBTIQuestion[] = [
 	// Extraversion vs Introversion - 2 Questions
 	{
 		id: 'ei1',
-		text: "When you encounter a challenging technical problem you've never seen before, your first instinct is to:",
+		text: 'When faced with a complex puzzle or challenge, you prefer to:',
 		dimension: 'EI',
 		answers: [
 			{
 				id: 'ei1e',
-				text: 'Immediately reach out to colleagues or post in team chat to discuss approaches',
+				text: 'Talk it through with others to generate ideas',
 				dimension: 'E'
 			},
 			{
 				id: 'ei1i',
-				text: 'Spend significant time researching and thinking through the problem independently first',
+				text: 'Work through it quietly in your own head first',
 				dimension: 'I'
 			}
 		]
 	},
 	{
 		id: 'ei2',
-		text: 'When learning a new framework or technology, you:',
+		text: "When learning something completely new, you're most comfortable:",
 		dimension: 'EI',
 		answers: [
 			{
 				id: 'ei2e',
-				text: 'Join community forums, attend meetups, or find study groups to learn with others',
+				text: 'In a group class or workshop setting',
 				dimension: 'E'
 			},
 			{
 				id: 'ei2i',
-				text: 'Work through documentation, tutorials, and examples on your own pace',
+				text: 'With self-paced materials you can explore alone',
 				dimension: 'I'
 			}
 		]
@@ -41,34 +41,34 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	// Sensing vs Intuition - 2 Questions
 	{
 		id: 'sn1',
-		text: 'When debugging a complex issue, you prefer to:',
+		text: 'When solving a problem, you tend to:',
 		dimension: 'SN',
 		answers: [
 			{
 				id: 'sn1s',
-				text: 'Start with error logs, stack traces, and step through the code line by line',
+				text: 'Start with the facts and work step-by-step through details',
 				dimension: 'S'
 			},
 			{
 				id: 'sn1n',
-				text: 'Form hypotheses about root causes and test broad architectural assumptions first',
+				text: 'Jump to the big picture and work backwards to specifics',
 				dimension: 'N'
 			}
 		]
 	},
 	{
 		id: 'sn2',
-		text: 'When evaluating a new tool or library for your project, you prioritize:',
+		text: 'When choosing between options, you value:',
 		dimension: 'SN',
 		answers: [
 			{
 				id: 'sn2s',
-				text: 'Proven track record, stability, and detailed documentation with examples',
+				text: 'Proven track record and concrete examples of success',
 				dimension: 'S'
 			},
 			{
 				id: 'sn2n',
-				text: 'Innovative potential, future roadmap, and how it could transform your architecture',
+				text: 'Innovative potential and future possibilities',
 				dimension: 'N'
 			}
 		]
@@ -77,34 +77,34 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	// Thinking vs Feeling - 2 Questions
 	{
 		id: 'tf1',
-		text: 'When choosing between two technically viable solutions, you decide based on:',
+		text: 'When making important decisions, you prioritize:',
 		dimension: 'TF',
 		answers: [
 			{
 				id: 'tf1t',
-				text: 'Objective metrics like performance benchmarks, maintainability scores, and technical debt',
+				text: 'Logic, efficiency, and objective criteria',
 				dimension: 'T'
 			},
 			{
 				id: 'tf1f',
-				text: 'Team preferences, developer experience, and which solution the team feels more confident with',
+				text: 'How it affects people and team dynamics',
 				dimension: 'F'
 			}
 		]
 	},
 	{
 		id: 'tf2',
-		text: "When you notice a teammate's code has significant issues, you:",
+		text: "When giving feedback on someone's work, you:",
 		dimension: 'TF',
 		answers: [
 			{
 				id: 'tf2t',
-				text: 'Point out the technical problems directly and suggest specific improvements',
+				text: 'Focus on what needs improvement directly',
 				dimension: 'T'
 			},
 			{
 				id: 'tf2f',
-				text: 'Start by acknowledging what works well, then gently suggest areas for improvement',
+				text: 'Start with positives before suggesting changes',
 				dimension: 'F'
 			}
 		]
@@ -113,34 +113,34 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	// Judging vs Perceiving - 2 Questions
 	{
 		id: 'jp1',
-		text: 'Your ideal sprint planning approach is:',
+		text: 'When working on projects, you prefer:',
 		dimension: 'JP',
 		answers: [
 			{
 				id: 'jp1j',
-				text: 'Detailed task breakdown with clear acceptance criteria and time estimates upfront',
+				text: 'Detailed plans with clear milestones set in advance',
 				dimension: 'J'
 			},
 			{
 				id: 'jp1p',
-				text: 'High-level goals with flexibility to adapt tasks and priorities as you learn more',
+				text: 'Flexible goals that can adapt as you learn more',
 				dimension: 'P'
 			}
 		]
 	},
 	{
 		id: 'jp2',
-		text: 'When preparing for a release, you prefer to:',
+		text: 'As deadlines approach, you tend to:',
 		dimension: 'JP',
 		answers: [
 			{
 				id: 'jp2j',
-				text: 'Follow a predetermined checklist and freeze code changes well before the deadline',
+				text: 'Have everything completed well in advance',
 				dimension: 'J'
 			},
 			{
 				id: 'jp2p',
-				text: 'Continue iterating and improving features right up until the release deadline',
+				text: 'Use the pressure to fuel last-minute creativity',
 				dimension: 'P'
 			}
 		]

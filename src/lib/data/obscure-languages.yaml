@@ -1,0 +1,2276 @@
+metadata:
+  description: Obscure and niche programming languages archived from the main personality quiz
+  purpose: Historical reference and potential future re-inclusion
+  rationale: These languages were removed to simplify the quiz and focus on mainstream/practical options
+  lastUpdated: '2025-08-24'
+  totalLanguages: 54
+  notes:
+    - CUDA removed as it is a parallel computing platform, not a programming language
+languages:
+  - id: actionscript
+    name: ActionScript
+    description: Object-oriented language for multimedia and interactive applications
+    personality: Creative and flexible. You build engaging interactive experiences and love visual storytelling.
+    mbti: ENFP
+    icon: 🎬
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/d/d3/ActionScript_Unofficial_Fan-made_Logo.png
+    primaryDomain: web_frontend
+    performanceNeeds: moderate
+    ecosystemMaturity: legacy
+    syntaxStyle: expressive
+    learningCurve: gentle
+    paradigm: object_oriented
+    originalPurpose: Flash multimedia development
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Multimedia development
+      - Interactive animations
+      - Flash integration
+      - Event-driven programming
+      - Rich media support
+    useCases:
+      - Flash applications
+      - Interactive animations
+      - Rich media content
+      - Game development
+      - Web interactivity
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: true
+    yearCreated: 1998
+  - id: apex
+    name: Apex
+    description: Graphical programming language for measurement and automation
+    personality: Business-focused problem solver who values seamless integration and real-world impact in enterprise CRM solutions.
+    mbti: ESTJ
+    icon: ☁️
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/labview.svg
+    primaryDomain: enterprise
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: moderate
+    paradigm: object_oriented
+    originalPurpose: Salesforce platform customization
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - Deep Salesforce integration
+      - Built-in database access
+      - Governor limits for multi-tenancy
+      - Trigger-based automation
+      - Enterprise-ready features
+    useCases:
+      - Salesforce customization
+      - CRM workflow automation
+      - Business logic implementation
+      - API integrations
+      - Lightning component controllers
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: true
+    yearCreated: 2007
+  - id: apl
+    name: APL
+    description: Array programming language with mathematical notation
+    personality: Abstract and logical. You think in mathematical terms and value concise, powerful expressions.
+    mbti: INTJ
+    icon: ∇
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apl/apl-original.svg
+    primaryDomain: data_science
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: symbolic
+    learningCurve: steep
+    paradigm: functional
+    originalPurpose: Mathematical and array computation
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Array operations
+      - Mathematical notation
+      - Concise expressions
+      - Interactive development
+      - Data analysis
+    useCases:
+      - Mathematical computing
+      - Data analysis
+      - Scientific research
+      - Financial modeling
+      - Array processing
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1966
+  - id: autohotkey
+    name: AutoHotkey
+    description: Automation scripting language for Windows task automation
+    personality: Practical and efficient. You automate repetitive tasks and help others be more productive.
+    mbti: ISFJ
+    icon: ⚡
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/autohotkey.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Windows automation and hotkeys
+    typing: dynamic
+    memoryManagement: manual
+    strengths:
+      - Windows automation
+      - Hotkey creation
+      - GUI automation
+      - Text expansion
+      - System scripting
+    useCases:
+      - Task automation
+      - Hotkey management
+      - GUI automation
+      - Text replacement
+      - System utilities
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 2003
+  - id: awk
+    name: AWK
+    description: Pattern-scanning and data extraction language
+    personality: Efficient and focused. You excel at text processing and data extraction.
+    mbti: ISTP
+    icon: 📝
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/devicons/devicon/master/icons/awk/awk-original.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Pattern scanning and processing
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Text processing
+      - One-liners
+      - Pattern matching
+      - Data extraction
+      - Report generation
+    useCases:
+      - Log analysis
+      - Data extraction
+      - Text processing
+      - Report generation
+      - Quick scripts
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1977
+  - id: bash
+    name: Bash/Shell
+    description: The command-line scripting language for Unix/Linux automation
+    personality: Practical and efficient. You get things done quickly and value automation over manual work.
+    mbti: ISTP
+    icon: 🐚
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Shell scripting and system automation
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - System administration
+      - Process automation
+      - Universal on Unix/Linux
+      - Powerful text processing
+      - Pipeline composition
+    useCases:
+      - System scripting
+      - DevOps automation
+      - Build scripts
+      - File manipulation
+      - Server management
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1989
+  - id: carbon
+    name: Carbon
+    description: Experimental C++ successor language by Google
+    personality: Pragmatic and leadership-oriented. You modernize systems while maintaining compatibility.
+    mbti: ESTJ
+    icon: 💠
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/e/e1/Carbon_logo.png
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: bleeding_edge
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Modern C++ successor
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - C++ interoperability
+      - Modern language design
+      - Memory safety
+      - Fast compilation
+      - Google backing
+    useCases:
+      - Systems programming
+      - C++ migration
+      - High-performance applications
+      - Operating systems
+      - Game engines
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2022
+  - id: chapel
+    name: Chapel
+    description: Parallel programming language for high-performance computing
+    personality: Systematic and forward-thinking. You tackle complex computational problems with elegant parallel solutions.
+    mbti: INTJ
+    icon: ⛪
+    color: '#3776AB'
+    imgURL: https://chapel-lang.org/img/chapel-logo.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Productive parallel programming
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Parallel computing
+      - Scalability
+      - High performance
+      - Distributed memory
+      - Productive parallelism
+    useCases:
+      - High-performance computing
+      - Scientific computing
+      - Parallel algorithms
+      - Supercomputing
+      - Data-intensive applications
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2009
+  - id: cobol
+    name: COBOL
+    description: Business-oriented language for enterprise systems
+    personality: You understand the importance of stability and business continuity.
+    mbti: ISTJ
+    icon: 🏦
+    color: '#3776AB'
+    imgURL: https://www.svgrepo.com/show/339080/cobol-language.svg
+    primaryDomain: enterprise
+    performanceNeeds: moderate
+    ecosystemMaturity: legacy
+    syntaxStyle: verbose
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: Business data processing
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Business logic
+      - Decimal arithmetic
+      - Stable
+      - Readable
+    useCases:
+      - Banking Systems
+      - Government
+      - Legacy Maintenance
+      - Business Processing
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 1959
+  - id: coffeescript
+    name: CoffeeScript
+    description: JavaScript with cleaner syntax and functional programming features
+    personality: Creative and expressive. You value clean, readable code and enjoy elegant syntax.
+    mbti: ENFP
+    icon: ☕
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/devicons/devicon/master/icons/coffeescript/coffeescript-original.svg
+    primaryDomain: web_frontend
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: gentle
+    paradigm: multi_paradigm
+    originalPurpose: Cleaner JavaScript syntax
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Clean syntax
+      - JavaScript interop
+      - Functional features
+      - Reduced boilerplate
+      - Expressive code
+    useCases:
+      - Web development
+      - Node.js applications
+      - Frontend scripting
+      - Rapid prototyping
+      - JavaScript enhancement
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: true
+    yearCreated: 2009
+  - id: commonlisp
+    name: Common Lisp
+    description: Multi-paradigm Lisp dialect with powerful macro system
+    personality: Abstract thinker and tinkerer. You love exploring ideas and building flexible systems.
+    mbti: INTP
+    icon: 🎯
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/4/48/Lisp_logo.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: symbolic
+    learningCurve: steep
+    paradigm: multi_paradigm
+    originalPurpose: Standardized Lisp for AI and research
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Powerful macros
+      - Interactive development
+      - CLOS object system
+      - Runtime modification
+      - Symbolic computation
+    useCases:
+      - AI research
+      - Symbolic computation
+      - Language prototyping
+      - Expert systems
+      - Research projects
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: true
+    eventDriven: false
+    concurrent: true
+    standardized: true
+    compiled: true
+    interpreted: true
+    vm: false
+    yearCreated: 1984
+  - id: crystal
+    name: Crystal
+    description: Ruby-inspired language with static typing and compile-time safety
+    personality: Creative and detail-oriented. You value elegance and want fast, safe code.
+    mbti: INFP
+    icon: 💎
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/devicons/devicon/master/icons/crystal/crystal-original.svg
+    primaryDomain: web_backend
+    performanceNeeds: important
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Fast Ruby alternative with type safety
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Ruby-like syntax
+      - Static type safety
+      - Fast performance
+      - Macro system
+      - Concurrent programming
+    useCases:
+      - Web applications
+      - API development
+      - System utilities
+      - Network programming
+      - Microservices
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2014
+  - id: cuda
+    name: CUDA
+    description: Parallel computing platform for NVIDIA GPU programming
+    personality: Technical and performance-focused. You harness hardware for maximum computational power.
+    mbti: ISTP
+    icon: 🚀
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nvidia.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: steep
+    paradigm: procedural
+    originalPurpose: NVIDIA GPU parallel programming
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Massive parallelism
+      - GPU acceleration
+      - High throughput
+      - Scientific computing
+      - Deep learning support
+    useCases:
+      - GPU computing
+      - Machine learning
+      - Scientific simulation
+      - Image processing
+      - Cryptocurrency mining
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2007
+  - id: d
+    name: D
+    description: Systems programming language combining high and low-level features
+    personality: Forward-thinking and pragmatic. You want modern features without sacrificing performance.
+    mbti: INTJ
+    icon: 🔷
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/2/24/D_Programming_Language_logo.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Better C++ alternative
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - C/C++ compatibility
+      - Modern features
+      - Compile-time execution
+      - Memory safety options
+      - Fast compilation
+    useCases:
+      - Systems programming
+      - Game development
+      - High-performance apps
+      - Compiler development
+      - Scientific computing
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2001
+  - id: dhall
+    name: Dhall
+    description: Programmable configuration language with guaranteed termination
+    personality: Structure-loving and safety-focused. You prefer reliable, validated system configuration.
+    mbti: ISFJ
+    icon: ⚙️
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_dhall.svg
+    primaryDomain: scripting
+    performanceNeeds: flexible
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: functional
+    originalPurpose: Safe configuration language
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Type-safe configuration
+      - Guaranteed termination
+      - No side effects
+      - JSON/YAML generation
+      - Configuration validation
+    useCases:
+      - Configuration as code
+      - Typed config files
+      - Policy specification
+      - Infrastructure configuration
+      - Safe templating
+    imperative: false
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 2017
+  - id: eiffel
+    name: Eiffel
+    description: Object-oriented language emphasizing software correctness and design by contract
+    personality: Meticulous and reliable. You prioritize software correctness and systematic design approaches.
+    mbti: ISTJ
+    icon: 🏗️
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/6/6a/Eiffel_logo.svg
+    primaryDomain: enterprise
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: steep
+    paradigm: object_oriented
+    originalPurpose: Contract-based software engineering
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Design by contract
+      - Software correctness
+      - Object-oriented design
+      - Reliability features
+      - Exception handling
+    useCases:
+      - Enterprise software
+      - Critical applications
+      - Software engineering
+      - Reliable systems
+      - Academic teaching
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: false
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: true
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 1985
+  - id: forth
+    name: Forth
+    description: Stack-based programming language for embedded and real-time systems
+    personality: Practical and concise. You value direct control and minimal overhead in system programming.
+    mbti: ISTP
+    icon: 🔧
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/GeraldWodni/forth-logo/master/forth-standard.org/forth.png
+    primaryDomain: embedded
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: steep
+    paradigm: procedural
+    originalPurpose: Stack-based systems programming
+    typing: dynamic
+    memoryManagement: manual
+    strengths:
+      - Minimal footprint
+      - Real-time capabilities
+      - Direct hardware access
+      - Interactive development
+      - Extensible design
+    useCases:
+      - Embedded systems
+      - Real-time control
+      - Device drivers
+      - Firmware development
+      - Boot loaders
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: true
+    interpreted: true
+    vm: false
+    yearCreated: 1970
+  - id: glsl
+    name: GLSL
+    description: OpenGL Shading Language for graphics programming
+    personality: Visual and technical. You create stunning graphics through mathematical precision.
+    mbti: ISTP
+    icon: 🎨
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: OpenGL graphics shader programming
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - Graphics rendering
+      - Vector operations
+      - Real-time effects
+      - Cross-platform
+      - Hardware acceleration
+    useCases:
+      - Shader programming
+      - 3D graphics
+      - Visual effects
+      - Game development
+      - Real-time rendering
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2004
+  - id: groovy
+    name: Groovy
+    description: Dynamic JVM language that enhances Java with modern features
+    personality: Flexible and creative. You like having options and building elegant solutions without constraints.
+    mbti: ENTP
+    icon: 🎭
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/3/36/Groovy-logo.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Enhancing Java with dynamic features
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Java interoperability
+      - DSL creation
+      - Concise syntax
+      - Build tool integration
+      - Testing frameworks
+    useCases:
+      - Build automation (Gradle)
+      - Test automation
+      - Scripting on JVM
+      - Web development
+      - DSL creation
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: true
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: true
+    vm: true
+    yearCreated: 2003
+  - id: hlsl
+    name: HLSL
+    description: High-Level Shading Language for DirectX graphics
+    personality: Project-focused with visual flair. You create impressive graphics for specific platforms.
+    mbti: ENTJ
+    icon: 🖥️
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_hlsl.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: DirectX graphics shader programming
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - DirectX integration
+      - Microsoft ecosystem
+      - Advanced graphics
+      - Game development
+      - Visual effects
+    useCases:
+      - DirectX shaders
+      - Game graphics
+      - Windows applications
+      - Visual effects
+      - Real-time rendering
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2002
+  - id: idris
+    name: Idris
+    description: Functional language with dependent types for verified programming
+    personality: Structured and precise. You value mathematical correctness and build provably correct systems.
+    mbti: INFJ
+    icon: 🔍
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_idris.svg
+    primaryDomain: academic
+    performanceNeeds: moderate
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: extreme
+    paradigm: functional
+    originalPurpose: Dependently typed programming
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Dependent types
+      - Proof capabilities
+      - Type-driven development
+      - Theorem proving
+      - Mathematical precision
+    useCases:
+      - Verified software
+      - Theorem proving
+      - Research projects
+      - Type theory teaching
+      - Critical systems
+    imperative: false
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2011
+  - id: io
+    name: Io
+    description: Pure object-oriented prototype-based programming language
+    personality: Curious and flexible. You explore new ideas and enjoy the freedom of prototype-based programming.
+    mbti: ENTP
+    icon: 🌀
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/2/26/Io-logo.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: modern
+    syntaxStyle: minimal
+    learningCurve: moderate
+    paradigm: object_oriented
+    originalPurpose: Prototype-based object programming
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Prototype-based OOP
+      - Minimal syntax
+      - Actor model
+      - Concurrent programming
+      - Reflective capabilities
+    useCases:
+      - Research projects
+      - Prototyping
+      - Scripting
+      - Concurrent applications
+      - Educational programming
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: false
+    generic: false
+    reflective: true
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 2002
+  - id: j
+    name: J
+    description: Array programming language descended from APL
+    personality: Logical and abstract. You think in mathematical patterns and value powerful, concise expressions.
+    mbti: INTJ
+    icon: 📊
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/6/65/J_%28programming_language%29_icon.png?20100501180106
+    primaryDomain: data_science
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: symbolic
+    learningCurve: steep
+    paradigm: functional
+    originalPurpose: Array-based mathematical computation
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Array programming
+      - Mathematical notation
+      - Concise expressions
+      - Powerful primitives
+      - Data analysis
+    useCases:
+      - Mathematical computing
+      - Data analysis
+      - Financial modeling
+      - Scientific research
+      - Algorithm prototyping
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1990
+  - id: janet
+    name: Janet
+    description: Embeddable functional and imperative language with Lisp-like syntax
+    personality: Creative and flexible. You appreciate expressiveness and enjoy experimentation.
+    mbti: INFP
+    icon: 🌸
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_janet.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: modern
+    syntaxStyle: symbolic
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Embeddable Lisp-like scripting
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Embeddable runtime
+      - Small footprint
+      - Lisp expressiveness
+      - C interoperability
+      - Extensible applications
+    useCases:
+      - Scripting
+      - Configuration
+      - Plugin systems
+      - Embedded scripting
+      - Extensible applications
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: true
+    generic: false
+    reflective: true
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: true
+    yearCreated: 2017
+  - id: labview
+    name: LabVIEW
+    description: Graphical programming language for measurement and automation
+    personality: Practical and operational. You focus on engineering solutions and hands-on measurement systems.
+    mbti: ESTJ
+    icon: 📊
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/labview.svg
+    primaryDomain: embedded
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: Graphical system and instrument programming
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Visual programming
+      - Data acquisition
+      - Real-time systems
+      - Instrument control
+      - Rapid prototyping
+    useCases:
+      - Test automation
+      - Data acquisition
+      - Instrument control
+      - Industrial automation
+      - Research applications
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: true
+    vm: false
+    yearCreated: 1986
+  - id: ladderlogic
+    name: Ladder Logic
+    description: Graphical programming language resembling electrical relay logic, commonly used in industrial automation for PLCs
+    personality: Detail-oriented and methodical. You enjoy hands-on tinkering and thrive under strict reliability constraints.
+    mbti: ISTJ
+    icon: 🏭
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: embedded
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: symbolic
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: Industrial automation and control
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - Intuitive for engineers
+      - Real-time deterministic execution
+      - Reliable industrial control
+      - Hardware logic mapping
+      - Industry standardization
+    useCases:
+      - Factory automation
+      - Process control systems
+      - Safety interlocks
+      - Building management
+      - Utility plant automation
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: true
+    standardized: true
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 1970
+  - id: lean
+    name: Lean
+    description: Modern theorem prover and functional programming language
+    personality: Rigorous and abstract. You love logical consistency and deep mathematical frameworks.
+    mbti: INTJ
+    icon: 📐
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_lean.svg
+    primaryDomain: academic
+    performanceNeeds: moderate
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: extreme
+    paradigm: functional
+    originalPurpose: Interactive theorem proving
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Interactive theorem proving
+      - Mathematical formalization
+      - Readable proofs
+      - Large math library
+      - Dependent types
+    useCases:
+      - Formal verification
+      - Mathematics formalization
+      - Theorem proving
+      - Logic teaching
+      - Certified programming
+    imperative: false
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: true
+    yearCreated: 2013
+  - id: lisp
+    name: Lisp
+    description: The second-oldest high-level language, pioneering many CS concepts
+    personality: Innovative and abstract. You see code as data and enjoy meta-programming.
+    mbti: INTP
+    icon: 🎯
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/4/48/Lisp_logo.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: symbolic
+    learningCurve: steep
+    paradigm: multi_paradigm
+    originalPurpose: AI and symbolic computation
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Code as data
+      - Macro system
+      - Interactive development
+      - Symbolic computation
+      - AI applications
+    useCases:
+      - AI research
+      - Computer algebra
+      - Language design
+      - Emacs scripting
+      - Teaching CS concepts
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: true
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: true
+    interpreted: true
+    vm: false
+    yearCreated: 1958
+  - id: logo
+    name: Logo
+    description: Educational programming language featuring turtle graphics
+    personality: Nurturing and interactive. You make programming accessible and enjoyable for learners.
+    mbti: ENFJ
+    icon: 🐢
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Educational programming with turtle graphics
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Educational focus
+      - Turtle graphics
+      - Simple syntax
+      - Interactive learning
+      - Visual feedback
+    useCases:
+      - Programming education
+      - Teaching concepts
+      - "s programming\",\n\t\t\t"
+      - ",\n\t\t\t"
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1967
+  - id: matlab
+    name: MATLAB
+    description: High-level language for numerical computation
+    personality: You are methodical and scientific. You solve complex mathematical problems.
+    mbti: INTJ
+    icon: 🔬
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png
+    primaryDomain: data_science
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: Numerical computing
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Matrix operations
+      - Visualization
+      - Toolboxes
+      - Simulink
+    useCases:
+      - Engineering
+      - Scientific Computing
+      - Signal Processing
+      - Control Systems
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: true
+    yearCreated: 1984
+  - id: mojo
+    name: Mojo
+    description: High-performance language for AI with Python compatibility
+    personality: Analytical and innovation-focused. You push the boundaries of AI and performance.
+    mbti: INTJ
+    icon: 🔥
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: data_science
+    performanceNeeds: critical
+    ecosystemMaturity: bleeding_edge
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: High-performance AI and scientific computing
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Python interoperability
+      - AI/ML optimization
+      - High performance
+      - Hardware acceleration
+      - Modern features
+    useCases:
+      - AI/ML development
+      - High-performance computing
+      - Scientific computing
+      - Python acceleration
+      - Systems programming
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2023
+  - id: mql4
+    name: MQL4/MQL5
+    description: MetaTrader programming language for algorithmic trading
+    personality: Strategic and results-oriented. You automate trading decisions and optimize financial performance.
+    mbti: ENTJ
+    icon: 📈
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: enterprise
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: MetaTrader trading platform programming
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Trading automation
+      - Technical indicators
+      - Market analysis
+      - Expert advisors
+      - Financial modeling
+    useCases:
+      - Algorithmic trading
+      - Trading robots
+      - Custom indicators
+      - Market analysis
+      - Financial strategies
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2005
+  - id: nix
+    name: Nix
+    description: Purely functional language for reproducible package management
+    personality: Logical and systematic. You appreciate purity and system-level consistency.
+    mbti: INTP
+    icon: ❄️
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/2/28/Nix_snowflake.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: expressive
+    learningCurve: steep
+    paradigm: functional
+    originalPurpose: Functional package management
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Reproducible builds
+      - Atomic deployments
+      - Functional deployment
+      - Dependency isolation
+      - Declarative configuration
+    useCases:
+      - Package management
+      - System configuration
+      - DevOps automation
+      - Reproducible environments
+      - Infrastructure as code
+    imperative: false
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 2003
+  - id: opencl
+    name: OpenCL
+    description: Open standard for heterogeneous parallel computing
+    personality: Versatile and systems-focused. You value cross-platform solutions and open standards.
+    mbti: INTP
+    icon: 🌐
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencl/opencl-original.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: steep
+    paradigm: procedural
+    originalPurpose: Cross-platform parallel computing
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Cross-platform
+      - Heterogeneous computing
+      - Vendor neutral
+      - CPU/GPU/FPGA support
+      - Industry standard
+    useCases:
+      - Parallel computing
+      - Scientific computing
+      - Image processing
+      - Signal processing
+      - Machine learning
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: true
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2009
+  - id: pony
+    name: Pony
+    description: Actor-model language with data-race freedom by design
+    personality: Innovative and scalable. You build safe, concurrent systems with elegant architectures.
+    mbti: ENTJ
+    icon: 🐎
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_pony.svg
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: steep
+    paradigm: multi_paradigm
+    originalPurpose: Safe high-performance concurrency
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - Data-race freedom
+      - Actor model
+      - High-performance messaging
+      - Memory safety
+      - Reference capabilities
+    useCases:
+      - Concurrent applications
+      - Network servers
+      - Messaging systems
+      - Distributed systems
+      - High-performance computing
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: false
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2015
+  - id: purebasic
+    name: PureBasic
+    description: Compiled BASIC language for Windows, Linux, and macOS
+    personality: Practical and reliable. You build solid applications with familiar tools and straightforward approaches.
+    mbti: ISFJ
+    icon: 🔷
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: enterprise
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Portable BASIC programming
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Fast native code
+      - Cross-platform
+      - Easy GUI development
+      - Portable executables
+      - BASIC familiarity
+    useCases:
+      - Desktop applications
+      - System utilities
+      - Games
+      - GUI applications
+      - Rapid development
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2000
+  - id: qsharp
+    name: Q#
+    description: Binary instruction format for high-performance web applications
+    personality: Curious and analytical. You explore quantum concepts and push the boundaries of computation.
+    mbti: INTP
+    icon: 🔬
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_qsharp.svg
+    primaryDomain: academic
+    performanceNeeds: critical
+    ecosystemMaturity: bleeding_edge
+    syntaxStyle: expressive
+    learningCurve: extreme
+    paradigm: procedural
+    originalPurpose: Quantum algorithm development
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - Quantum algorithm development
+      - .NET integration
+      - Type safety for quantum ops
+      - Simulator support
+      - Quantum research tools
+    useCases:
+      - Quantum algorithms
+      - Quantum simulation
+      - Quantum research
+      - Azure Quantum
+      - Quantum cryptography
+    imperative: false
+    objectOriented: false
+    functional: true
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: true
+    yearCreated: 2017
+  - id: racket
+    name: Racket
+    description: Language-oriented programming platform for creating DSLs
+    personality: Creative and academic. You enjoy creating new languages and exploring ideas.
+    mbti: INTP
+    icon: 🎨
+    color: '#3776AB'
+    imgURL: https://racket-lang.org/img/racket-logo.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: modern
+    syntaxStyle: symbolic
+    learningCurve: steep
+    paradigm: multi_paradigm
+    originalPurpose: Language-oriented programming
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Language creation
+      - Macro system
+      - Teaching tools
+      - IDE integration
+      - Cross-platform
+    useCases:
+      - DSL creation
+      - Education
+      - Research
+      - Web development
+      - Scripting
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: true
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: true
+    vm: true
+    yearCreated: 1995
+  - id: reasonml
+    name: ReasonML
+    description: OCaml with JavaScript-friendly syntax for web development
+    personality: Creative and experimental. You enjoy blending functional programming with practical web development.
+    mbti: ENTP
+    icon: ⚛️
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/a/af/Reason-logo.svg
+    primaryDomain: web_frontend
+    performanceNeeds: moderate
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: moderate
+    paradigm: functional
+    originalPurpose: OCaml for JavaScript ecosystem
+    typing: static
+    memoryManagement: garbage_collected
+    strengths:
+      - OCaml type system
+      - JavaScript interop
+      - React integration
+      - Fast compilation
+      - Pattern matching
+    useCases:
+      - Web development
+      - React applications
+      - Mobile apps
+      - Full-stack development
+      - Type-safe frontends
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: false
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: true
+    yearCreated: 2016
+  - id: rexx
+    name: REXX
+    description: Interpreted scripting language for automation and text processing
+    personality: Routine-focused and reliable. You handle business needs with proven, stable solutions.
+    mbti: ISFJ
+    icon: 📜
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rexx/rexx-original.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: System scripting and automation
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Easy scripting
+      - Text processing
+      - Mainframe integration
+      - Simple syntax
+      - Cross-platform
+    useCases:
+      - System scripting
+      - Batch processing
+      - Text manipulation
+      - Legacy system automation
+      - Administrative tasks
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1979
+  - id: ring
+    name: Ring
+    description: General-purpose programming language with natural language syntax
+    personality: Playful and open. You enjoy creative scripting with flexible, natural-feeling syntax.
+    mbti: ENFP
+    icon: 💍
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/ring.svg
+    primaryDomain: scripting
+    performanceNeeds: moderate
+    ecosystemMaturity: modern
+    syntaxStyle: expressive
+    learningCurve: gentle
+    paradigm: multi_paradigm
+    originalPurpose: Natural language programming
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Natural language syntax
+      - Multi-paradigm support
+      - Easy learning curve
+      - Rich standard library
+      - Flexible design
+    useCases:
+      - General scripting
+      - Web development
+      - Desktop applications
+      - Educational programming
+      - Rapid prototyping
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 2016
+  - id: sas
+    name: SAS
+    description: Statistical analysis system for data management and analytics
+    personality: Analytical and precise. You focus on data-driven insights and statistical rigor.
+    mbti: ISTJ
+    icon: 📈
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/1/10/SAS_logo_horiz.svg
+    primaryDomain: data_science
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: moderate
+    paradigm: procedural
+    originalPurpose: Statistical analysis
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Statistical analysis
+      - Data management
+      - Enterprise support
+      - Reporting tools
+      - Industry standard
+    useCases:
+      - Statistical analysis
+      - Business intelligence
+      - Clinical trials
+      - Risk management
+      - Data mining
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: true
+    vm: false
+    yearCreated: 1976
+  - id: scheme
+    name: Scheme
+    description: Minimalist Lisp dialect emphasizing simplicity and elegance
+    personality: Minimalist and elegant. You value simplicity and theoretical purity.
+    mbti: INTP
+    icon: 🔮
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/3/39/Lambda_lc.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: steep
+    paradigm: functional
+    originalPurpose: Teaching and language research
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Simple syntax
+      - Tail recursion
+      - First-class continuations
+      - Hygienic macros
+      - Educational value
+    useCases:
+      - Teaching CS
+      - Language research
+      - Scripting
+      - Embedded scripting
+      - Compiler implementation
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: true
+    generic: false
+    reflective: true
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: true
+    interpreted: true
+    vm: false
+    yearCreated: 1975
+  - id: scratch
+    name: Scratch
+    description: Visual programming language designed for learning
+    personality: Playful and engaging. You make programming accessible and fun for everyone.
+    mbti: ESFP
+    icon: 🐱
+    color: '#3776AB'
+    imgURL: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/scratch.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: modern
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Teaching programming to children
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Visual blocks
+      - No syntax errors
+      - Immediate feedback
+      - Creative projects
+      - Community sharing
+    useCases:
+      - Education
+      - Teaching programming
+      - Creative coding
+      - Game creation
+      - Animation
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: true
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: true
+    yearCreated: 2007
+  - id: simula
+    name: Simula
+    description: The first object-oriented programming language for simulation
+    personality: Innovative and theory-driven. You model complex systems and pioneered object-oriented thinking.
+    mbti: INTJ
+    icon: 🏛️
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: academic
+    performanceNeeds: moderate
+    ecosystemMaturity: legacy
+    syntaxStyle: verbose
+    learningCurve: steep
+    paradigm: object_oriented
+    originalPurpose: Simulation and object-oriented programming
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - First OO language
+      - Simulation modeling
+      - Co-routine support
+      - Historical significance
+      - Academic influence
+    useCases:
+      - Discrete event simulation
+      - System modeling
+      - Research projects
+      - Academic studies
+      - Historical computing
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 1967
+  - id: smalltalk
+    name: Smalltalk
+    description: Pure object-oriented language with live coding environment
+    personality: Open-minded and experimental. You thrive in interactive environments and love pure concepts.
+    mbti: ENFP
+    icon: 💬
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/b/bf/Smalltalk_Balloon.svg
+    primaryDomain: academic
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: steep
+    paradigm: object_oriented
+    originalPurpose: Pure object-oriented programming
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - Everything is an object
+      - Live programming
+      - Image-based development
+      - Reflective capabilities
+      - Simple syntax
+    useCases:
+      - Educational programming
+      - Prototyping
+      - Research
+      - GUI development
+      - Live coding environments
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: false
+    generic: false
+    reflective: true
+    eventDriven: true
+    concurrent: true
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: true
+    yearCreated: 1972
+  - id: sql
+    name: SQL
+    description: The declarative language for database management and data manipulation
+    personality: Methodical and systematic. You believe in structured thinking and organized data. Precision matters to you.
+    mbti: ISTJ
+    icon: 🗄️
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png
+    primaryDomain: data_science
+    performanceNeeds: important
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Database querying and manipulation
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - Universal database language
+      - Set-based operations
+      - Powerful data aggregation
+      - ACID transaction support
+      - Mature ecosystem
+    useCases:
+      - Database queries
+      - Data analytics
+      - Report generation
+      - Data warehousing
+      - ETL processes
+    imperative: false
+    objectOriented: false
+    functional: false
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1974
+  - id: tcl
+    name: Tcl
+    description: Tool command language for embedded scripting and rapid prototyping
+    personality: Adaptable and inventive. You create flexible solutions that integrate well.
+    mbti: ENTP
+    icon: 🔧
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/c/c6/Tcl9_logo.png
+    primaryDomain: scripting
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Embeddable scripting
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Easy embedding
+      - Cross-platform
+      - Tk GUI toolkit
+      - String processing
+      - Extensibility
+    useCases:
+      - Embedded scripting
+      - Test automation
+      - GUI applications
+      - Network programming
+      - Rapid prototyping
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: true
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1988
+  - id: vlang
+    name: V
+    description: Simple, fast, and safe systems language
+    personality: Clear and fast-learning. You value simplicity and efficient development workflows.
+    mbti: ENFJ
+    icon: 🚀
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vlang/v-logo/master/dist/v-logo.svg
+    primaryDomain: systems
+    performanceNeeds: important
+    ecosystemMaturity: bleeding_edge
+    syntaxStyle: minimal
+    learningCurve: gentle
+    paradigm: multi_paradigm
+    originalPurpose: Simple, safe systems programming
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Simple syntax
+      - Fast compilation
+      - Memory safety
+      - Small binary size
+      - Hot code reloading
+    useCases:
+      - System programming
+      - Web development
+      - CLI tools
+      - Game development
+      - Desktop applications
+    imperative: true
+    objectOriented: true
+    functional: true
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: true
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2019
+  - id: vale
+    name: Vale
+    description: Systems language with safe manual memory management
+    personality: Methodical and safety-focused. You want control with guaranteed correctness.
+    mbti: ISTJ
+    icon: 🏛️
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: systems
+    performanceNeeds: critical
+    ecosystemMaturity: bleeding_edge
+    syntaxStyle: expressive
+    learningCurve: steep
+    paradigm: multi_paradigm
+    originalPurpose: Safe manual memory management
+    typing: static
+    memoryManagement: manual
+    strengths:
+      - Memory safety without GC
+      - Region-based memory
+      - High performance
+      - Ownership system
+      - Zero-cost abstractions
+    useCases:
+      - Systems programming
+      - Game engines
+      - Operating systems
+      - High-performance computing
+      - Embedded systems
+    imperative: true
+    objectOriented: false
+    functional: true
+    procedural: true
+    generic: true
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 2019
+  - id: vba
+    name: VBA
+    description: Microsoft Office automation and macro programming language
+    personality: Supportive and practical. You help others be more productive with familiar tools.
+    mbti: ESFJ
+    icon: 📊
+    color: '#3776AB'
+    imgURL: https://upload.wikimedia.org/wikipedia/commons/4/40/VB.NET_Logo.svg
+    primaryDomain: scripting
+    performanceNeeds: flexible
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: gentle
+    paradigm: procedural
+    originalPurpose: Office application automation
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Office integration
+      - Rapid automation
+      - Business workflows
+      - Data manipulation
+      - Report generation
+    useCases:
+      - Excel automation
+      - Office macros
+      - Business reporting
+      - Data processing
+      - Custom functions
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1993
+  - id: vhdl
+    name: VHDL
+    description: Hardware description language with strong typing for digital systems
+    personality: Structured and formal. You value strong typing and systematic design approaches.
+    mbti: INTJ
+    icon: 🏗️
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_vhdl.svg
+    primaryDomain: embedded
+    performanceNeeds: critical
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: steep
+    paradigm: procedural
+    originalPurpose: Hardware description with strong typing
+    typing: static
+    memoryManagement: automatic
+    strengths:
+      - Strong typing
+      - Concurrent modeling
+      - Hierarchical design
+      - IEEE standard
+      - Formal verification
+    useCases:
+      - Digital system design
+      - FPGA development
+      - Hardware modeling
+      - System verification
+      - Academic teaching
+    imperative: true
+    objectOriented: false
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: true
+    standardized: true
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 1987
+  - id: foxpro
+    name: Visual FoxPro
+    description: >-
+      Data-centric programming language and development environment for building high-performance database and business
+      applications
+    personality: >-
+      Practical and results-driven. You enjoy building working systems from end to end and bridging business and
+      technical work.
+    mbti: ESTJ
+    icon: 🦊
+    color: '#3776AB'
+    imgURL: null
+    primaryDomain: enterprise
+    performanceNeeds: important
+    ecosystemMaturity: legacy
+    syntaxStyle: verbose
+    learningCurve: moderate
+    paradigm: multi_paradigm
+    originalPurpose: Database and business application development
+    typing: dynamic
+    memoryManagement: automatic
+    strengths:
+      - Native data handling
+      - Rapid application development
+      - Efficient indexing and querying
+      - Integrated GUI tools
+      - Strong reporting capabilities
+    useCases:
+      - Database-driven business apps
+      - Inventory management
+      - Financial systems
+      - Line-of-business applications
+      - Desktop database solutions
+    imperative: true
+    objectOriented: true
+    functional: false
+    procedural: true
+    generic: false
+    reflective: false
+    eventDriven: true
+    concurrent: false
+    standardized: false
+    compiled: true
+    interpreted: false
+    vm: false
+    yearCreated: 1995
+  - id: xslt
+    name: XSLT
+    description: XML transformation language for converting XML documents
+    personality: Structured and creative. You find patterns in data and transform information systematically.
+    mbti: INFJ
+    icon: 🔄
+    color: '#3776AB'
+    imgURL: https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_xsl.svg
+    primaryDomain: enterprise
+    performanceNeeds: moderate
+    ecosystemMaturity: mature
+    syntaxStyle: verbose
+    learningCurve: moderate
+    paradigm: functional
+    originalPurpose: XML document transformation
+    typing: dynamic
+    memoryManagement: garbage_collected
+    strengths:
+      - XML transformation
+      - Declarative programming
+      - Template matching
+      - XPath integration
+      - Standards-based
+    useCases:
+      - XML document transformation
+      - Data format conversion
+      - Web content generation
+      - Report generation
+      - Data migration
+    imperative: false
+    objectOriented: false
+    functional: true
+    procedural: false
+    generic: false
+    reflective: false
+    eventDriven: false
+    concurrent: false
+    standardized: true
+    compiled: false
+    interpreted: true
+    vm: false
+    yearCreated: 1999

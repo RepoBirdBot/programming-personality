@@ -138,7 +138,7 @@
 		name="description"
 		content={$quizStore.completed && $quizStore.result
 			? `${$quizStore.result.name}: ${$quizStore.result.personality}. Discover which programming language matches your personality!`
-			: 'Discover which programming language matches your personality from 200+ languages! Based on MBTI personality science.'}
+			: 'Discover which programming language matches your personality from 42 curated languages! Based on MBTI personality science.'}
 	/>
 
 	<!-- Open Graph / Facebook -->
@@ -153,7 +153,7 @@
 		property="og:description"
 		content={$quizStore.completed && $quizStore.result
 			? `${$quizStore.result.name}: ${$quizStore.result.personality}. Take the quiz to find your programming language match!`
-			: 'Discover which programming language matches your personality from 200+ languages! Based on MBTI personality science.'}
+			: 'Discover which programming language matches your personality from 42 curated languages! Based on MBTI personality science.'}
 	/>
 	<meta
 		property="og:image"
@@ -188,7 +188,7 @@
 					<span class="emoji">🚀</span>
 					<span class="gradient-text">Programming Language Personality Test</span>
 				</h1>
-				<p>Discover your coding personality match from 100 languages!</p>
+				<p>Discover your coding personality match from 42 languages!</p>
 				<div class="intro-details">
 					<p class="intro-subtitle">
 						✨ Takes just 2-3 minutes<br />

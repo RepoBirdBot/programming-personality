@@ -11,10 +11,59 @@ export interface MBTIQuestion {
 	answers: MBTIAnswer[];
 }
 
+// All language IDs as a const array for type extraction
+export const LANGUAGE_IDS = [
+	'ada',
+	'assembly',
+	'c',
+	'clojure',
+	'cpp',
+	'csharp',
+	'dart',
+	'delphi',
+	'elixir',
+	'elm',
+	'erlang',
+	'fortran',
+	'fsharp',
+	'go',
+	'haskell',
+	'java',
+	'javascript',
+	'julia',
+	'kotlin',
+	'lua',
+	'nim',
+	'objectivec',
+	'ocaml',
+	'odin',
+	'perl',
+	'php',
+	'powershell',
+	'prolog',
+	'purescript',
+	'python',
+	'r',
+	'ruby',
+	'rust',
+	'scala',
+	'solidity',
+	'swift',
+	'typescript',
+	'vbnet',
+	'visualbasic',
+	'wolfram',
+	'xpp',
+	'zig'
+] as const;
+
+// Extract the type from the const array
+export type LanguageId = (typeof LANGUAGE_IDS)[number];
+
 export interface LanguageAnswer {
 	id: string;
 	text: string;
-	languages: string[]; // Language IDs this answer favors
+	languages: LanguageId[]; // Language IDs this answer favors
 }
 
 export interface LanguageQuestion {
@@ -75,7 +124,7 @@ export type LearningCurve = 'gentle' | 'moderate' | 'steep' | 'extreme';
 export type Paradigm = 'procedural' | 'object_oriented' | 'functional' | 'multi_paradigm';
 
 export interface Language {
-	id: string;
+	id: LanguageId;
 	name: string;
 	description: string;
 	strengths: string[];
@@ -116,8 +165,8 @@ export interface QuizState {
 	mbtiAnswers: Record<string, string>;
 	languageAnswers: Record<string, string>;
 	mbtiType: string;
-	candidateLanguages: string[];
-	scores: Record<string, number>;
+	candidateLanguages: string[]; // Can be LanguageId or empty initially
+	scores: Partial<Record<LanguageId, number>>;
 	completed: boolean;
 	result: Language | null;
 	adaptiveQuestions?: LanguageQuestion[];

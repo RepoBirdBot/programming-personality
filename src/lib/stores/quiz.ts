@@ -1,5 +1,5 @@
 import { writable, get } from 'svelte/store';
-import type { QuizState, Language, MBTIType } from '$lib/types/quiz';
+import type { QuizState, Language, MBTIType, LanguageId } from '$lib/types/quiz';
 import { mbtiQuestions } from '$lib/data/mbti-questions';
 import { getAdaptiveQuestions } from '$lib/data/adaptive-questions';
 import { languages } from '$lib/data/languages';
@@ -110,7 +110,8 @@ function createQuizStore() {
 
 					// Initialize scores for candidate languages
 					newState.candidateLanguages.forEach((lang) => {
-						newState.scores[lang] = 0;
+						if (!newState.scores) newState.scores = {};
+						newState.scores[lang as LanguageId] = 0;
 					});
 
 					// Move to language phase
@@ -260,7 +261,7 @@ function calculateEnhancedResult(
 	if (!result) {
 		// Fallback for languages not yet fully defined
 		result = {
-			id: resultId,
+			id: resultId as LanguageId, // Fallback for undefined languages
 			name: resultId.charAt(0).toUpperCase() + resultId.slice(1),
 			description: `A ${mbtiType} language that matches your personality`,
 			strengths: ['Matches your MBTI type', 'Suits your preferences'],

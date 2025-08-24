@@ -9,7 +9,7 @@ Visit the live application at: https://repobirdbot.github.io/programming-persona
 ## 🌟 Features
 
 - **MBTI-Based Assessment**: Two-phase quiz combining personality typing with language matching
-- **100 Programming Languages**: Extensive list covering mainstream to esoteric languages
+- **42 Programming Languages**: Curated list of mainstream and specialized languages
 - **Adaptive Questioning**: Dynamic questions based on your MBTI personality type
 - **Share Your Results**: Social sharing buttons for Twitter, LinkedIn, WhatsApp, and Reddit
 - **Shareable Links**: Copy and share unique URLs that display your quiz results
