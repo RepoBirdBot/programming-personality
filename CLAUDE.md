@@ -47,7 +47,7 @@ The quiz operates in three phases managed by `src/lib/stores/quiz.ts`:
 
 ### Key Data Flow
 
-1. MBTI questions (`mbti-questions.ts`) → Calculate MBTI type → Filter candidate languages from `language-profiles.ts`
+1. MBTI questions (`mbti-questions.ts`) → Calculate MBTI type → Filter candidate languages from `languages.ts`
 2. Generate adaptive questions (`adaptive-questions.ts`) based on MBTI type
 3. Score candidate languages based on answers → Return highest scoring language
 
@@ -55,14 +55,26 @@ The quiz operates in three phases managed by `src/lib/stores/quiz.ts`:
 
 - **MBTIQuestion.svelte**: Handles MBTI personality questions
 - **LanguageQuestion.svelte**: Handles adaptive language matching questions
-- **Results.svelte**: Displays final matched language with personality insights
+- **Results.svelte**: Displays final matched language with user's MBTI type
 - **+page.svelte**: Main orchestrator managing quiz phases and state transitions
 
 ### Data Architecture
 
-- **language-profiles.ts**: 200+ language profiles with MBTI mappings
+- **languages.ts**: 42 language profiles with dual MBTI mappings (primary + optional secondary)
+  - Each language has `mbti: [primary, secondary?]` format
+  - Languages can match multiple personality types for better distribution
+  - Example: Python maps to `['ENFP', 'INTP']` - creative + analytical
 - **adaptive-questions.ts**: Dynamic question generation based on MBTI type
 - **quiz.ts store**: Centralized state management using Svelte stores
+
+### MBTI Mapping Strategy
+
+Languages support 1-2 MBTI types to ensure:
+
+- All 16 MBTI types have at least one language match
+- Popular languages can appeal to multiple personality types
+- Matching considers both primary and secondary MBTI assignments
+- User's calculated MBTI type is preserved in results (not the language's MBTI)
 
 ## Deployment
 

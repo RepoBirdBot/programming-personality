@@ -1,11 +1,13 @@
 import { languages } from '../src/lib/data/languages';
 import { getAdaptiveQuestions } from '../src/lib/data/adaptive-questions';
+import type { MBTIType } from '../src/lib/types/quiz';
 
 // Quick test focused on problematic MBTI types
 const PROBLEM_MBTI_TYPES = ['ENFP', 'ISFJ', 'ESFP', 'ISTJ'];
 
 function quickSimulateQuiz(mbtiType: string, languageAnswers: Record<string, string>) {
-	let candidateLanguages = languages.filter((lang) => lang.mbti === mbtiType);
+	// Check both primary and secondary MBTI types
+	let candidateLanguages = languages.filter((lang) => lang.mbti.includes(mbtiType as MBTIType));
 
 	if (candidateLanguages.length === 0) {
 		candidateLanguages = languages;
@@ -130,7 +132,8 @@ console.log(`Success Rate: ${((passed / testCases.length) * 100).toFixed(1)}%`);
 // Test question generation for each MBTI type
 console.log('\n=== QUESTION GENERATION TEST ===');
 PROBLEM_MBTI_TYPES.forEach((mbtiType) => {
-	const candidateLanguages = languages.filter((lang) => lang.mbti === mbtiType);
+	// Check both primary and secondary MBTI types
+	const candidateLanguages = languages.filter((lang) => lang.mbti.includes(mbtiType as MBTIType));
 	const questions = getAdaptiveQuestions(mbtiType);
 	console.log(
 		`${mbtiType}: ${candidateLanguages.length} candidates, ${questions.length} questions generated`
