@@ -20,7 +20,7 @@ export const load = async () => {
 				distinctID: 'anonymous-' + Math.random().toString(36).substring(7)
 			}
 		});
-		
+
 		// Manually capture pageview after init
 		setTimeout(() => {
 			posthog.capture('$pageview');
