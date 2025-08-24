@@ -8,10 +8,11 @@ export const ssr = false;
 export const load = async () => {
 	if (browser) {
 		posthog.init(PUBLIC_POSTHOG_KEY, {
-			api_host: PUBLIC_POSTHOG_HOST,
-			capture_pageview: false,
-			capture_pageleave: false,
-			capture_exceptions: true // This enables capturing exceptions using Error Tracking
+			api_host: PUBLIC_POSTHOG_HOST || 'https://app.posthog.com',
+			person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+			capture_pageview: true,
+			capture_pageleave: true
 		});
 	}
+	return {};
 };
