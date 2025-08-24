@@ -251,17 +251,26 @@
 <style>
 	main {
 		min-height: 100vh;
+		min-height: 100dvh; /* Dynamic viewport height for mobile */
 		display: flex;
-		align-items: center;
+		align-items: flex-start; /* Align to top for results */
 		justify-content: center;
-		padding: 2rem 1rem;
-		padding-top: 0;
+		padding: 1rem;
+		padding-bottom: 80px; /* Space for fixed badges */
+		position: relative;
+	}
+
+	/* Center vertically only for intro and questions */
+	main:has(.intro),
+	main:has(:global(.question-container)) {
+		align-items: center;
 	}
 
 	.intro {
 		text-align: center;
 		max-width: 700px;
-		padding: 3rem;
+		width: 100%;
+		padding: 2rem;
 		background: var(--color-bg-card);
 		border: 1px solid var(--color-border);
 		border-radius: 16px;
@@ -269,9 +278,10 @@
 	}
 
 	.intro h1 {
-		font-size: 2.5rem;
+		font-size: clamp(1.75rem, 5vw, 2.5rem);
 		margin-bottom: 1rem;
 		color: var(--color-text-primary);
+		line-height: 1.2;
 	}
 
 	.intro h1 .gradient-text {
@@ -290,9 +300,9 @@
 	}
 
 	.intro p {
-		font-size: 1.2rem;
+		font-size: clamp(1rem, 2.5vw, 1.2rem);
 		color: var(--color-text-secondary);
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 		line-height: 1.6;
 	}
 
@@ -301,14 +311,16 @@
 	}
 
 	.intro-subtitle {
-		font-size: 1.1rem;
+		font-size: clamp(0.95rem, 2vw, 1.1rem);
 		line-height: 1.8;
 		color: var(--color-text-secondary);
 	}
 
 	.start-button {
-		padding: 1rem 3rem;
-		font-size: 1.2rem;
+		padding: 1rem 2.5rem;
+		min-height: 48px; /* Touch target minimum */
+		min-width: 120px;
+		font-size: clamp(1rem, 2.5vw, 1.2rem);
 		background: var(--gradient-primary);
 		color: white;
 		border: none;
@@ -316,11 +328,16 @@
 		cursor: pointer;
 		transition: all 0.2s ease;
 		box-shadow: var(--shadow-md);
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.start-button:hover {
 		transform: translateY(-2px);
 		box-shadow: var(--shadow-lg);
+	}
+
+	.start-button:active {
+		transform: translateY(0);
 	}
 
 	.repobird-badge {
@@ -370,28 +387,85 @@
 		box-shadow: var(--shadow-lg);
 	}
 
-	@media (max-width: 600px) {
-		.intro h1 {
+	/* Tablet styles */
+	@media (max-width: 768px) {
+		main {
+			padding: 1rem;
+			padding-bottom: 80px;
+		}
+
+		.intro {
+			padding: 1.5rem;
+			border-radius: 12px;
+		}
+	}
+
+	/* Mobile styles */
+	@media (max-width: 480px) {
+		main {
+			padding: 0.5rem;
+			padding-bottom: 70px;
+		}
+
+		.intro {
+			padding: 1.25rem;
+			max-width: calc(100vw - 1rem);
+		}
+
+		.intro h1 .emoji {
 			font-size: 2rem;
+			display: block;
+			margin-bottom: 0.5rem;
 		}
 
 		.intro-details {
-			grid-template-columns: 1fr;
-			gap: 1rem;
+			margin: 1.5rem 0;
+		}
+
+		.start-button {
+			padding: 0.875rem 2rem;
+			width: 100%;
+			max-width: 280px;
+		}
+
+		.repobird-badge,
+		.github-badge {
+			bottom: 10px;
+			padding: 6px 12px;
+			font-size: 0.75rem;
+			border-radius: 16px;
 		}
 
 		.repobird-badge {
-			bottom: 15px;
-			right: 15px;
-			padding: 6px 12px;
-			font-size: 0.8rem;
+			right: 10px;
 		}
 
 		.github-badge {
-			bottom: 15px;
-			left: 15px;
-			padding: 6px 12px;
-			font-size: 0.8rem;
+			left: 10px;
+		}
+
+		.github-badge svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	/* Landscape mobile */
+	@media (max-height: 600px) and (orientation: landscape) {
+		main {
+			padding: 0.5rem;
+		}
+
+		.intro {
+			padding: 1rem;
+		}
+
+		.intro h1 {
+			margin-bottom: 0.5rem;
+		}
+
+		.intro-details {
+			margin: 1rem 0;
 		}
 	}
 </style>

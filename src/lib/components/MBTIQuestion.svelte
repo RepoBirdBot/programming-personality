@@ -36,7 +36,7 @@
 	</div>
 
 	<div class="question-header">
-		<span class="phase-label">Phase 1: Personality Assessment</span>
+		<span class="phase-label">Phase 1 of 2</span>
 		<span class="question-number">Question {questionNumber} of {totalQuestions}</span>
 	</div>
 
@@ -74,8 +74,11 @@
 <style>
 	.question-container {
 		max-width: 600px;
+		width: 100%;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.progress {
@@ -116,30 +119,31 @@
 	}
 
 	.question-text {
-		font-size: 1.5rem;
+		font-size: clamp(1.25rem, 3vw, 1.5rem);
 		margin-bottom: 0;
 		text-align: center;
 		color: var(--color-text-primary);
-		min-height: 6.75rem; /* 108px - Accommodate up to 3 lines */
+		min-height: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		line-height: 1.5;
-		padding: 0 0.5rem;
+		line-height: 1.4;
+		padding: 0.5rem;
+		flex-shrink: 0;
 	}
 
 	.quiz-content {
 		display: flex;
 		align-items: flex-start;
-		gap: 2rem;
-		min-height: 400px;
-		height: 400px;
-		padding-top: 2.5rem;
+		gap: 1rem;
+		padding: 1rem 0;
 	}
 
 	.nav-button {
 		width: 48px;
 		height: 48px;
+		min-width: 48px;
+		min-height: 48px;
 		border-radius: 50%;
 		background: var(--color-bg-card);
 		border: 2px solid var(--color-border);
@@ -150,8 +154,8 @@
 		align-items: center;
 		justify-content: center;
 		flex-shrink: 0;
-		margin-top: 4rem;
-		align-self: flex-start;
+		align-self: center;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.nav-button:hover:not(:disabled) {
@@ -166,17 +170,21 @@
 	}
 
 	.answers {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(10, minmax(104px, auto));
+		display: flex;
+		flex-direction: column;
 		gap: 0.75rem;
 		flex: 1;
 		min-width: 0;
-		align-content: start;
+		max-height: 60vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 0.5rem;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: thin;
 	}
 
 	.answer-button {
-		padding: 1rem 1.5rem;
+		padding: 1rem 1.25rem;
 		background: var(--color-bg-card);
 		border: 2px solid var(--color-border);
 		border-radius: 8px;
@@ -188,53 +196,40 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 104px;
-		height: 100%;
+		min-height: 60px;
+		flex-shrink: 0;
 		white-space: normal;
 		word-wrap: break-word;
 		line-height: 1.4;
+		-webkit-tap-highlight-color: transparent;
 	}
 
-	/* Dynamically adjust grid rows based on number of answers */
-	.answers:has(.answer-button:nth-child(2):last-child) {
-		grid-template-rows: repeat(2, minmax(104px, 1fr));
+	/* Custom scrollbar for answers */
+	.answers::-webkit-scrollbar {
+		width: 6px;
 	}
 
-	.answers:has(.answer-button:nth-child(3):last-child) {
-		grid-template-rows: repeat(3, minmax(104px, 1fr));
+	.answers::-webkit-scrollbar-track {
+		background: var(--color-bg-tertiary);
+		border-radius: 3px;
 	}
 
-	.answers:has(.answer-button:nth-child(4):last-child) {
-		grid-template-rows: repeat(4, minmax(104px, 1fr));
+	.answers::-webkit-scrollbar-thumb {
+		background: var(--color-border);
+		border-radius: 3px;
 	}
 
-	.answers:has(.answer-button:nth-child(5):last-child) {
-		grid-template-rows: repeat(5, minmax(104px, 1fr));
-	}
-
-	.answers:has(.answer-button:nth-child(6):last-child) {
-		grid-template-rows: repeat(6, minmax(104px, 1fr));
-	}
-
-	.answers:has(.answer-button:nth-child(7):last-child) {
-		grid-template-rows: repeat(7, minmax(104px, 1fr));
-	}
-
-	.answers:has(.answer-button:nth-child(8):last-child) {
-		grid-template-rows: repeat(8, minmax(104px, 1fr));
-	}
-
-	.answers:has(.answer-button:nth-child(9):last-child) {
-		grid-template-rows: repeat(9, minmax(104px, 1fr));
-	}
-
-	.answers:has(.answer-button:nth-child(10):last-child) {
-		grid-template-rows: repeat(10, minmax(104px, 1fr));
+	.answers::-webkit-scrollbar-thumb:hover {
+		background: var(--color-border-light);
 	}
 
 	.answer-button:hover {
 		border-color: var(--color-primary-light);
 		box-shadow: var(--shadow-md);
+	}
+
+	.answer-button:active {
+		transform: scale(0.98);
 	}
 
 	.answer-button.selected {
@@ -273,33 +268,119 @@
 		}
 	}
 
+	/* Tablet styles */
 	@media (max-width: 768px) {
+		.question-container {
+			padding: 0.75rem;
+		}
+
 		.quiz-content {
-			gap: 1rem;
-			min-height: 350px;
-			height: 350px;
-			padding-top: 1.5rem;
+			gap: 0.75rem;
+		}
+
+		.nav-button {
+			width: 44px;
+			height: 44px;
+			min-width: 44px;
+			min-height: 44px;
+			font-size: 1.25rem;
+		}
+
+		.answers {
+			gap: 0.625rem;
+			padding: 0.25rem;
+		}
+
+		.answer-button {
+			padding: 0.875rem 1rem;
+			font-size: 0.95rem;
+			min-height: 56px;
+		}
+	}
+
+	/* Mobile styles */
+	@media (max-width: 480px) {
+		.question-container {
+			padding: 0.5rem;
+		}
+
+		.answers {
+			max-height: 50vh; /* Smaller on mobile to account for chrome */
+		}
+
+		.progress {
+			margin-bottom: 1rem;
+		}
+
+		.question-header {
+			margin-bottom: 0.75rem;
+		}
+
+		.question-text {
+			min-height: 3rem;
+			padding: 0.25rem;
+		}
+
+		.quiz-content {
+			gap: 0.5rem;
+			padding: 0.5rem 0;
 		}
 
 		.nav-button {
 			width: 40px;
 			height: 40px;
-			font-size: 1.2rem;
-			margin-top: 3rem;
-		}
-
-		.question-text {
-			font-size: 1.25rem;
-			min-height: 5.5rem;
+			min-width: 40px;
+			min-height: 40px;
+			font-size: 1.125rem;
 		}
 
 		.answers {
 			gap: 0.5rem;
+			padding: 0.125rem;
 		}
 
 		.answer-button {
-			padding: 0.75rem 1rem;
-			font-size: 0.95rem;
+			padding: 0.75rem;
+			font-size: 0.9rem;
+			min-height: 52px;
+		}
+
+		.checkmark {
+			font-size: 1rem;
+			margin-left: 0.5rem;
+		}
+	}
+
+	/* Landscape mobile */
+	@media (max-height: 600px) and (orientation: landscape) {
+		.question-container {
+			padding: 0.5rem;
+		}
+
+		.progress {
+			margin-bottom: 0.75rem;
+		}
+
+		.question-header {
+			margin-bottom: 0.5rem;
+		}
+
+		.question-text {
+			min-height: 2.5rem;
+			font-size: 1.125rem;
+		}
+
+		.quiz-content {
+			padding: 0.25rem 0;
+		}
+
+		.answers {
+			padding: 0;
+		}
+
+		.answer-button {
+			min-height: 48px;
+			padding: 0.625rem 0.875rem;
 		}
 	}
 </style>

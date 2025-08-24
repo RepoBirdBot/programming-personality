@@ -760,38 +760,33 @@ export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
 		}
 	]);
 
-	// Question 15: Feedback and iteration style
+	// Question 15: Development vs execution speed priority
 	addQuestionIfValid(
 		'environment',
-		'How do you prefer to see your work come to life?',
+		'Your priority: Development speed or execution speed?',
 		'ecosystem',
 		[
 			{
-				id: 'env_live',
-				text: 'See changes instantly as you make them',
-				languages: candidateLanguages
-					.filter((l) => LIVE_CODING_LANGUAGES.includes(l.id))
-					.map((l) => l.id)
-			},
-			{
-				id: 'env_compiled',
-				text: 'Build everything then see the final result',
-				languages: candidateLanguages
-					.filter((l) => COMPILED_LANGUAGES.includes(l.id))
-					.map((l) => l.id)
-			},
-			{
 				id: 'env_interpreted',
-				text: 'Test ideas interactively as you go',
+				text: 'Rapid prototyping matters more than runtime performance',
 				languages: candidateLanguages
 					.filter((l) => INTERPRETED_LANGUAGES.includes(l.id))
 					.map((l) => l.id)
 			},
 			{
-				id: 'env_visual',
-				text: 'Visual building blocks and diagrams',
+				id: 'env_compiled',
+				text: 'Runtime performance justifies longer build times',
 				languages: candidateLanguages
-					.filter(() => false) // No languages defined for this category
+					.filter((l) => COMPILED_LANGUAGES.includes(l.id))
+					.map((l) => l.id)
+			},
+			{
+				id: 'env_live',
+				text: 'Interactive development with reasonable performance',
+				languages: candidateLanguages
+					.filter(
+						(l) => LIVE_CODING_LANGUAGES.includes(l.id) || INTERPRETED_LANGUAGES.includes(l.id)
+					)
 					.map((l) => l.id)
 			}
 		]

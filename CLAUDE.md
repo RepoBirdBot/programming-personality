@@ -91,3 +91,11 @@ Base path is configured in `svelte.config.js` to handle GitHub Pages subdirector
 - **Static adapter**: Configured for GitHub Pages with fallback to 404.html
 - **Base path**: Automatically switches between development (/) and production (/programming-personality)
 - **TypeScript**: Strict mode enabled with svelte-check for type safety
+
+## Development Workflow
+
+When making changes to the codebase, follow these steps before committing:
+
+1. Make your code changes
+2. Run `make format` to format the code
+3. Verify `make test-ci` passes (runs lint, format check, and type checking)

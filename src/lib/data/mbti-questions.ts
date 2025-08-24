@@ -5,34 +5,34 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	// Extraversion vs Introversion - 2 Questions
 	{
 		id: 'ei1',
-		text: 'When faced with a complex puzzle or challenge, you prefer to:',
+		text: 'After a busy social event or meeting, you usually:',
 		dimension: 'EI',
 		answers: [
 			{
 				id: 'ei1e',
-				text: 'Talk it through with others to generate ideas',
+				text: 'Feel energized and ready for more interaction',
 				dimension: 'E'
 			},
 			{
 				id: 'ei1i',
-				text: 'Work through it quietly in your own head first',
+				text: 'Need some quiet time alone to recharge',
 				dimension: 'I'
 			}
 		]
 	},
 	{
 		id: 'ei2',
-		text: "When learning something completely new, you're most comfortable:",
+		text: 'When you need to think through something important, you typically:',
 		dimension: 'EI',
 		answers: [
 			{
 				id: 'ei2e',
-				text: 'In a group class or workshop setting',
+				text: 'Find it helpful to talk it out as you go',
 				dimension: 'E'
 			},
 			{
 				id: 'ei2i',
-				text: 'With self-paced materials you can explore alone',
+				text: 'Need quiet time to process internally before discussing',
 				dimension: 'I'
 			}
 		]
@@ -58,17 +58,17 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	},
 	{
 		id: 'sn2',
-		text: 'When choosing between options, you value:',
+		text: 'When learning something new, you prefer explanations with:',
 		dimension: 'SN',
 		answers: [
 			{
 				id: 'sn2s',
-				text: 'Proven track record and concrete examples of success',
+				text: 'Specific examples, step-by-step instructions, and practical applications',
 				dimension: 'S'
 			},
 			{
 				id: 'sn2n',
-				text: 'Innovative potential and future possibilities',
+				text: 'Overall concepts, underlying principles, and theoretical frameworks',
 				dimension: 'N'
 			}
 		]
@@ -94,17 +94,17 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	},
 	{
 		id: 'tf2',
-		text: "When giving feedback on someone's work, you:",
+		text: 'A good solution is one that:',
 		dimension: 'TF',
 		answers: [
 			{
 				id: 'tf2t',
-				text: 'Focus on what needs improvement directly',
+				text: 'Is logically sound and consistent, even if unpopular',
 				dimension: 'T'
 			},
 			{
 				id: 'tf2f',
-				text: 'Start with positives before suggesting changes',
+				text: 'Everyone affected can feel good about, even if imperfect',
 				dimension: 'F'
 			}
 		]
@@ -113,34 +113,34 @@ export const mbtiQuestions: MBTIQuestion[] = [
 	// Judging vs Perceiving - 2 Questions
 	{
 		id: 'jp1',
-		text: 'When working on projects, you prefer:',
+		text: 'You work best with:',
 		dimension: 'JP',
 		answers: [
 			{
 				id: 'jp1j',
-				text: 'Detailed plans with clear milestones set in advance',
+				text: 'Clear plans, deadlines, and defined outcomes',
 				dimension: 'J'
 			},
 			{
 				id: 'jp1p',
-				text: 'Flexible goals that can adapt as you learn more',
+				text: 'Open options, flexibility, and room to explore',
 				dimension: 'P'
 			}
 		]
 	},
 	{
 		id: 'jp2',
-		text: 'As deadlines approach, you tend to:',
+		text: "You're more comfortable when:",
 		dimension: 'JP',
 		answers: [
 			{
 				id: 'jp2j',
-				text: 'Have everything completed well in advance',
+				text: 'Things are decided and you can plan accordingly',
 				dimension: 'J'
 			},
 			{
 				id: 'jp2p',
-				text: 'Use the pressure to fuel last-minute creativity',
+				text: 'Options stay open and you can adjust as you go',
 				dimension: 'P'
 			}
 		]

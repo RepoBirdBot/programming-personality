@@ -154,8 +154,10 @@
 
 	.results-container {
 		max-width: 900px;
+		width: 100%;
 		margin: 0 auto;
 		padding: 1rem;
+		padding-top: 2rem;
 	}
 
 	.result-card {
@@ -201,7 +203,7 @@
 	}
 
 	.language-name {
-		font-size: 1.8rem;
+		font-size: clamp(1.5rem, 4vw, 1.8rem);
 		margin: 0;
 		color: var(--color-text-primary);
 		font-family:
@@ -213,6 +215,7 @@
 			sans-serif;
 		font-weight: 700;
 		letter-spacing: -0.025em;
+		line-height: 1.2;
 	}
 
 	.mbti-badge {
@@ -236,10 +239,11 @@
 	}
 
 	.personality {
-		font-size: 1.1rem;
+		font-size: clamp(1rem, 2.5vw, 1.1rem);
 		color: var(--color-text-secondary);
 		margin-bottom: 1.5rem;
 		font-style: italic;
+		line-height: 1.5;
 	}
 
 	.description {
@@ -252,9 +256,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		gap: 3rem;
+		gap: 2rem;
 		margin: 1.5rem 0;
 		text-align: center;
+		flex-wrap: wrap;
 	}
 
 	.detail-section h3 {
@@ -264,8 +269,9 @@
 	}
 
 	.detail-section {
-		flex: 1;
+		flex: 1 1 200px; /* Allow shrinking to 200px min */
 		max-width: 300px;
+		min-width: 200px;
 	}
 
 	.detail-section ul {
@@ -312,19 +318,26 @@
 	}
 
 	.restart-button {
-		padding: 0.8rem 1.5rem;
+		padding: 0.875rem 1.5rem;
+		min-height: 48px;
+		min-width: 140px;
 		background: var(--gradient-primary);
 		color: white;
 		border: none;
 		border-radius: 8px;
-		font-size: 0.9rem;
+		font-size: clamp(0.875rem, 2vw, 0.9rem);
 		cursor: pointer;
 		transition: transform 0.2s ease;
 		align-self: center;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.restart-button:hover {
 		transform: scale(1.05);
+	}
+
+	.restart-button:active {
+		transform: scale(1.02);
 	}
 
 	.share-button {
@@ -333,6 +346,8 @@
 		justify-content: center;
 		width: 44px;
 		height: 44px;
+		min-width: 44px;
+		min-height: 44px;
 		border: none;
 		border-radius: 50%;
 		cursor: pointer;
@@ -340,11 +355,16 @@
 			transform 0.2s ease,
 			opacity 0.2s ease;
 		color: white;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.share-button:hover {
 		transform: scale(1.1);
 		opacity: 0.9;
+	}
+
+	.share-button:active {
+		transform: scale(1.05);
 	}
 
 	.share-button.twitter {
@@ -398,9 +418,10 @@
 		}
 	}
 
-	@media (max-width: 767px) {
+	/* Tablet styles */
+	@media (max-width: 768px) {
 		.results-container {
-			padding: 0.5rem;
+			padding: 0.75rem;
 		}
 
 		.result-card {
@@ -422,25 +443,113 @@
 			height: 3.5rem;
 		}
 
-		.language-name {
-			font-size: 1.5rem;
-		}
-
 		.details {
-			flex-direction: column;
 			gap: 1.5rem;
 		}
 
-		.personality {
-			font-size: 1rem;
+		.detail-section {
+			flex: 1 1 45%; /* Try to fit 2 columns */
+			min-width: 150px;
 		}
 
 		.description {
-			font-size: 0.9rem;
+			font-size: 0.95rem;
 		}
 
 		.actions-section {
 			gap: 1rem;
+		}
+	}
+
+	/* Mobile styles */
+	@media (max-width: 480px) {
+		.results-container {
+			padding: 1rem;
+			padding-top: 1.5rem; /* Near top but with some breathing room */
+		}
+
+		.result-card {
+			padding: 1.25rem;
+			border-radius: 12px;
+		}
+
+		.header {
+			flex-direction: row; /* Keep side by side on mobile */
+			gap: 0.75rem;
+			margin-bottom: 0.5rem;
+			text-align: left;
+		}
+
+		.title-section {
+			align-items: flex-start; /* Align text to left */
+		}
+
+		.language-icon {
+			font-size: 3rem;
+			width: 3rem;
+			height: 3rem;
+			flex-shrink: 0;
+		}
+
+		.language-name {
+			text-align: left;
+		}
+
+		.mbti-badge {
+			font-size: 0.75rem;
+			padding: 0.2rem 0.625rem;
+		}
+
+		.mbti-description {
+			font-size: 0.875rem;
+			padding: 0.5rem;
+			margin-bottom: 0.5rem;
+			line-height: 1.4;
+		}
+
+		.personality {
+			margin-bottom: 0.75rem;
+			font-size: 0.95rem;
+		}
+
+		.description {
+			font-size: 0.875rem;
+			margin-bottom: 0.75rem;
+			line-height: 1.4;
+		}
+
+		.details {
+			margin: 0.75rem 0;
+			gap: 0.75rem;
+			justify-content: space-around;
+		}
+
+		.detail-section {
+			flex: 1 1 40%; /* Try to fit side by side */
+			min-width: 140px;
+			max-width: 200px;
+		}
+
+		.detail-section h3 {
+			font-size: 0.95rem;
+			margin-bottom: 0.25rem;
+		}
+
+		.detail-section li {
+			font-size: 0.825rem;
+			padding: 0.125rem 0;
+			line-height: 1.3;
+		}
+
+		.actions-section {
+			margin-top: 0.75rem;
+			padding-top: 0.75rem;
+			gap: 0.75rem;
+		}
+
+		.share-section h3 {
+			font-size: 0.875rem;
+			margin-bottom: 0.5rem;
 		}
 
 		.share-buttons {
@@ -450,22 +559,99 @@
 		.share-button {
 			width: 40px;
 			height: 40px;
+			min-width: 40px;
+			min-height: 40px;
+		}
+
+		.share-button svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.restart-button {
+			padding: 0.75rem 1.25rem;
+			width: 100%;
+			max-width: 240px;
+		}
+
+		.copy-feedback {
+			font-size: 0.85rem;
+			margin-top: 0.375rem;
 		}
 	}
 
-	@media (max-width: 480px) {
-		.header {
-			gap: 0.5rem;
+	/* Very small mobile */
+	@media (max-width: 360px) {
+		.result-card {
+			padding: 0.875rem;
+			padding-top: 0.625rem;
 		}
 
 		.language-icon {
-			font-size: 3rem;
-			width: 3rem;
-			height: 3rem;
+			font-size: 2.5rem;
+			width: 2.5rem;
+			height: 2.5rem;
 		}
 
-		.language-name {
-			font-size: 1.3rem;
+		.details {
+			flex-direction: column; /* Stack vertically on very small screens */
+			align-items: center;
+		}
+
+		.detail-section {
+			max-width: 250px;
+			width: 100%;
+		}
+
+		.share-button {
+			width: 36px;
+			height: 36px;
+			min-width: 36px;
+			min-height: 36px;
+		}
+
+		.share-button svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	/* Landscape mobile */
+	@media (max-height: 600px) and (orientation: landscape) {
+		.results-container {
+			min-height: auto;
+			padding: 0.5rem;
+		}
+
+		.result-card {
+			padding: 1rem;
+		}
+
+		.header {
+			margin-bottom: 0.5rem;
+		}
+
+		.language-icon {
+			font-size: 2.5rem;
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		.mbti-description {
+			margin-bottom: 0.5rem;
+			padding: 0.5rem;
+		}
+
+		.personality {
+			margin-bottom: 0.75rem;
+		}
+
+		.description {
+			margin-bottom: 0.75rem;
+		}
+
+		.details {
+			margin: 0.75rem 0;
 		}
 	}
 </style>

@@ -45,21 +45,28 @@
 /* Global styles */
 * {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 html {
 	height: 100%;
+	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+	text-size-adjust: 100%;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
+	min-height: 100dvh; /* Dynamic viewport height */
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
 	background: var(--gradient-background);
 	background-attachment: fixed;
 	color: var(--color-text-primary);
 	line-height: 1.6;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Scrollbar styling for dark mode */
@@ -92,6 +99,13 @@ body {
 	outline-offset: 2px;
 }
 
+/* Remove focus outline for touch devices */
+@media (hover: none) {
+	:focus {
+		outline: none;
+	}
+}
+
 /* Button base styles */
 button {
 	font-family: inherit;
@@ -101,6 +115,9 @@ button {
 	border-radius: 8px;
 	transition: all 0.2s ease;
 	color: white;
+	touch-action: manipulation; /* Prevent double-tap zoom */
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 button:disabled {
@@ -175,4 +192,54 @@ select:focus {
 
 .bg-card {
 	background: var(--color-bg-card);
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+	body {
+		font-size: 16px; /* Prevent zoom on iOS */
+	}
+}
+
+/* Touch-friendly hover states */
+@media (hover: hover) {
+	/* Only apply hover effects on devices that support hovering */
+	button:hover:not(:disabled) {
+		transform: translateY(-1px);
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Improve readability on small screens */
+@media (max-width: 480px) {
+	p,
+	li {
+		font-size: 0.95rem;
+	}
+
+	h1 {
+		font-size: clamp(1.5rem, 5vw, 2.5rem);
+	}
+
+	h2 {
+		font-size: clamp(1.25rem, 4vw, 2rem);
+	}
+
+	h3 {
+		font-size: clamp(1.1rem, 3vw, 1.5rem);
+	}
+}
+
+/* Landscape mobile adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+	body {
+		font-size: 14px;
+	}
+
+	button {
+		padding: 0.5rem 1rem;
+	}
 }
