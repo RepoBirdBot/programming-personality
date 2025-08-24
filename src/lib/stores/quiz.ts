@@ -96,8 +96,10 @@ function createQuizStore() {
 					newState.mbtiType = calculateMBTIType(newState.mbtiAnswers);
 
 					// Get candidate languages for this MBTI type from languages array
-					// If no exact matches, use all languages as candidates
-					const exactMatches = languages.filter((lang) => lang.mbti === newState.mbtiType);
+					// Check both primary and secondary MBTI types
+					const exactMatches = languages.filter((lang) =>
+						lang.mbti.includes(newState.mbtiType as MBTIType)
+					);
 					if (exactMatches.length > 0) {
 						newState.candidateLanguages = exactMatches.map((lang) => lang.id);
 					} else {
@@ -235,10 +237,10 @@ function calculateEnhancedResult(
 		const topScore = scoredLanguages[0][1];
 		const topScorers = scoredLanguages.filter(([_, score]) => score === topScore);
 
-		// Check if any top scorer matches the MBTI type
+		// Check if any top scorer matches the MBTI type (primary or secondary)
 		const mbtiMatch = topScorers.find(([langId]) => {
 			const lang = languages.find((l) => l.id === langId);
-			return lang?.mbti === mbtiType;
+			return lang?.mbti.includes(mbtiType as MBTIType);
 		});
 
 		if (mbtiMatch) {
@@ -246,10 +248,10 @@ function calculateEnhancedResult(
 		}
 	} else if (candidates.length > 0) {
 		// No scores, pick from candidates
-		// Prefer MBTI matches if available
+		// Prefer MBTI matches if available (primary or secondary)
 		const mbtiMatch = candidates.find((langId) => {
 			const lang = languages.find((l) => l.id === langId);
-			return lang?.mbti === mbtiType;
+			return lang?.mbti.includes(mbtiType as MBTIType);
 		});
 		resultId = mbtiMatch || candidates[0];
 	}
@@ -267,14 +269,12 @@ function calculateEnhancedResult(
 			strengths: ['Matches your MBTI type', 'Suits your preferences'],
 			useCases: ['Your preferred domains'],
 			personality: `Perfect for ${mbtiType} personality types`,
-			mbti: mbtiType as MBTIType,
+			mbti: [mbtiType as MBTIType],
 			icon: '💻',
 			color: '#666'
 		};
-	} else {
-		// Add MBTI to existing language
-		result = { ...result, mbti: mbtiType as MBTIType };
 	}
+	// Note: We keep the language's actual MBTI types, not the user's type
 
 	return result!;
 }

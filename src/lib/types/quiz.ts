@@ -130,7 +130,7 @@ export interface Language {
 	strengths: string[];
 	useCases: string[];
 	personality: string;
-	mbti: MBTIType;
+	mbti: [MBTIType, MBTIType?]; // Primary and optional secondary MBTI type
 	icon: string;
 	color: string;
 	imgURL?: string;

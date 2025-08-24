@@ -41,8 +41,8 @@
 			</div>
 			<div class="title-section">
 				<h1 class="language-name">You are {language.name}!</h1>
-				{#if language.mbti}
-					<div class="mbti-badge">MBTI: {language.mbti}</div>
+				{#if $quizStore.mbtiType}
+					<div class="mbti-badge">Your MBTI: {$quizStore.mbtiType}</div>
 				{/if}
 			</div>
 		</div>

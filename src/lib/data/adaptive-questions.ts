@@ -1,4 +1,4 @@
-import type { LanguageQuestion, LanguageId } from '$lib/types/quiz';
+import type { LanguageQuestion, LanguageId, MBTIType } from '$lib/types/quiz';
 import { languages } from './languages';
 
 // Language category constants for better readability
@@ -111,8 +111,8 @@ const SINGLE_OBJECTIVEC: LanguageId[] = ['objectivec'];
 
 // Smart questions that adapt based on MBTI type to distinguish between similar languages
 export function getAdaptiveQuestions(mbtiType: string): LanguageQuestion[] {
-	// First try to get languages matching the MBTI type
-	let candidateLanguages = languages.filter((lang) => lang.mbti === mbtiType);
+	// First try to get languages matching the MBTI type (primary or secondary)
+	let candidateLanguages = languages.filter((lang) => lang.mbti.includes(mbtiType as MBTIType));
 
 	// If no exact matches, use all languages
 	if (candidateLanguages.length === 0) {
